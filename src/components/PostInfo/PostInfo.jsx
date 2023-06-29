@@ -3,7 +3,12 @@ import { CommentList } from '../CommentList';
 import './PostInfo.scss';
 
 export const PostInfo = ({ post }) => {
-  const { title, body, comments, user } = post;
+  const {
+    title,
+    body,
+    comments,
+    user,
+  } = post;
 
   return (
     <div className="PostInfo">
