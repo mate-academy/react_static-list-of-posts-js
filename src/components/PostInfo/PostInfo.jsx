@@ -3,11 +3,11 @@ import { UserInfo } from '../UserInfo/UserInfo';
 import './PostInfo.scss';
 
 export const PostInfo = ({ post }) => {
-  const { id, title, user, body, comments } = post;
+  const { title, user, body, comments } = post;
 
   return (
 
-    <article key={id} className="PostInfo">
+    <article className="PostInfo">
       <div className="PostInfo__header">
         <h3 className="PostInfo__title">{title}</h3>
         {user && <UserInfo user={user} />}

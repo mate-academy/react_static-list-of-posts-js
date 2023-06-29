@@ -1,7 +1,7 @@
 import { PostInfo } from '../PostInfo/PostInfo';
 
 export const PostList = ({ posts }) => (
-  <section className="PostList">
+  <section key={posts.id} className="PostList">
     {posts.map(post => (
       <PostInfo post={post} />
     ))}
