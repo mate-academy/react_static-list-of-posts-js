@@ -3,7 +3,12 @@ import { UserInfo } from '../UserInfo';
 import { CommentList } from '../CommentList';
 
 export const PostInfo = ({
-  post: { title, body, user, comments },
+  post: {
+    title,
+    body,
+    user,
+    comments,
+  },
 }) => (
   <div className="PostInfo">
     <div className="PostInfo__header">
