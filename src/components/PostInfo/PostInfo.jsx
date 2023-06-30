@@ -6,24 +6,29 @@ export const PostInfo = ({ post }) => {
   const {
     user,
     comments,
+    title,
+    body,
   } = post;
 
   return (
     <div className="PostInfo">
       <div className="PostInfo__header">
         <h3 className="PostInfo__title">
-          {post.title}
+          {title}
         </h3>
 
         <p>
           {' Posted by  '}
 
-          <UserInfo user={user} />
+          {user
+            ? <UserInfo user={user} />
+            : ('Holy Spirit')
+          }
         </p>
       </div>
 
       <p className="PostInfo__body">
-        {post.body}
+        {body}
       </p>
 
       {post?.comments.length
