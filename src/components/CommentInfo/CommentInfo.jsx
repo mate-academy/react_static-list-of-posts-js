@@ -10,8 +10,6 @@ export const CommentInfo = ({ comment: { name, email, body } }) => (
       </a>
     </div>
 
-    <div className="CommentInfo__body">
-      {body}
-    </div>
+    <div className="CommentInfo__body">{body}</div>
   </div>
 );
