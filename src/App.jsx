@@ -6,9 +6,11 @@ import usersFromServer from './api/users.json';
 import { PostList } from './components/PostList';
 
 function getUser(id) {
-  return usersFromServer.find(
+  const matchedUser = usersFromServer.find(
     user => user.id === id,
   );
+
+  return matchedUser || null;
 }
 
 function getComment(id) {
