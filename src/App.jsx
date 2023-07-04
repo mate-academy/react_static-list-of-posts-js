@@ -7,7 +7,7 @@ import { PostList } from './components/PostList';
 function findUserById(id) {
   return usersFromServer.find(user => (
     user.id === id
-  ));
+  )) || null;
 }
 
 function findCommentsByPostId(postId) {
