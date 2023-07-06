@@ -5,6 +5,5 @@ export const PostList = ({ posts }) => (
     {posts.map(post => (
       <PostInfo key={post.id} post={post} />
     ))}
-    {/* <b data-cy="NoCommentsMessage">No comments yet</b> */}
   </div>
 );
