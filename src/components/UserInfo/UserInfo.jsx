@@ -1,7 +1,10 @@
 import './UserInfo.scss';
 
 export const UserInfo = ({ user }) => {
-  const { name, email } = user;
+  const {
+    name = 'unknown user',
+    email = 'unknown email',
+  } = user;
 
   return (
     <p>
