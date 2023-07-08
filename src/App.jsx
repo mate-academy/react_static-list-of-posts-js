@@ -17,12 +17,9 @@ const posts = postsFromServer.map((post) => {
   return {
     ...post,
     user: getUserById(post.userId),
-    comments: getCommentsByPostId(post.id) || [],
+    comments: getCommentsByPostId(post.id),
   };
 });
-
-/* eslint-disable*/
-console.log(posts);
 
 export const App = () => (
   <section className="App">
