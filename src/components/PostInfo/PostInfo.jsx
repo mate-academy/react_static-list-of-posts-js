@@ -1,25 +1,27 @@
 import './PostInfo.scss';
 import { UserInfo } from '../UserInfo';
 import { CommentList } from '../CommentList';
+import commentsFromServer from '../../api/comments.json';
 
 export const PostInfo = ({ post }) => (
-  <>
-    <div className="PostInfo">
-      <div className="PostInfo__header">
-        <h3 className="PostInfo__title">{post.title}</h3>
+  <div className="PostInfo">
+    <div className="PostInfo__header">
+      <h3 className="PostInfo__title">{post.title}</h3>
 
-        <p>
-          {' Posted by  '}
+      <p>
+        {' Posted by  '}
 
-          <UserInfo user={post.user} />
-        </p>
-      </div>
-
-      <p className="PostInfo__body">
-        {post.body}
+        <UserInfo user={post.user} />
       </p>
-
-      <CommentList comments={post.comments} />
     </div>
-  </>
+
+    <p className="PostInfo__body">
+      {post.body}
+    </p>
+
+    <CommentList comments={
+      commentsFromServer.filter(comment => comment.postId === post.id)
+    }
+    />
+  </div>
 );
