@@ -1,7 +1,6 @@
 import './PostInfo.scss';
 import { UserInfo } from '../UserInfo';
 import { CommentList } from '../CommentList';
-import commentsFromServer from '../../api/comments.json';
 
 export const PostInfo = ({ post }) => (
   <div className="PostInfo">
@@ -19,9 +18,6 @@ export const PostInfo = ({ post }) => (
       {post.body}
     </p>
 
-    <CommentList comments={
-      commentsFromServer.filter(comment => comment.postId === post.id)
-    }
-    />
+    <CommentList comments={post.comments} />
   </div>
 );
