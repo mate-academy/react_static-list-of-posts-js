@@ -15,7 +15,7 @@ function getCommentsById(id) {
     comment => comment.postId === id,
   );
 
-  return filteredComments.length > 0 ? filteredComments : null;
+  return filteredComments.length > 0 ? filteredComments : [];
 }
 
 export const posts = postsFromServer.map(post => ({

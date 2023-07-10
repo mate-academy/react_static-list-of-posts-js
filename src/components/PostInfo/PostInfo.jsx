@@ -3,7 +3,7 @@ import { UserInfo } from '../UserInfo';
 import { CommentList } from '../CommentList';
 
 export const PostInfo = ({ post }) => {
-  const { title, body } = post;
+  const { title, body, comments } = post;
 
   return (
     <div className="PostInfo">
@@ -23,10 +23,12 @@ export const PostInfo = ({ post }) => {
 
       <hr />
 
-      {post.comments ? (
-        <CommentList comments={post.comments} />
+      {comments.length ? (
+        <CommentList comments={comments} />
       ) : (
-        <b data-cy="NoCommentsMessage">No comments yet</b>
+        <b data-cy="NoCommentsMessage">
+          No comments yet
+        </b>
       ) }
     </div>
   );
