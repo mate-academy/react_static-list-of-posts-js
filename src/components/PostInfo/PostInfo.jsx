@@ -1,4 +1,5 @@
-import { CommentInfo } from '../CommentInfo';
+import './PostInfo.scss';
+import { CommentList } from '../CommentList';
 import { UserInfo } from '../UserInfo';
 
 export const PostInfo = ({ post }) => {
@@ -21,10 +22,15 @@ export const PostInfo = ({ post }) => {
         {body}
       </p>
 
-      <hr />
+      {comments.length ? <CommentList comments={comments} />
+        : (
+          <>
+            <hr />
 
-      {comments ? <CommentInfo comment={comments} />
-        : <b data-cy="NoCommentsMessage">No comments yet</b>}
+            <b data-cy="NoCommentsMessage">No comments yet</b>
+          </>
+        )
+        }
     </div>
   );
 };
