@@ -1,1 +1,1 @@
-import '@mate-academy/cypress-tools/support';
+import "@mate-academy/cypress-tools/support";
