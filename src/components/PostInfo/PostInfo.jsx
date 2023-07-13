@@ -1,12 +1,9 @@
 import { UserInfo } from '../UserInfo/UserInfo';
 import { CommentList } from '../CommentList/CommentList';
 
-import commentsFromServer from '../../api/comments.json';
-import usersFromServer from '../../api/users.json';
-
 export const PostInfo = ({ post }) => {
   const {
-    title, body, comments,
+    title, body, user, comments,
   } = post;
 
   return (
@@ -15,7 +12,7 @@ export const PostInfo = ({ post }) => {
         <h3 className="PostInfo__title">{ title }</h3>
         <p>
           {' Posted by  '}
-          {usersFromServer.map(user => <UserInfo user={user} key={user.id} />)}
+          {user && <UserInfo user={user} />}
         </p>
 
         <p className="PostInfo__body">
@@ -25,7 +22,7 @@ export const PostInfo = ({ post }) => {
         <hr />
 
         {comments.length
-          ? <CommentList comments={commentsFromServer} />
+          ? <CommentList comments={comments} />
           : <b data-cy="NoCommentsMessage">No comments yet</b>}
       </div>
     </div>
