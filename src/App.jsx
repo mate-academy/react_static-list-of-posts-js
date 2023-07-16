@@ -14,7 +14,7 @@ function getUser(userId) {
 }
 
 function getComment(id) {
-  const foundComment = commentsFromServer.find(
+  const foundComment = commentsFromServer.filter(
     comment => comment.postId === id,
   );
 
@@ -24,7 +24,7 @@ function getComment(id) {
 export const posts = postsFromServer.map(post => ({
   ...post,
   user: getUser(post.userId),
-  comment: getComment(post.id),
+  comments: getComment(post.id),
 }));
 
 export const App = () => (

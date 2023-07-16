@@ -6,7 +6,7 @@ import './PostInfo.scss';
 export const PostInfo = (
   {
     post: {
-      title, user, comment, body,
+      title, user, comments, body,
     },
   },
 ) => (
@@ -21,14 +21,12 @@ export const PostInfo = (
       {body}
     </p>
 
-    {comment ? (
-      <CommentList comment={comment} />
-    )
+    <hr />
+
+    {comments.length > 0
+      ? (<CommentList comments={comments} />)
       : (
-        <>
-          <hr />
-          <b data-cy="NoCommentsMessage">No comments yet</b>
-        </>
+        <b data-cy="NoCommentsMessage">No comments yet</b>
       )}
   </div>
 );
