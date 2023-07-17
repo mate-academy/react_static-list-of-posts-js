@@ -24,4 +24,3 @@ export const CommentInfo = ({ comment }) => {
     </div>
   );
 };
-// comment for deploy
