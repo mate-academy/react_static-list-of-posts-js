@@ -22,9 +22,9 @@ export const PostInfo = ({ post }) => {
       </p>
 
       <hr />
-      {comments.length === 0 || comments === undefined
-        ? (<p data-cy="NoCommentsMessage">No comments yet</p>)
-        : (<CommentList comments={comments} />)
+      {comments.length
+        ? (<CommentList comments={comments} />)
+        : (<p data-cy="NoCommentsMessage">No comments yet</p>)
     }
     </div>
   );
