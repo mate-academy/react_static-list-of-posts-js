@@ -1,8 +1,8 @@
 import { CommentInfo } from '../CommentInfo';
 
-export const CommentList = ({ arrOfComments }) => (
+export const CommentList = ({ comments }) => (
   <div className="CommentList">
-    {arrOfComments.map(comment => (
+    {comments.map(comment => (
       <CommentInfo key={comment.id} comment={comment} />
     ))}
   </div>
