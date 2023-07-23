@@ -4,7 +4,9 @@ import './CommentList.scss';
 export const CommentList = ({ comments }) => (
   <>
     <ul className="CommentList">
-      <CommentInfo comments={comments} />
+      {comments.map(comment => (
+        <CommentInfo comment={comment} key={comment.id} />
+      ))}
     </ul>
   </>
 );

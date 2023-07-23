@@ -1,24 +1,22 @@
 import './CommentInfo.scss';
 
-export const CommentInfo = ({ comments = [] }) => (
+export const CommentInfo = ({ comment: { name, email, body } = [] }) => (
   <>
-    {comments.map(comment => (
-      <li className="CommentInfo" key={comment.id}>
-        <div className="CommentInfo__title">
-          <strong className="CommentInfo__name">{comment.name}</strong>
-          {' by '}
-          <a
-            className="CommentInfo__email"
-            href={`mailto:${comment.email}`}
-          >
-            {comment.email}
-          </a>
-        </div>
+    <li className="CommentInfo">
+      <div className="CommentInfo__title">
+        <strong className="CommentInfo__name">{name}</strong>
+        {' by '}
+        <a
+          className="CommentInfo__email"
+          href={`mailto:${email}`}
+        >
+          {email}
+        </a>
+      </div>
 
-        <div className="CommentInfo__body">
-          {comment.body}
-        </div>
-      </li>
-    ))}
+      <div className="CommentInfo__body">
+        {body}
+      </div>
+    </li>
   </>
 );
