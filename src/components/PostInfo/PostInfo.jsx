@@ -6,14 +6,14 @@ export const PostInfo = ({ post }) => {
   const { title, user, body, comments } = post;
 
   return (
-    <>
+    <li className="PostInfo">
       <div className="PostInfo__header">
         <h3 className="PostInfo__title">{title}</h3>
 
         <p>
           {' Posted by  '}
 
-          <UserInfo user={user} />
+          {user && <UserInfo user={user} />}
         </p>
       </div>
 
@@ -22,6 +22,6 @@ export const PostInfo = ({ post }) => {
       </p>
 
       <CommentList comments={comments} />
-    </>
+    </li>
   );
 };

@@ -3,11 +3,11 @@ import './CommentList.scss';
 
 export const CommentList = ({ comments }) => (
   (comments.length !== 0) ? (
-    <div className="CommentList">
+    <ul className="CommentList">
       {comments.map(comment => (
         <CommentInfo comment={comment} key={comment.id} />
       ))}
-    </div>
+    </ul>
   ) : (
     <>
       <hr />
