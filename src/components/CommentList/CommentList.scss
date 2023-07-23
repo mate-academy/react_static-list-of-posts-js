@@ -1,1 +1,14 @@
-//
+.CommentList {
+  display: flex;
+  flex-direction: column;
+  gap: 0.7em;
+  background-color: #eee;
+  padding: 1em;
+
+  &__no-comments {
+    padding-top: 10px;
+    border-top: 1px solid #000;
+    width: 100%;
+    font-weight: bold;
+  }
+}
