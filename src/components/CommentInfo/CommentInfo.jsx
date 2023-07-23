@@ -1,8 +1,9 @@
 import './CommentInfo.scss';
+import { PropTypes } from 'prop-types';
 
 export const CommentInfo = ({ comment }) => {
   const {
-    name = 'comment',
+    name,
     email,
     body = '',
   } = comment;
@@ -10,16 +11,24 @@ export const CommentInfo = ({ comment }) => {
   return (
     <div className="CommentInfo">
       <div className="CommentInfo__title">
-        <strong className="CommentInfo__name">{name}</strong>
+        <strong className="CommentInfo__name">{name || ''}</strong>
 
         {' by '}
-
-        <a
-          className="CommentInfo__email"
-          href={email ? `mailto:${email}` : '#'}
-        >
-          {email}
-        </a>
+        {email
+          ? (
+            <a
+              className="CommentInfo__email"
+              href={email ? `mailto:${email}` : '#'}
+            >
+              {email}
+            </a>
+          )
+          : (
+            <>
+              Anonymous
+            </>
+          )
+        }
       </div>
 
       <div className="CommentInfo__body">
@@ -27,4 +36,8 @@ export const CommentInfo = ({ comment }) => {
       </div>
     </div>
   );
+};
+
+CommentInfo.propTypes = {
+  comment: PropTypes.oneOfType([PropTypes.object]).isRequired,
 };

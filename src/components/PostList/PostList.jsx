@@ -1,3 +1,4 @@
+import { PropTypes } from 'prop-types';
 import { PostInfo } from '../PostInfo';
 import './PostList.scss';
 
@@ -8,3 +9,7 @@ export const PostList = ({ posts }) => (
     ))}
   </ul>
 );
+
+PostList.propTypes = {
+  posts: PropTypes.oneOfType([PropTypes.array]).isRequired,
+};

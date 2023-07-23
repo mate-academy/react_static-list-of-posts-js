@@ -1,3 +1,4 @@
+import { PropTypes } from 'prop-types';
 import { CommentInfo } from '../CommentInfo';
 import './CommentList.scss';
 
@@ -12,9 +13,16 @@ export const CommentList = ({ comments }) => (
     )
     : (
       <>
-        <hr />
-
-        <strong data-cy="NoCommentsMessage">No comments yet</strong>
+        <p
+          className="CommentList__no-comments"
+          data-cy="NoCommentsMessage"
+        >
+          No comments yet
+        </p>
       </>
     )
 );
+
+CommentList.propTypes = {
+  comments: PropTypes.oneOfType([PropTypes.array]).isRequired,
+};

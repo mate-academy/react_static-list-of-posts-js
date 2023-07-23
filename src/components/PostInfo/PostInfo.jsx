@@ -1,3 +1,4 @@
+import { PropTypes } from 'prop-types';
 import { UserInfo } from '../UserInfo';
 import { CommentList } from '../CommentList';
 import './PostInfo.scss';
@@ -17,8 +18,6 @@ export const PostInfo = ({ post }) => {
 
         {user && (
           <p>
-            {' Posted by  '}
-
             <UserInfo user={user} />
           </p>
         )}
@@ -28,10 +27,13 @@ export const PostInfo = ({ post }) => {
         {body}
       </p>
 
-      {Array.isArray(comments) && (
-        <CommentList comments={comments} />
-      )}
+
+      <CommentList comments={comments} />
 
     </div>
   );
+};
+
+PostInfo.propTypes = {
+  post: PropTypes.oneOfType([PropTypes.object]).isRequired,
 };
