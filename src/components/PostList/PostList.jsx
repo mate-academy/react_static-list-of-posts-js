@@ -1,20 +1,20 @@
 import { PostInfo } from '../PostInfo';
 
+function getUserById(users, userId) {
+  return users.find(user => user.id === userId);
+}
+
+function getCommentsById(comments, idOfPost) {
+  return comments.filter(comment => comment.postId === idOfPost);
+}
+
 export const PostList = ({
   postsFromServer, commentsFromServer, usersFromServer,
 }) => {
-  function getUserById(userId) {
-    return usersFromServer.find(user => user.id === userId);
-  }
-
-  function getCommentsById(idOfPost) {
-    return commentsFromServer.filter(comment => comment.postId === idOfPost);
-  }
-
   const posts = postsFromServer.map(post => ({
     ...post,
-    user: getUserById(post.userId),
-    comments: getCommentsById(post.id),
+    user: getUserById(usersFromServer, post.userId),
+    comments: getCommentsById(commentsFromServer, post.id),
   }));
 
   return (

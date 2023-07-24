@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types';
 import { CommentList } from '../CommentList';
 import { UserInfo } from '../UserInfo';
 import './PostInfo.scss';
@@ -22,9 +23,29 @@ export const PostInfo = ({ post }) => {
         {body}
       </p>
 
-      {post.comments.length !== 0
+      {comments && comments.length !== 0
         ? <CommentList comments={comments} />
         : <b data-cy="NoCommentsMessage">No comments yet</b>}
     </div>
   );
+};
+
+PostInfo.propTypes = {
+  title: PropTypes.string.isRequired,
+  body: PropTypes.string.isRequired,
+  comments: PropTypes.arrayOf(
+    PropTypes.shape({
+      postId: PropTypes.number,
+      id: PropTypes.number,
+      name: PropTypes.string,
+      email: PropTypes.string,
+      body: PropTypes.string,
+    }),
+  ).isRequired,
+  user: PropTypes.shape({
+    id: PropTypes.number,
+    name: PropTypes.string,
+    username: PropTypes.string,
+    email: PropTypes.string,
+  }).isRequired,
 };
