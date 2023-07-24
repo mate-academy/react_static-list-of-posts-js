@@ -1,6 +1,6 @@
 
 export const CommentInfo = ({ comment }) => (
-  <li className="CommentInfo">
+  <div className="CommentInfo">
     <div className="CommentInfo__title">
       <strong className="CommentInfo__name">
         {comment.name}
@@ -16,5 +16,5 @@ export const CommentInfo = ({ comment }) => (
     <div className="CommentInfo__body">
       {comment.body}
     </div>
-  </li>
+  </div>
 );
