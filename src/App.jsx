@@ -1,28 +1,16 @@
 import './App.scss';
 import { PostList } from './components/PostList';
-
-// import postsFromServer from './api/posts.json';
 import postsFromServer from './api/posts.json';
-
-// import commentsFromServer from './api/comments.json';
 import commentsFromServer from './api/comments.json';
-
-// import usersFromServer from './api/users.json';
 import usersFromServer from './api/users.json';
 
 export function getUserById(id) {
-  return usersFromServer.find(user => user.id === id);
+  return usersFromServer.find(user => user.id === id) || null;
 }
 
 export function getCommentsById(postId) {
   const comments = commentsFromServer
-    .reduce((prev, comment) => {
-      if (comment.postId === postId) {
-        return [...prev, comment];
-      }
-
-      return [...prev];
-    }, []);
+    .filter(comment => comment.postId === postId);
 
   return comments;
 }
