@@ -18,6 +18,5 @@ export const PostInfo = ({
     <p className="PostInfo__body">{body}</p>
 
     <CommentList comments={comments} />
-
   </div>
 );

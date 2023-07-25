@@ -9,6 +9,6 @@ export const CommentList = ({ comments }) => (
         <CommentInfo comment={comment} key={comment.id} />
       ))
       : <b data-cy="NoCommentsMessage">No comments</b>
-      }
+    }
   </div>
 );
