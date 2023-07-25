@@ -6,13 +6,9 @@ export const UserInfo = ({ user }) => {
     name,
   } = user;
 
-  return (
-    <p>
-      {' Posted by  '}
-
-      <a className="UserInfo" href={`mailto:${email}`}>
-        {name}
-      </a>
-    </p>
-  );
+  return (user && (
+    <a className="UserInfo" href={`mailto:${email}`}>
+      {name}
+    </a>
+  ));
 };
