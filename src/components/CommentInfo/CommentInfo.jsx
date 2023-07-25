@@ -4,7 +4,6 @@ export const CommentInfo = ({
   <div className="CommentInfo">
     <div className="CommentInfo__title">
       <strong className="CommentInfo__name">{name}</strong>
-
       {' by '}
 
       <a
