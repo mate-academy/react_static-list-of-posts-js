@@ -1,3 +1,7 @@
-export const UserInfo = () => (
-  <>Put the user here</>
+import './UserInfo.scss';
+
+export const UserInfo = ({ postUser }) => (
+  <a className="UserInfo" href={`mailto:${postUser.email}`}>
+    {postUser.name}
+  </a>
 );
