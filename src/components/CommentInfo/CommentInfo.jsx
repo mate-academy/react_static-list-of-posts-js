@@ -1,6 +1,6 @@
 import React from 'react';
 
-export const CommentInfo = ({ comment }) => (
+export const CommentInfo = ({ comment: { email, body } }) => (
   <div className="CommentInfo">
     <div className="CommentInfo__title">
       <strong className="CommentInfo__name">pariatur omnis in</strong>
@@ -9,14 +9,14 @@ export const CommentInfo = ({ comment }) => (
 
       <a
         className="CommentInfo__email"
-        href={`mailto:${comment.email}`}
+        href={`mailto:${email}`}
       >
-        {comment.email}
+        {email}
       </a>
     </div>
 
     <div className="CommentInfo__body">
-      {comment.body}
+      {body}
     </div>
   </div>
 );
