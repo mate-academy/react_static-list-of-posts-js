@@ -1,9 +1,9 @@
 import React from 'react';
 
-export const CommentInfo = ({ comment: { email, body } }) => (
+export const CommentInfo = ({ comment: { email, body, name } }) => (
   <div className="CommentInfo">
     <div className="CommentInfo__title">
-      <strong className="CommentInfo__name">pariatur omnis in</strong>
+      <strong className="CommentInfo__name">{name}</strong>
 
       {' by '}
 
