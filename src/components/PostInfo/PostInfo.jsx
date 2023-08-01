@@ -13,10 +13,6 @@ export const PostInfo = ({ post }) => (
       <p>
         {' Posted by '}
 
-        {/* { post.user !== undefined
-          ? (<UserInfo user={post.user} />)
-          : (<b>Anonimus</b>)
-        } */}
         <UserInfo user={post.user} />
       </p>
     </div>
