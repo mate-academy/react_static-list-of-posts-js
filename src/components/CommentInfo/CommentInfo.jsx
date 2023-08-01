@@ -5,7 +5,9 @@ export const CommentInfo = ({ comment }) => (
         {comment.name}
       </strong>
 
-      {' by '}
+      <span>
+        {' by '}
+      </span>
 
       <a href={`mailto:${comment.email}`} className="CommentInfo__email">
         {comment.email}
