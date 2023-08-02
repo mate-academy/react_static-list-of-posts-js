@@ -25,15 +25,12 @@ export const PostInfo = ({ userPostComment }) => {
           <CommentList
             comments={comments}
           />
-
         ) : (
           <>
             <hr />
             <b data-cy="NoCommentsMessage">No comments yet</b>
           </>
-        )
-}
-
+        )}
     </div>
   );
 };

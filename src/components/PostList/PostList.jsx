@@ -5,7 +5,6 @@ export function PostList({ userPostComments }) {
     <PostInfo
       userPostComment={userPostComment}
       key={`${userPostComment.id}`}
-
     />
   ));
 }
