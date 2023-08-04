@@ -10,12 +10,9 @@ export const PostInfo = ({ post: { title, user, body, comments } }) => (
       </h3>
 
       <p>
-        {' Posted by  '}
+        <span> Posted by </span>
 
-        <UserInfo
-          key={user.id}
-          user={user}
-        />
+        {user && <UserInfo key={user.id} user={user} />}
       </p>
     </div>
 

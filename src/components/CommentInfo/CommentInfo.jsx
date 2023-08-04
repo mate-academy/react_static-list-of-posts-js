@@ -7,7 +7,7 @@ export const CommentInfo = ({ comment: { name, email, body } }) => (
         {name}
       </strong>
 
-      {' by '}
+      <span> by </span>
 
       <a
         className="CommentInfo__email"
