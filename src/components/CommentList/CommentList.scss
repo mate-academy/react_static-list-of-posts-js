@@ -1,1 +1,12 @@
-//
+.CommentList {
+  display: flex;
+  flex-direction: column;
+  gap: 0.7em;
+  background-color: #eee;
+  padding: 1em;
+
+  &__list {
+    list-style: none;
+    padding: 0;
+  }
+}
