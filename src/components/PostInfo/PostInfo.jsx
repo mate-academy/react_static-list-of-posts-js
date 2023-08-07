@@ -5,22 +5,24 @@ import { UserInfo } from '../UserInfo';
 
 export const PostInfo = ({ post }) => (
   <div className="PostInfo">
-    <div className="PostInfo__header">
-      <h3 className="PostInfo__title">
-        {post.title}
-      </h3>
+    <>
+      <div className="PostInfo__header">
+        <h3 className="PostInfo__title">
+          {post.title}
+        </h3>
 
-      <p>
-        {' Posted by  '}
+        <p>
+          {' Posted by  '}
 
-        <UserInfo user={post.user} />
+          <UserInfo user={post.user} />
+        </p>
+      </div>
+
+      <p className="PostInfo__body">
+        {post.body}
       </p>
-    </div>
 
-    <p className="PostInfo__body">
-      {post.body}
-    </p>
-
-    <CommentList comments={post.comments} />
+      <CommentList comments={post.comments} />
+    </>
   </div>
 );
