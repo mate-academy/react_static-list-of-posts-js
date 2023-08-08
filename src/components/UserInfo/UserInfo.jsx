@@ -15,7 +15,7 @@ export const UserInfo = ({
       rel="noreferrer"
       href={`mailto:${email}`}
     >
-    {name}
-  </a>
-  </p >
+      {name}
+    </a>
+  </p>
 );
