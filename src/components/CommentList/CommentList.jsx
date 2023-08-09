@@ -1,10 +1,14 @@
 import { CommentInfo } from '../CommentInfo';
-// import comments from './api/comments.json';
 
 export const CommentList = ({ comments }) => (
   <div className="CommentList">
     {comments.map(comment => (
-      <CommentInfo key={comment.id} comment={comment} />
+      <CommentInfo
+        key={comment.id}
+        name={comment.name}
+        email={comment.email}
+        body={comment.body}
+      />
     ))}
   </div>
 );
