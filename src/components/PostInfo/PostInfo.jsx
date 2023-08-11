@@ -6,7 +6,7 @@ import { UserInfo } from '../UserInfo';
 export const PostInfo = ({
   post: {
     body,
-    comment,
+    comments,
     title,
     user,
   },
@@ -28,8 +28,8 @@ export const PostInfo = ({
 
     <hr />
 
-    {comment.length ? (
-      <CommentList comments={comment} />
+    {comments.length ? (
+      <CommentList comments={comments} />
     ) : (
       <b data-cy="NoCommentsMessage">
         No comments yet
