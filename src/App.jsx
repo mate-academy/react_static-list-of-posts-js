@@ -15,8 +15,7 @@ function getCommentsById(post) {
   ));
 }
 
-// eslint-disable-next-line no-shadow
-export const posts = postsFromServer.map(post => ({
+const posts = postsFromServer.map(post => ({
   ...post,
   user: getUserById(post.userId),
   comments: getCommentsById(post),
@@ -25,7 +24,6 @@ export const posts = postsFromServer.map(post => ({
 export const App = () => (
   <section className="App">
     <h1 className="App__title">Static list of posts</h1>
-    {/* eslint-disable-next-line no-undef */}
     <PostList posts={posts} />
   </section>
 );
