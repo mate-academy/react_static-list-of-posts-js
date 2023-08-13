@@ -1,23 +1,23 @@
 export const CommentInfo = ({ comment }) => {
-  const { name: commentName, email: commentEmail, body: commentBody } = comment;
+  const { name, email, body } = comment;
 
   return (
     <div className="CommentInfo">
       <div className="CommentInfo__title">
-        <strong className="CommentInfo__name">{commentName}</strong>
+        <strong className="CommentInfo__name">{name}</strong>
 
         {' by '}
 
         <a
           className="CommentInfo__email"
-          href={`mailto:${commentEmail}`}
+          href={`mailto:${email}`}
         >
-          {commentEmail}
+          {email}
         </a>
       </div>
 
       <div className="CommentInfo__body">
-        {commentBody}
+        {body}
       </div>
     </div>
   );
