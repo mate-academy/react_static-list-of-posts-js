@@ -1,4 +1,3 @@
-
 export const CommentInfo = ({ comment: { name, email, body } }) => (
   <div className="CommentInfo">
     <div className="CommentInfo__title">

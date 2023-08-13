@@ -16,7 +16,7 @@ function getCommentsById(post) {
 }
 
 // eslint-disable-next-line no-shadow
-export const post = postsFromServer.map(post => ({
+export const posts = postsFromServer.map(post => ({
   ...post,
   user: getUserById(post.userId),
   comments: getCommentsById(post),
