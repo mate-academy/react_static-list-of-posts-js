@@ -7,7 +7,7 @@ export const UserInfo = ({ user }) => {
     <div>
       <p className="UserTitle">Posted by</p>
 
-      <a className="UserInfo" href={`mailto: ${email}`}>
+      <a className="UserInfo" href={`mailto:${email}`}>
         {name}
       </a>
     </div>
