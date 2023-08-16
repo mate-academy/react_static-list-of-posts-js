@@ -1,5 +1,3 @@
-import './CommentInfo.scss';
-
 export const CommentInfo = ({ comment }) => {
   const { name, email, body } = comment;
 
