@@ -2,13 +2,12 @@ export const CommentInfo = ({ comment }) => {
   const { name, email, body } = comment;
 
   return (
-    <div className="CommentInfo">
+    <li className="CommentInfo">
       <div className="CommentInfo__title">
         <strong className="CommentInfo__name">
           {name}
         </strong>
-
-        {' by '}
+        <span>by </span>
 
         <a
           className="CommentInfo__email"
@@ -21,6 +20,6 @@ export const CommentInfo = ({ comment }) => {
       <div className="CommentInfo__body">
         {body}
       </div>
-    </div>
+    </li>
   );
 };

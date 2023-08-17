@@ -6,7 +6,7 @@ export const PostInfo = ({ post }) => {
   const { title, body, user, comments } = post;
 
   return (
-    <div className="PostInfo">
+    <li className="PostInfo">
       <div className="PostInfo__header">
         <h3 className="PostInfo__title">
           {title}
@@ -28,6 +28,6 @@ export const PostInfo = ({ post }) => {
       {comments && comments.length
         ? <CommentList comments={comments} />
         : <b data-cy="NoCommentsMessage">No comments yet</b>}
-    </div>
+    </li>
   );
 };
