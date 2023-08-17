@@ -11,9 +11,9 @@ export const PostInfo = ({ post }) => {
         <h3 className="PostInfo__title">{title}</h3>
 
         <p>
-          {' Posted by  '}
-
-          <UserInfo user={user} />
+          {' Posted by '}
+          
+          {user ? <UserInfo user={user} /> : 'Unknown User'}
         </p>
       </div>
 
