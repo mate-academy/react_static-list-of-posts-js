@@ -3,26 +3,33 @@ import { UserInfo } from '../UserInfo';
 import './PostInfo.scss';
 
 export function PostInfo({ post }) {
+  const {
+    title,
+    user,
+    body,
+    comments,
+  } = post;
+
   return (
     <div className="PostInfo">
       <div className="PostInfo__header">
         <h3 className="PostInfo__title">
-          {post.title}
+          {title}
         </h3>
 
         <p>
           {' Posted by  '}
 
-          <UserInfo user={post.user} />
+          <UserInfo user={user} />
 
         </p>
       </div>
 
       <p className="PostInfo__body">
-        {post.body}
+        {body}
       </p>
 
-      <CommentList comments={post.comments} />
+      <CommentList comments={comments} />
     </div>
   );
 }
