@@ -1,4 +1,5 @@
 import { CommentInfo } from '../CommentInfo';
+import './CommentList.scss';
 
 export function CommentList({ comments }) {
   const hasComments = comments.length;
