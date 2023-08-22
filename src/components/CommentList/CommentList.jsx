@@ -1,3 +1,21 @@
-export const CommentList = () => (
-  <>Put the list here</>
-);
+import { CommentInfo } from '../CommentInfo';
+
+export function CommentList({ comments }) {
+  const hasComments = comments.length;
+
+  return (
+    <div className="CommentList">
+      {hasComments ? (
+        comments.map(comment => (
+          <CommentInfo
+            comment={comment}
+            key={comment.id}
+          />
+        ))
+      ) : (
+        <p data-cy="NoCommentsMessage">No comment yet</p>
+      )
+      }
+    </div>
+  );
+}
