@@ -6,7 +6,7 @@ import usersFromServer from './api/users.json';
 
 import { PostList } from './components/PostList';
 
-const getUserOfPost = userId => (
+const findUserOfPost = userId => (
   usersFromServer.find(({ id }) => id === userId)
     || null
 );
@@ -18,7 +18,7 @@ const getCommentsOfpost = idOfPost => (
 const getListOfPosts = () => (
   postsFromServer.map(post => ({
     ...post,
-    user: getUserOfPost(post.userId),
+    user: findUserOfPost(post.userId),
     comments: getCommentsOfpost(post.id),
   }))
 );
