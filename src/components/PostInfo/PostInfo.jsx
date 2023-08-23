@@ -3,7 +3,12 @@ import { UserInfo } from '../UserInfo';
 import './PostInfo.scss';
 
 export const PostInfo = ({ post }) => {
-  const { title, body, user, comments } = post;
+  const {
+    title,
+    body,
+    user,
+    comments,
+  } = post;
 
   return (
     <div className="PostInfo">
