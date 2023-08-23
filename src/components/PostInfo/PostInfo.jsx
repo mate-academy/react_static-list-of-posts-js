@@ -9,7 +9,7 @@ const PostInfo = ({ post, user, comments }) => (
       <h3 className="PostInfo__title">{post.title}</h3>
       <p>
         {' Posted by '}
-        <UserInfo user={user} />
+        {user ? <UserInfo user={user} /> : 'Unknown User'}
       </p>
     </div>
     <p className="PostInfo__body">{post.body}</p>
