@@ -6,7 +6,7 @@ import usersFromServer from './api/users.json';
 import { PostList } from './components/PostList';
 
 const getUser = userID => (
-  usersFromServer.filter(user => user.id === userID)[0]);
+  usersFromServer.find(user => user.id === userID));
 
 const getComment = postId => (
   commentsFromServer.filter(comment => comment.postId === postId));

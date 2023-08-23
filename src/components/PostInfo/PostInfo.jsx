@@ -17,7 +17,7 @@ export const PostInfo = ({ post }) => {
 
         {user && (
           <p>
-            {' Posted by  '}
+            {' Posted by '}
             <UserInfo user={user} />
           </p>
         )}
@@ -28,7 +28,7 @@ export const PostInfo = ({ post }) => {
         {body}
       </p>
 
-      {comments && comments.length
+      {comments.length
         ? <CommentList comments={comments} />
         : (
           <>
