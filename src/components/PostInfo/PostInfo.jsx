@@ -19,9 +19,7 @@ export function PostInfo({ post }) {
 
         <p>
           Posted by
-
           <UserInfo user={user} />
-
         </p>
       </div>
 

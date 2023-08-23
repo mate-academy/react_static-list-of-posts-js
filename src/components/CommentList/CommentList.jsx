@@ -2,7 +2,7 @@ import { CommentInfo } from '../CommentInfo';
 import './CommentList.scss';
 
 export function CommentList({ comments }) {
-  const hasComments = comments.length;
+  const hasComments = !!comments.length;
 
   return (
     <div className="CommentList">
@@ -12,10 +12,10 @@ export function CommentList({ comments }) {
             comment={comment}
             key={comment.id}
           />
-        ))
-      ) : (
-        <b data-cy="NoCommentsMessage">No comments yet</b>
-      )
+        )))
+        : (
+          <b data-cy="NoCommentsMessage">No comments yet</b>
+        )
       }
     </div>
   );
