@@ -18,7 +18,7 @@ export function PostInfo({ post }) {
         </h3>
 
         <p>
-          {' Posted by  '}
+          Posted by
 
           <UserInfo user={user} />
 

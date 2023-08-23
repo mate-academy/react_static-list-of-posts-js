@@ -5,8 +5,7 @@ export function CommentInfo({ comment }) {
     <div className="CommentInfo">
       <div className="CommentInfo__title">
         <strong className="CommentInfo__name">{name}</strong>
-
-        {' by '}
+         by
 
         <a
           className="CommentInfo__email"
