@@ -5,7 +5,6 @@ export const PostList = ({ posts }) => (
     {posts.map(post => (
       <PostInfo
         post={post}
-        comments={post.comments}
         key={post.id}
       />
     ))}
