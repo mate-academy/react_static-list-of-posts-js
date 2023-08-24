@@ -1,9 +1,7 @@
 import './UserInfo.scss';
 
 export const UserInfo = ({ user }) => (
-  user.name ? (
-    <a className="UserInfo" href={`mailto:${user.email}`}>
-      {user.name}
-    </a>
-  ) : ('Anonym')
+  <a className="UserInfo" href={`mailto:${user.email}`}>
+    {user.name}
+  </a>
 );
