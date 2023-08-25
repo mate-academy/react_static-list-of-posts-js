@@ -26,7 +26,7 @@ export const PostInfo = ({ post }) => {
         {body}
       </p>
 
-      {comments.length
+      {Boolean(comments.length)
         ? (<CommentList comments={comments} />)
         : (
           <>
