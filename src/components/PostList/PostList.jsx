@@ -8,7 +8,7 @@ const posts = postsFromServer.map(post => (
   {
     ...post,
     user: findUserById(post.userId),
-    comments: filterCommentsById(post.id),
+    comments: filterCommentsByPostId(post.id),
   }
 ));
 
@@ -16,7 +16,7 @@ function findUserById(userId) {
   return usersFromServer.find(user => user.id === userId);
 }
 
-function filterCommentsById(postId) {
+function filterCommentsByPostId(postId) {
   return commentsFromServer.filter(comment => comment.postId === postId);
 }
 
