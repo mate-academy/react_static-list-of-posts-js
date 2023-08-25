@@ -6,9 +6,17 @@ import usersFromServer from './api/users.json';
 
 import { PostList } from './components/PostList';
 
-export const posts = postsFromServer.map(post => ({
-  user: usersFromServer.find(user => user.id === post.userId),
-  comments: commentsFromServer.filter(comment => comment.postId === post.id),
+function getUserById(userId) {
+  return usersFromServer.find(user => user.id === userId);
+}
+
+function getCommentsById(postId) {
+  return commentsFromServer.filter(comment => comment.postId === postId);
+}
+
+const posts = postsFromServer.map(post => ({
+  user: getUserById(post.userId),
+  comments: getCommentsById(post.id),
   ...post,
 }));
 
