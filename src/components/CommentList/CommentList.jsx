@@ -14,7 +14,10 @@ export function CommentList({ comments }) {
           />
         )))
         : (
-          <b data-cy="NoCommentsMessage">No comments yet</b>
+          <>
+            <hr />
+            <b data-cy="NoCommentsMessage">No comments yet</b>
+          </>
         )
       }
     </div>
