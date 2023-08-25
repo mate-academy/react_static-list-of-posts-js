@@ -28,7 +28,6 @@ export const PostInfo = ({ post }) => {
         {body}
       </p>
 
-      <hr />
       <CommentList comments={comments} />
     </div>
   );
