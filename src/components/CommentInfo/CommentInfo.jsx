@@ -9,7 +9,7 @@ export const CommentInfo = ({ comment: { name, email, body } }) => (
         className="CommentInfo__email"
         href={email}
       >
-        Telly_Lynch@karl.co.uk
+        {email}
       </a>
     </div>
 

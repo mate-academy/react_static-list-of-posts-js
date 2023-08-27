@@ -1,4 +1,4 @@
-import { UserInfo } from 'os';
+import { UserInfo } from '../UserInfo';
 import { CommentList } from '../CommentList';
 import './PostInfo.scss';
 
@@ -11,7 +11,7 @@ export const PostInfo = ({
 
       <p>
         { `Posted by ${user.username}` }
-
+        {' '}
         <UserInfo user={user} key={user.id} />
       </p>
     </div>
