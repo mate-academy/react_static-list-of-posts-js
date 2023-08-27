@@ -10,13 +10,12 @@ export const PostInfo = ({
       <h3 className="PostInfo__title">{title}</h3>
 
       <p>
-        { `Posted by ${user.username}` }
-        {' '}
+        {`Posted by `}
         <UserInfo user={user} key={user.id} />
       </p>
     </div>
 
     <p className="PostInfo__body">{body}</p>
-    { comment ? <CommentList comment={comment} /> : 'No comments' }
+    { comment.length > 0 ? <CommentList comment={comment} /> : 'No comments' }
   </div>
 );

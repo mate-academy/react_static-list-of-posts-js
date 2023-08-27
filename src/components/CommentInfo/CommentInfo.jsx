@@ -1,4 +1,4 @@
-export const CommentInfo = ({ comment: { name, email, body } }) => (
+export const CommentInfo = ({ com: { name, email, body } }) => (
   <div className="CommentInfo">
     <div className="CommentInfo__title">
       <strong className="CommentInfo__name">{name}</strong>
