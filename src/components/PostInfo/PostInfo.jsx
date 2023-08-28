@@ -11,7 +11,7 @@ export const PostInfo = ({
 
       <p>
         {`Posted by `}
-        <UserInfo user={user} key={user.id} />
+        {user ? <UserInfo user={user} key={user.id} /> : null}
       </p>
     </div>
 
