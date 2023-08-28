@@ -31,7 +31,6 @@ export const PostInfo = ({ post }) => {
 
       {comments.length === 0 ? (
         <>
-          <hr />
           <b data-cy="NoCommentsMessage">No comments yet</b>
         </>
       ) : (

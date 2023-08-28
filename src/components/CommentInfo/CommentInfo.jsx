@@ -24,6 +24,5 @@ export const CommentInfo = ({ comment }) => {
         {body}
       </div>
     </div>
-
   );
 };
