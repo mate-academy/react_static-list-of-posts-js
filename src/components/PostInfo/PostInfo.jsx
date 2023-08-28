@@ -2,7 +2,7 @@ import { UserInfo } from '../UserInfo';
 import { CommentList } from '../CommentList';
 import './PostInfo.scss';
 
-export const PostInfo = (post) => {
+export const PostInfo = ({ post }) => {
   const { user, title, body, comments } = post;
 
   return (
@@ -23,7 +23,7 @@ export const PostInfo = (post) => {
         {body}
       </p>
 
-      {CommentList.length
+      {comments.length
         ? (<CommentList comments={comments} />)
         : (
           <>
