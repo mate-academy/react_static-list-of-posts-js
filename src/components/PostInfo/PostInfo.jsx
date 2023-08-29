@@ -18,8 +18,6 @@ export const PostInfo = ({ post }) => {
         </h3>
 
         <p>
-          {' Posted by  '}
-
           <UserInfo user={user} />
         </p>
       </div>
