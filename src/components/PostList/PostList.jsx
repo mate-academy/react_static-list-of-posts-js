@@ -1,3 +1,5 @@
+import { PostInfo } from "../PostInfo";
 
-/* export const PostList = () => (
-); */
+export const PostList = ({ post }) => (
+  <PostInfo post={post} />
+);

@@ -3,7 +3,7 @@ import './App.scss';
 import postsFromServer from './api/posts.json';
 import commentsFromServer from './api/comments.json';
 import usersFromServer from './api/users.json';
-import { PostInfo } from './components/PostInfo';
+import { PostList } from './components/PostList';
 
 function getUserById(userId) {
   return usersFromServer.find(user => user.id === userId) || null;
@@ -26,9 +26,8 @@ export const App = () => (
     <h1 className="App__title">Static list of posts</h1>
 
     {posts.map(post => (
-      <div className="PostList">
-        <PostInfo post={post} />
-      </div>
+      <PostList post={post} />
     ))}
+
   </section>
 );

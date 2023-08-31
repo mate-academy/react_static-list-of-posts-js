@@ -1,6 +1,6 @@
-import './PostInfo.scss';
-import { CommentList } from '../CommentList';
-import { UserInfo } from '../UserInfo';
+import "./PostInfo.scss";
+import { CommentList } from "../CommentList";
+import { UserInfo } from "../UserInfo";
 
 export const PostInfo = ({ post }) => (
   <div className="PostInfo">
@@ -13,8 +13,6 @@ export const PostInfo = ({ post }) => (
     </div>
 
     <p className="PostInfo__body">{post.body}</p>
-    <div>
-      <CommentList comments={post.comments} />
-    </div>
+    <CommentList comments={post.comments} />
   </div>
 );
