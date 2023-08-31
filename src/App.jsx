@@ -27,7 +27,7 @@ export const App = () => (
 
     {posts.map(post => (
       <div className="PostList">
-        <PostInfo post={post} key={post.userId} />
+        <PostInfo post={post} />
       </div>
     ))}
   </section>
