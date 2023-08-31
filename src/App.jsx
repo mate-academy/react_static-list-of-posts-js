@@ -6,12 +6,12 @@ import usersFromServer from './api/users.json';
 import { PostList } from './components/PostList';
 
 function getUserById(userId) {
-  return usersFromServer.find(user => user.id === userId) || null;
+  return usersFromServer.find(user => user.id === userId);
 }
 
 function getCommentById(postId) {
   return (
-    commentsFromServer.filter(comment => comment.postId === postId) || null
+    commentsFromServer.filter(comment => comment.postId === postId)
   );
 }
 
@@ -26,7 +26,7 @@ export const App = () => (
     <h1 className="App__title">Static list of posts</h1>
 
     {posts.map(post => (
-      <PostList post={post} />
+      <PostList post={post} key={post.id} />
     ))}
 
   </section>
