@@ -16,19 +16,3 @@ export const CommentList = ({ comments }) => (
     </>
   )
 );
-
-// export const CommentList = ({ comments }) => (
-//   comments && comments.length > 0 ? (
-//     <div className="CommentList">
-//       {comments.map(comment => (
-//         <CommentInfo comment={comment} key={comment.id} />
-//       ))}
-
-//     </div>
-//   ) : (
-//     <>
-//       <hr />
-//       <b data-cy="NoCommentsMessage">No comments yet</b>
-//     </>
-//   )
-// );
