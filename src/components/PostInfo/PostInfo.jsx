@@ -3,7 +3,7 @@ import { UserInfo } from '../UserInfo';
 import './PostInfo.scss';
 
 export const PostInfo = ({ post }) => (
-  <div className="PostInfo">
+  <li className="PostInfo">
     <div className="PostInfo__header">
       <h3 className="PostInfo__title">
         {post.title}
@@ -24,5 +24,5 @@ export const PostInfo = ({ post }) => (
     {post.comments.length === 0 ? (
       <b data-cy="NoCommentsMessage">No comments yet</b>
     ) : (<CommentList comments={post.comments} />)}
-  </div>
+  </li>
 );
