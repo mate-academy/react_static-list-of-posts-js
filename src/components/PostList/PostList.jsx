@@ -3,18 +3,8 @@ import postsFromServer from '../../api/posts.json';
 import commentsFromServer from '../../api/comments.json';
 import usersFromServer from '../../api/users.json';
 
-function getUserByPostId(id) {
-  const arr = [];
-
-  commentsFromServer.filter((elem) => {
-    if (elem.postId === id) {
-      arr.push(elem);
-    }
-
-    return elem;
-  });
-
-  return arr;
+function filteredCommentsById(postId) {
+  return commentsFromServer.filter(comment => comment.postId === postId);
 }
 
 function getUserByUserId(userId) {
@@ -24,19 +14,12 @@ function getUserByUserId(userId) {
 const posts = postsFromServer.map(post => ({
   ...post,
   user: getUserByUserId(post.userId),
+  comments: filteredCommentsById(post.id),
 }));
-
-const postsUpdate = posts.map((elem) => {
-  const valueElem = elem;
-
-  valueElem.comments = getUserByPostId(elem.id);
-
-  return elem;
-});
 
 export const PostList = () => (
   <ul className="PostList">
-    {postsUpdate.map(post => (
+    {posts.map(post => (
       <PostInfo post={post} key={post.id} />
     ))}
   </ul>
