@@ -15,21 +15,15 @@ const getPostComments = idOfPost => (
   commentsFromServer.filter(({ postId }) => postId === idOfPost)
 );
 
-const getListOfPosts = () => (
-  postsFromServer.map(post => ({
-    ...post,
-    user: findUserByUserId(post.userId),
-    comments: getPostComments(post.id),
-  }))
+const posts = postsFromServer.map(post => ({
+  ...post,
+  user: findUserByUserId(post.userId),
+  comments: getPostComments(post.id),
+}));
+
+export const App = () => (
+  <section className="App">
+    <h1 className="App__title">Static list of posts</h1>
+    <PostList posts={posts} />
+  </section>
 );
-
-export const App = () => {
-  const listOfPost = getListOfPosts();
-
-  return (
-    <section className="App">
-      <h1 className="App__title">Static list of posts</h1>
-      <PostList posts={listOfPost} />
-    </section>
-  );
-};
