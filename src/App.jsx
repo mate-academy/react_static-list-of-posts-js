@@ -15,7 +15,7 @@ function getUserById(userId) {
     || null;
 }
 
-export const posts = postsFromServer.map(post => ({
+const posts = postsFromServer.map(post => ({
   ...post,
   comments: getCommentsByPostId(post.id),
   user: getUserById(post.userId),
