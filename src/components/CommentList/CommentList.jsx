@@ -3,6 +3,8 @@ import { CommentInfo } from '../CommentInfo';
 
 export const CommentList = ({ comments }) => (
   <div className="CommentList">
-    <CommentInfo comment={comments} />
+    {comments.map(comment => (
+      <CommentInfo comment={comment} />
+    ))}
   </div>
 );
