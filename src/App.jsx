@@ -18,15 +18,9 @@ function getUserbyId(userId) {
 }
 
 function getCommentsbyId(postId) {
-  const comments = commentsFromServer.filter(
+  return commentsFromServer.filter(
     comment => comment.postId === postId,
   );
-
-  if (comments.length > 0) {
-    return comments;
-  }
-
-  return null;
 }
 
 export const App = () => (
