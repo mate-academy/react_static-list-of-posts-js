@@ -4,7 +4,7 @@ export const CommentInfo = ({ comment }) => {
   return (
     <div className="CommentInfo">
       <div className="CommentInfo__title">
-        <strong className="CommentInfo__name">{name}</strong>
+        <span className="CommentInfo__name">{name}</span>
 
         {' by '}
 
