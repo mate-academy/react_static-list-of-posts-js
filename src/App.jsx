@@ -8,16 +8,16 @@ import { PostList } from './components/PostList';
 const posts = postsFromServer.map(post => ({
   ...post,
   user: getUserbyId(post.userId),
-  comments: getCommentsbyId(post.id),
+  comments: getCommentsbyPostId(post.id),
 }));
 
 function getUserbyId(userId) {
   return usersFromServer.find(
     user => user.id === userId,
-  );
+  ) || null;
 }
 
-function getCommentsbyId(postId) {
+function getCommentsbyPostId(postId) {
   return commentsFromServer.filter(
     comment => comment.postId === postId,
   );
