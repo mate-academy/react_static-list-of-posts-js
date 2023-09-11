@@ -1,16 +1,11 @@
 import './CommentList.scss';
+import { CommentInfo } from '../CommentInfo/CommentInfo';
 
-export const CommentList = ({ com }) => (
+export const CommentList = ({ comments }) => (
   <>
-    <p>
-      {com.name}
-      <>  </>
-      by
-      <>  </>
-      <a href={`mailto:${com.email}`}>{com.email}</a>
-    </p>
-    <br />
-    <p>{com.body}</p>
+    {comments.map(comment => (
+      <CommentInfo key={comment.id} comment={comment} />
+    ))}
   </>
 
 );

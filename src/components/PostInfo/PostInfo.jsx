@@ -22,13 +22,12 @@ export const PostInfo = ({ todo }) => (
       <hr />
 
       <b data-cy="NoCommentsMessage">
-        {todo.comment.map(com => (
-          com.length === 0 ? (
-            <p>Not comments yet</p>
-          ) : (
-            <CommentList com={com} />
-          )
-        ))}
+
+        {todo.comments.length > 0 ? (
+          <CommentList comments={todo.comments} />
+        ) : (
+          <p>No commnets yet</p>
+        )}
       </b>
     </div>
   </>
