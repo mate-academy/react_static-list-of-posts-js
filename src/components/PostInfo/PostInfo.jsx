@@ -24,8 +24,6 @@ function checkComments(comment) {
 export const PostInfo = ({ post }) => {
   const { body, comments, title, user } = post;
 
-  // console.log(title, body, comment, user);
-
   return (
     <>
       <div className="PostInfo">
@@ -33,8 +31,8 @@ export const PostInfo = ({ post }) => {
           <h3 className="PostInfo__title">{title}</h3>
 
           <p>
-            {' Posted by  '}
-            <UserInfo user={user} />
+            {' Posted by '}
+            {user && <UserInfo user={user} />}
           </p>
         </div>
 
