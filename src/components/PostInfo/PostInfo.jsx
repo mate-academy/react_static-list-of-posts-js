@@ -10,10 +10,7 @@ export const PostInfo = ({ post }) => (
       <p>
         {' Posted by  '}
 
-        {post.user === undefined
-          ? null
-          : <UserInfo user={post.user} />
-        }
+        {post.user !== null &&  <UserInfo user={post.user} />}
       </p>
     </div>
 
