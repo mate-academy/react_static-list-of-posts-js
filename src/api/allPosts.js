@@ -3,15 +3,11 @@ import commentsFromServer from './comments.json';
 import usersFromServer from './users.json';
 
 function GetAllComments(postId) {
-  const comments = commentsFromServer.filter(item => item.postId === postId);
-
-  return comments;
+  return commentsFromServer.filter(item => item.postId === postId);
 }
 
 function GetPostUser(userId) {
-  const user = usersFromServer.find(item => item.id === userId);
-
-  return user;
+  return usersFromServer.find(item => item.id === userId);
 }
 
 export const allPosts = postsFromServer.map(item => (

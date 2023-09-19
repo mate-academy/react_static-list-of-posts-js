@@ -2,7 +2,7 @@ export const CommentInfo = ({ comment }) => {
   const { name, email, body } = comment;
 
   return (
-    <div className="CommentInfo">
+    <article className="CommentInfo">
       <div className="CommentInfo__title">
         <strong className="CommentInfo__name">{name}</strong>
 
@@ -19,6 +19,6 @@ export const CommentInfo = ({ comment }) => {
       <div className="CommentInfo__body">
         {body}
       </div>
-    </div>
+    </article>
   );
 };
