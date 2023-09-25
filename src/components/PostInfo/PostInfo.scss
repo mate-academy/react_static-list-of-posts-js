@@ -1,9 +1,12 @@
+$black: #000;
+$lightGray: #d3d3d3;
+
 .PostInfo {
   margin: 10px auto;
   width: 90%;
-  border: 1px solid #000;
+  border: 1px solid $black;
   border-radius: 8px;
-  background-color: lightgray;
+  background-color: $lightGray;
   padding: 1em;
 
   &__title {
