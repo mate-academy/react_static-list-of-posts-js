@@ -8,12 +8,14 @@ export const CommentInfo = ({ comment }) => {
 
         {' by '}
 
-        <a
-          className="CommentInfo__email"
-          href={`mailto:${email}`}
-        >
-          {email}
-        </a>
+        {email && (
+          <a
+            className="CommentInfo__email"
+            href={`mailto:${email}`}
+          >
+            {email}
+          </a>
+        )}
       </div>
 
       <div className="CommentInfo__body">

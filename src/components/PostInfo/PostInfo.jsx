@@ -10,14 +10,14 @@ export const PostInfo = ({ post }) => {
       <div className="PostInfo__header">
         <h3 className="PostInfo__title">{title}</h3>
 
-        {user !== null && <UserInfo user={user} />}
+        {user && <UserInfo user={user} />}
       </div>
 
       <p className="PostInfo__body">
         {body}
       </p>
 
-      {comments.length > 0
+      {comments.length
         ? <CommentList comments={comments} />
         : (
           <>
