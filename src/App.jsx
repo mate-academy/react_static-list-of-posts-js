@@ -12,8 +12,7 @@ const posts = postsFromServer.map(post => ({
 }));
 
 function getUserById(userId) {
-  return usersFromServer.find(user => user.id === userId)
-    || null;
+  return usersFromServer.find(user => user.id === userId);
 }
 
 function getCommentsById(postId) {
