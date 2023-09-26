@@ -1,12 +1,13 @@
 import React from 'react';
-import './CommentList.scss'; // Import the corresponding SCSS file
+import './CommentList.scss';
 import { CommentInfo } from '../CommentInfo';
 
 export const CommentList = ({ comments }) => (
-  <div className="CommentList">
-    {/* Map over comments and render CommentInfo components */}
+  <ul className="CommentList">
     {comments.map(comment => (
-      <CommentInfo key={comment.id} comment={comment} />
+      <li key={comment.id} className="CommentList__item">
+        <CommentInfo comment={comment} />
+      </li>
     ))}
-  </div>
+  </ul>
 );

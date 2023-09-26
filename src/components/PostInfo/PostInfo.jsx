@@ -1,5 +1,5 @@
 import React from 'react';
-import './PostInfo.scss'; // Import the corresponding SCSS file
+import './PostInfo.scss';
 import { UserInfo } from '../UserInfo';
 import { CommentList } from '../CommentList';
 
@@ -14,7 +14,6 @@ export const PostInfo = ({ post }) => (
     </div>
     <p className="PostInfo__body">{post.body}</p>
 
-    {/* Render comments if available */}
     {post.comments.length > 0 ? (
       <CommentList comments={post.comments} />
     ) : (
