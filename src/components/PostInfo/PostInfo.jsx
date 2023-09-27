@@ -9,8 +9,11 @@ export const PostInfo = ({ post: { title, user, body, comments } }) => (
 
       <p>
         {' Posted by  '}
-
-        <UserInfo user={user} />
+        {user ? (
+          <UserInfo user={user} key={user.id} />
+        ) : (
+          <b>Unknown</b>
+        )}
       </p>
     </div>
 
