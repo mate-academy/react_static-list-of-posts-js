@@ -6,7 +6,7 @@ export const PostInfo = ({ todo }) => {
   const { title, user, body, comments } = todo;
 
   return (
-    <div className="PostInfo">
+    <li className="PostInfo">
       <div className="PostInfo__header">
         <h3 className="PostInfo__title">{title}</h3>
 
@@ -31,6 +31,6 @@ export const PostInfo = ({ todo }) => {
           <p>No commnets yet</p>
         )}
       </b>
-    </div>
+    </li>
   );
 };

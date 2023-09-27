@@ -1,5 +1,9 @@
 $lighted: lightgray;
 
+* {
+  list-style: none;
+}
+
 .PostInfo {
   margin: 10px auto;
   width: 90%;
@@ -7,6 +11,7 @@ $lighted: lightgray;
   border-radius: 8px;
   background-color: $lighted;
   padding: 1em;
+
 
   &__title {
     margin: 0;
