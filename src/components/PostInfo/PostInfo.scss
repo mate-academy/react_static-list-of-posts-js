@@ -1,4 +1,4 @@
-$lighted: lightgray;
+@import '../../App.scss';
 
 * {
   list-style: none;
@@ -11,7 +11,6 @@ $lighted: lightgray;
   border-radius: 8px;
   background-color: $lighted;
   padding: 1em;
-
 
   &__title {
     margin: 0;
