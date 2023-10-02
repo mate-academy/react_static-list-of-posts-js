@@ -3,8 +3,6 @@ import './App.scss';
 import postsFromServer from './api/posts.json';
 import commentsFromServer from './api/comments.json';
 import usersFromServer from './api/users.json';
-// import { title } from 'process';
-// import { post } from 'cypress/types/jquery';
 import { PostList } from './components/PostList';
 
 function getUserById(userId) {
