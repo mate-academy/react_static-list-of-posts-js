@@ -10,7 +10,7 @@ function getUserById(userId) {
 }
 
 function getCommentById(id) {
-  return commentsFromServer.filter(comment => comment.postId === id) || null;
+  return commentsFromServer.filter(comment => comment.postId === id);
 }
 
 const posts = postsFromServer.map(post => ({
