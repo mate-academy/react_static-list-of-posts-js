@@ -16,7 +16,6 @@ export const CommentInfo = ({ comment }) => (
           {comment.email}
         </a>
       )}
-
     </div>
 
     {comment.body && (
