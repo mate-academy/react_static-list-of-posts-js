@@ -1,7 +1,9 @@
-export const UserInfo = ({ user }) => (
-  user.name && user.email ? (
-    <a className="UserInfo" href={`mailto:${user.email}`}>
-      {user.name}
+export const UserInfo = ({ user }) => {
+  const { name, email } = user;
+
+  return name && email ? (
+    <a className="UserInfo" href={`mailto:${email}`}>
+      {name}
     </a>
-  ) : 'unknown user'
-);
+  ) : 'unknown user';
+};

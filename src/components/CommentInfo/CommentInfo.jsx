@@ -1,26 +1,26 @@
-export const CommentInfo = ({ comment }) => (
+export const CommentInfo = ({ comment: { name, email, body } }) => (
   <div className="CommentInfo">
     <div className="CommentInfo_title">
-      {comment.name && (
+      {name && (
         <strong className="CommentInfo__name">
-          {comment.name}
+          {name}
         </strong>
       )}
 
       {' by '}
-      {comment.email && (
+      {email && (
         <a
           className="CommentInfo__email"
-          href={`mailto:${comment.email}`}
+          href={`mailto:${email}`}
         >
-          {comment.email}
+          {email}
         </a>
       )}
     </div>
 
-    {comment.body && (
+    {body && (
       <div className="CommentInfo__body">
-        {comment.body}
+        {body}
       </div>
     )}
   </div>
