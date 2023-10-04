@@ -1,14 +1,31 @@
 import './App.scss';
 
-// import postsFromServer from './api/posts.json';
-// import commentsFromServer from './api/comments.json';
-// import usersFromServer from './api/users.json';
+import postsFromServer from './api/posts.json';
+import commentsFromServer from './api/comments.json';
+import usersFromServer from './api/users.json';
+import { PostList } from './components/PostList';
+
+function getCommentById(id) {
+  return commentsFromServer.filter(comment => comment.postId === id) || null;
+}
+
+function getUserById(userId) {
+  return usersFromServer.find(user => user.id === userId) || null;
+}
+
+const posts = postsFromServer.map(post => ({
+  ...post,
+  comments: getCommentById(post.id),
+  user: getUserById(post.userId),
+}));
 
 export const App = () => (
   <section className="App">
     <h1 className="App__title">Static list of posts</h1>
 
-    <div className="PostList">
+    <PostList posts={posts} />
+
+    {/* <div className="PostList">
       <div className="PostInfo">
         <div className="PostInfo__header">
           <h3 className="PostInfo__title">qui est esse</h3>
@@ -55,7 +72,8 @@ export const App = () => (
           voluptates et aut adipisci ea maiores voluptas maxime
         </p>
 
-        <div className="CommentList">
+        <CommentList comments={commentsFromServer} />
+        {/* <div className="CommentList">
           <div className="CommentInfo">
             <div className="CommentInfo__title">
               <strong className="CommentInfo__name">pariatur omnis in</strong>
@@ -100,8 +118,8 @@ export const App = () => (
               voluptates excepturi deleniti ratione
             </div>
           </div>
-        </div>
-      </div>
-    </div>
+        </div> */}
+    {/* </div> */}
+    {/* </div>} */}
   </section>
 );
