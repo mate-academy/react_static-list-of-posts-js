@@ -11,12 +11,10 @@ export const PostInfo = ({ post }) => {
   } = post;
 
   const NoCommentsMessage = () => (
-    <div
-      className="NoCommentsMessage"
-      style={{ fontWeight: 'bold', borderTop: '2px solid #ccc' }}
-      data-cy="NoCommentsMessage"
-    >
-      <p>No comments yet</p>
+    <div className="NoCommentsMessage" data-cy="NoCommentsMessage">
+      <hr />
+
+      <p style={{ fontWeight: 'bold' }}>No comments yet</p>
     </div>
   );
 
