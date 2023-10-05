@@ -3,7 +3,7 @@ import { UserInfo } from '../UserInfo';
 import './PostInfo.scss';
 
 export const PostInfo = ({ post: { title, body, user, comments } }) => (
-  <div className="PostInfo">
+  <li className="PostInfo">
     <div className="PostInfo__header">
       <h3 className="PostInfo__title">
         {title}
@@ -17,5 +17,5 @@ export const PostInfo = ({ post: { title, body, user, comments } }) => (
     </p>
 
     <CommentList comments={comments} />
-  </div>
+  </li>
 );
