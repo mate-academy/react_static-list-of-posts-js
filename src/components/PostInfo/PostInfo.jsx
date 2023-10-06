@@ -3,27 +3,33 @@ import { CommentList } from '../CommentList';
 import { UserInfo } from '../UserInfo';
 
 export const PostInfo = ({ post }) => {
-  const areThereAnyComments = post.comments.length;
+  const {
+    title,
+    user,
+    body,
+    comments,
+  } = post;
+  const areThereAnyComments = comments.length;
 
   return (
     <div className="PostInfo">
       <div className="PostInfo__header">
-        <h3 className="PostInfo__title">{post.title}</h3>
+        <h3 className="PostInfo__title">{title}</h3>
 
         <p>
           {' Posted by  '}
 
-          <UserInfo user={post.user} />
+          <UserInfo user={user} />
         </p>
       </div>
 
       <p className="PostInfo__body">
-        {post.body}
+        {body}
       </p>
 
       {areThereAnyComments
         ? (
-          <CommentList comments={post.comments} />
+          <CommentList comments={comments} />
         )
         : (
           <>
