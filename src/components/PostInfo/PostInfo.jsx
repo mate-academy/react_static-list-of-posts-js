@@ -2,21 +2,26 @@ import { CommentList } from '../CommentList';
 import { UserInfo } from '../UserInfo';
 import './PostInfo.scss';
 
-export const PostInfo = ({ post }) => (
+export const PostInfo = ({ post: {
+  title,
+  user,
+  body,
+  comments,
+} }) => (
   <div className="PostInfo">
     <div className="PostInfo__header">
-      <h3 className="PostInfo__title">{post.title}</h3>
+      <h3 className="PostInfo__title">{title}</h3>
     </div>
 
-    <UserInfo user={post.user} key={post.user.id} />
+    <UserInfo user={user} key={user.id} />
 
     <p className="PostInfo__body">
-      {post.body}
+      {body}
     </p>
 
     <hr />
 
-    <CommentList comments={post.comments} />
+    <CommentList comments={comments} />
 
   </div>
 );
