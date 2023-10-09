@@ -1,5 +1,9 @@
 export const CommentInfo = ({ comment }) => {
-  const { name, email, body } = comment;
+  const {
+    name,
+    email,
+    body,
+  } = comment;
   const mailto = `mailto:${email}`;
 
   return (
