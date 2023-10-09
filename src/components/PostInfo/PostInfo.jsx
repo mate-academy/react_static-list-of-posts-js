@@ -1,6 +1,7 @@
 import './PostInfo.scss';
 import { CommentList } from '../CommentList';
 import { UserInfo } from '../UserInfo';
+import { NoCommentsMessage } from '../NoCommentsMessage';
 
 export const PostInfo = ({ post }) => {
   const {
@@ -9,14 +10,6 @@ export const PostInfo = ({ post }) => {
     user,
     comments,
   } = post;
-
-  const NoCommentsMessage = () => (
-    <div className="NoCommentsMessage" data-cy="NoCommentsMessage">
-      <hr />
-
-      <p style={{ fontWeight: 'bold' }}>No comments yet</p>
-    </div>
-  );
 
   return (
     <div className="PostInfo">
