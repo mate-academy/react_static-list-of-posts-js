@@ -3,11 +3,11 @@ import './App.scss';
 import postsFromServer from './api/posts.json';
 import commentsFromServer from './api/comments.json';
 import usersFromServer from './api/users.json';
+
 import { PostList } from './components/PostList';
 
 function getCommentsById(postId) {
-  return commentsFromServer.filter(post => post.postId === postId)
-      || null;
+  return commentsFromServer.filter(post => post.postId === postId);
 }
 
 function getUserById(userId) {
