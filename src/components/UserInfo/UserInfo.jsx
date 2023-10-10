@@ -1,3 +1,5 @@
+import './UserInfo.scss';
+
 export const UserInfo = ({ user }) => {
   const mailTo = `mailto:${user.email}`;
 
