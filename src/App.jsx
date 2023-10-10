@@ -22,6 +22,7 @@ export const posts = postsFromServer.map(post => ({
 export const App = () => (
   <section className="App">
     <h1 className="App__title">Static list of posts</h1>
+
     {posts.map(post => (
       <PostList post={post} key={post.id} />
     ))}
