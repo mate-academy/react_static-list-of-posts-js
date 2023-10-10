@@ -19,7 +19,10 @@ export const PostInfo = ({ post: {
       {body}
     </p>
 
-    <hr />
+    {comments.length === 0 && (
+      <hr />
+    )
+    }
 
     <CommentList comments={comments} />
 
