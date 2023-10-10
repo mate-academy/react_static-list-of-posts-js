@@ -11,8 +11,7 @@ function getAuthor(authorId) {
 }
 
 function getAllPostComments(postId) {
-  return commentsFromServer.filter(comment => comment.postId === postId)
-  || null;
+  return commentsFromServer.filter(comment => comment.postId === postId);
 }
 
 export const postsData = postsFromServer.map((post) => {
