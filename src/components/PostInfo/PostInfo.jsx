@@ -20,7 +20,11 @@ export const PostInfo = ({ post }) => {
 
         <p>
           {' Posted by  '}
-          <UserInfo user={user} />
+          {
+            user
+              ? <UserInfo user={user} />
+              : <b className="PostInfo__userAnonymous">The user is anonymous</b>
+          }
         </p>
       </div>
 
@@ -28,14 +32,16 @@ export const PostInfo = ({ post }) => {
         {body}
       </p>
 
-      {comments.length > 0
-        ? <CommentList comments={comments} />
-        : (
-          <>
-            <hr />
-            <b data-cy="NoCommentsMessage">No comments yet</b>
-          </>
-        )}
+      {
+        comments.length > 0
+          ? <CommentList comments={comments} />
+          : (
+            <>
+              <hr />
+              <b data-cy="NoCommentsMessage">No comments yet</b>
+            </>
+          )
+      }
     </div>
   );
 };
