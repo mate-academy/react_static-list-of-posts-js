@@ -9,12 +9,13 @@ export const PostInfo = ({ post }) => (
 
       <p>{' Posted by  '}</p>
       <UserInfo user={post.user} />
-
     </div>
 
-    <p className="PostInfo__body">
-      {post.body}
-    </p>
-    <CommentList comments={post.comments} />
+    <p className="PostInfo__body">{post.body}</p>
+    {post?.comments.length > 0 ? (
+      <CommentList comments={post.comments} />
+    ) : (
+      <b data-cy="NoCommentsMessage">No comments yet</b>
+    )}
   </div>
 );
