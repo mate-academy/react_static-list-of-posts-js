@@ -4,7 +4,7 @@ import './PostInfo.scss';
 
 export const PostInfo = ({ post }) => {
   const { body, comments, title, user } = post;
-  const isComents = comments.length > 0;
+  const isComments = comments.length > 0;
 
   return (
     <div className="PostInfo">
@@ -14,7 +14,8 @@ export const PostInfo = ({ post }) => {
       </div>
 
       <p className="PostInfo__body">{body}</p>
-      {isComents ? (
+
+      {isComments ? (
         <CommentList comments={comments} />
       ) : (
         <>
