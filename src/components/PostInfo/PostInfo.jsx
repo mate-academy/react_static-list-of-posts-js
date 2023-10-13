@@ -16,14 +16,14 @@ export const PostInfo = ({
         {title}
       </h3>
 
-      <UserInfo user={user} key={user.id} />
+      <UserInfo user={user} />
     </div>
 
     <p className="PostInfo__body">
       {body}
     </p>
     {comments.length !== 0
-      ? <CommentList comments={comments} key={comments.id} />
+      ? <CommentList comments={comments} />
       : (
         <>
           <hr />
