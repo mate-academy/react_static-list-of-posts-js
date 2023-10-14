@@ -11,7 +11,7 @@ export const App = () => (
 
     <PostList
       posts={postsFromServer}
-      comments={commentsFromServer}
+      commentsList={commentsFromServer}
       users={usersFromServer}
     />
   </section>
