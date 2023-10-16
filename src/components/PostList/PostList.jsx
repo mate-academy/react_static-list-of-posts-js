@@ -1,23 +1,13 @@
 import './PostList.scss';
 import { PostInfo } from '../PostInfo';
 
-export const PostList = ({ posts, commentsList, users }) => (
+export const PostList = ({ posts }) => (
   <div className="PostList">
-    {posts.map((post) => {
-      const postExtra = {
-        ...post,
-        user: users.find(user => post.userId === user.id),
-        comments: commentsList
-          .filter(comment => comment.postId === post.id),
-      };
-      // assembled the postExtra above for test compitability
-
-      return (
-        <PostInfo
-          post={postExtra}
-          key={post.id}
-        />
-      );
-    })}
+    {posts.map(post => (
+      <PostInfo
+        post={post}
+        key={post.id}
+      />
+    ))}
   </div>
 );

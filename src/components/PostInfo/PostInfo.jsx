@@ -15,7 +15,7 @@ export const PostInfo = ({
   <div className="PostInfo">
     <div className="PostInfo__header">
       <h3 className="PostInfo__title">
-        {`${title}`}
+        {title}
       </h3>
 
       <p>
@@ -26,7 +26,7 @@ export const PostInfo = ({
     </div>
 
     <p className="PostInfo__body">
-      {`${body}`}
+      {body}
     </p>
 
     {(comments.length === 0)
@@ -37,7 +37,7 @@ export const PostInfo = ({
           <b data-cy="NoCommentsMessage">No comments yet</b>
         </>
       )
-      : (<CommentList comments={comments} />)
+      : <CommentList comments={comments} />
     }
   </div>
 );
