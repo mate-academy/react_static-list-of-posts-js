@@ -23,8 +23,13 @@ iframe {
   }
 }
 
+.PostInfo__user {
+  display: flex;
+}
+
 .UserInfo {
   font-weight: bold;
+  margin-left: 5px;
 }
 
 .CommentList {
