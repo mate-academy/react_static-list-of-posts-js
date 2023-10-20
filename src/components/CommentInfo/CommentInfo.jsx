@@ -1,5 +1,3 @@
-import './CommentInfo.scss';
-
 export const CommentInfo = ({ comment }) => {
   const {
     name,
@@ -14,7 +12,11 @@ export const CommentInfo = ({ comment }) => {
           {name}
         </strong>
 
-        <span> {' by '} </span>
+        <span>
+          {' '}
+          {' by '}
+          {' '}
+        </span>
 
         <a
           className="CommentInfo__email"
