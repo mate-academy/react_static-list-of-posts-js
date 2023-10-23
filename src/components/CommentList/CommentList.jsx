@@ -3,7 +3,7 @@ import './CommentList.scss';
 
 export const CommentList = ({ comments }) => (
   <div className="CommentList">
-    {comments.length > 0 ? (
+    {comments.length ? (
       comments.map(comment => (
         <CommentInfo
           comment={comment}
