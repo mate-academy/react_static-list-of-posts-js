@@ -1,15 +1,15 @@
 import { CommentInfo } from '../CommentInfo';
+import './CommentList.scss';
 
-export const CommentList = ({ comments }) => {
-  if (!comments.length) {
-    return (<b data-cy="NoCommentsMessage">No comments yet</b>);
-  }
-
-  return (
-    <>
+export const CommentList = ({ comments }) => (
+  <>
+    <ul className="CommentList">
       {comments.map(comment => (
-        <CommentInfo comment={comment} />
+        <li key={comment.id}>
+          <CommentInfo comment={comment} />
+        </li>
       ))}
-    </>
-  );
-};
+    </ul>
+
+  </>
+);
