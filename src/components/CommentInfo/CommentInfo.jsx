@@ -1,5 +1,5 @@
-export const CommentInfo = ({ comment }) => (
-  <div className="CommentInfo">
+export const CommentInfo = ({ comment, key }) => (
+  <div className="CommentInfo" key={comment.id}>
     <div className="CommentInfo__title">
       <strong className="CommentInfo__name">{comment.name}</strong>
 
