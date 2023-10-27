@@ -10,7 +10,7 @@ export const PostInfo = ({ post }) => {
       <div className="PostInfo__header">
         <h3 className="PostInfo__title">{title}</h3>
 
-        <UserInfo user={user} />
+        {user && <UserInfo user={user} />}
       </div>
 
       <p className="PostInfo__body">
