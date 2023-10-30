@@ -3,7 +3,7 @@ import './PostInfo.scss';
 import { CommentList } from '../CommentList';
 import { UserInfo } from '../UserInfo';
 
-export const PostInfo = ({ post, user }) => (
+export const PostInfo = ({ post }) => (
   <div className="PostInfo">
     <div className="PostInfo__header">
       <h3 className="PostInfo__title">
@@ -12,7 +12,7 @@ export const PostInfo = ({ post, user }) => (
 
       <p>
         {' Posted by  '}
-        {user && <UserInfo user={user} />}
+        {post.user && <UserInfo user={post.user} />}
       </p>
     </div>
 
