@@ -5,7 +5,7 @@ import commentsFromServer from './api/comments.json';
 import usersFromServer from './api/users.json';
 import { PostList } from './components/PostList';
 
-const prepareData = () => {
+const getPreparedPosts = () => {
   const postsWithUser = postsFromServer.map(post => ({
     ...post,
     user: usersFromServer.find(user => user.id === post.userId),
@@ -20,7 +20,7 @@ const prepareData = () => {
 };
 
 export const App = () => {
-  const posts = prepareData();
+  const posts = getPreparedPosts();
 
   return (
     <section className="App">
