@@ -20,7 +20,7 @@ export const PostInfo = ({ post: { title, user, body, comments } }) => (
     </p>
 
     {
-      comments.length !== 0 ? (
+      comments.length ? (
         <CommentList comments={comments} />
       ) : (
         <>
