@@ -1,8 +1,8 @@
-import { CommentInfo } from '../CommentInfo';
+import { CommentList } from '../CommentList';
 import { UserInfo } from '../UserInfo/UserInfo';
 import './PostInfo.scss';
 
-export const PostInfo = ({ post }) => (
+export const PostInfo = ({ post, comments }) => (
   <div className="PostInfo">
     <div className="PostInfo__header">
       <h3 className="PostInfo__title">
@@ -11,8 +11,7 @@ export const PostInfo = ({ post }) => (
 
       <p>
         {' Posted by  '}
-        {post.user && <UserInfo user={post.user} />
-        }
+        {post.user && <UserInfo user={post.user} />}
       </p>
     </div>
 
@@ -21,8 +20,9 @@ export const PostInfo = ({ post }) => (
     </p>
 
     <hr />
-    <b data-cy="NoCommentsMessage">
-      {post.comment && <CommentInfo comment={post.comment} />}
-    </b>
+    {post.comments.length !== 0 ? <CommentList comments={post.comments} />
+      : <b data-cy="NoCommentsMessage"> No comments yet </b>
+    }
+
   </div>
 );
