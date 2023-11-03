@@ -4,7 +4,7 @@ import { CommentInfo } from '../CommentInfo';
 export const CommentList = ({ postComments }) => (
   <div className="CommentList">
     {postComments.map(comment => (
-      <CommentInfo commentInfo={comment} />
+      <CommentInfo commentInfo={comment} key={comment.id} />
     ))}
   </div>
 );
