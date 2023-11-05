@@ -12,7 +12,12 @@ export const PostInfo = ({ post }) => (
       <p>
         {' Posted by  '}
 
+        ?
+        {' '}
         <UserInfo user={post.user} />
+        :
+        {' '}
+        <p>user does not exist</p>
       </p>
     </div>
 
