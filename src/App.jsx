@@ -19,7 +19,7 @@ const posts = postsFromServer.map(post => ({
 export const App = () => (
   <section className="App">
     <h1 className="App__title">Static list of posts</h1>
-    {posts.length > 0 ? (
+    {posts.length ? (
       <PostList posts={posts} />
     ) : (
       <p className="App__no-posts">No posts available</p>
