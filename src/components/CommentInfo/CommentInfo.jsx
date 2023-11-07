@@ -2,8 +2,8 @@ export const CommentInfo = ({ comment }) => {
   const { name, email, body } = comment;
 
   return (
-    <div className="CommentInfo">
-      <div className="CommentInfo__title">
+    <li className="CommentInfo">
+      <li className="CommentInfo__title">
         <strong className="CommentInfo__name">{name}</strong>
 
         {' by '}
@@ -14,11 +14,11 @@ export const CommentInfo = ({ comment }) => {
         >
           {email}
         </a>
-      </div>
+      </li>
 
-      <div className="CommentInfo__body">
+      <li className="CommentInfo__body">
         {body}
-      </div>
-    </div>
+      </li>
+    </li>
   );
 };

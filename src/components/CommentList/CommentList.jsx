@@ -2,7 +2,7 @@ import { CommentInfo } from '../CommentInfo';
 import './CommentList.scss';
 
 export const CommentList = ({ comments }) => (
-  <div className="CommentList">
+  <ul className="CommentList">
 
     {comments.map(comment => (
       <CommentInfo
@@ -10,5 +10,5 @@ export const CommentList = ({ comments }) => (
       />
     ))}
 
-  </div>
+  </ul>
 );

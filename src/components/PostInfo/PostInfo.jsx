@@ -7,8 +7,8 @@ export const PostInfo = ({ post }) => {
 
   return (
     <>
-      <div className="PostInfo">
-        <div className="PostInfo__header">
+      <li className="PostInfo">
+        <li className="PostInfo__header">
           <h3 className="PostInfo__title">{title}</h3>
 
           <p>
@@ -16,18 +16,18 @@ export const PostInfo = ({ post }) => {
 
             <UserInfo user={user} />
           </p>
-        </div>
+        </li>
 
         <p className="PostInfo__body">
           {body}
         </p>
 
-        {comments.length === 0
+        {!comments.length
           ? <b data-cy="NoCommentsMessage">No comments yet</b>
           : <CommentList comments={comments} />
         }
 
-      </div>
+      </li>
     </>
   );
 };
