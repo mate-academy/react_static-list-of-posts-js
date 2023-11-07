@@ -8,7 +8,7 @@ export const CommentInfo = ({ comment }) => {
           {name}
         </strong>
 
-        {' by '}
+        <span>{' by '}</span>
 
         <a
           className="CommentInfo__email"
