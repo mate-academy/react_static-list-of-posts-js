@@ -3,7 +3,7 @@ export const CommentInfo = ({ comment }) => {
 
   return (
     <>
-      <div key={id} className="CommentInfo">
+      <div className="CommentInfo">
         <div className="CommentInfo__title">
           <strong className="CommentInfo__name">{name}</strong>
           {' by '}

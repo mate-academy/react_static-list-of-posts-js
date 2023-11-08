@@ -6,7 +6,6 @@ export const PostInfo = ({ post }) => {
   const { id, user, title, body, comments } = post;
 
   return (
-    <>
       <div key={id} className="PostInfo">
         <div className="PostInfo__header">
           <h3 className="PostInfo__title">
@@ -26,6 +25,5 @@ export const PostInfo = ({ post }) => {
           <CommentList comments={comments} />
         )}
       </div>
-    </>
   );
 };
