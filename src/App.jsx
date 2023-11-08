@@ -12,7 +12,6 @@ const getCommentsById = postId => (
 
 const getUserById = userId => (
   usersFromServer.find(user => user.id === userId)
-    || null
 );
 
 export const posts = postsFromServer.map(post => ({
