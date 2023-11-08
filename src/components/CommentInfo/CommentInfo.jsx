@@ -1,5 +1,5 @@
 export const CommentInfo = ({ comment }) => {
-  const { id, name, email, body } = comment;
+  const { name, email, body } = comment;
 
   return (
     <>
