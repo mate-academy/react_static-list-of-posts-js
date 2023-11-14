@@ -17,7 +17,7 @@ function getCommentByPostId(postId) {
   const findComment = commentsFromServer
     .filter(comment => comment.postId === postId);
 
-  return findComment || [];
+  return findComment;
 }
 
 export const posts = postsFromServer.map(post => ({

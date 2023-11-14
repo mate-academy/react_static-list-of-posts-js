@@ -19,7 +19,7 @@ export const PostInfo = ({ post }) => {
         <p>
           {' Posted by  '}
 
-          {user ? <UserInfo user={user} /> : null}
+          {user && <UserInfo user={user} />}
         </p>
       </div>
       <p className="PostInfo__body">
