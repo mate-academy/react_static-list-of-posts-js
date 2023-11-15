@@ -1,6 +1,6 @@
 # React Static List of Posts (JS)
 
-This task is similar to [Static List of TODOs](https://github.com/mate-academy/react_static-list-of-todos-js#react-static-list-of-todos), but you should do everything yourself:
+This task is similar to [Static List of TODOs](https://github.com/TenetaJ/react_static-list-of-posts-js), but you should do everything yourself:
 
 - don't change classes in the given markup (tests use them);
 - prepare `posts` by adding a `user` and `comments` to each `post` (each comment has a `postId`);
