@@ -1,3 +1,7 @@
-export const PostInfo = () => (
-  <>Put the post here</>
+import './PostInfo.scss'
+
+export const PostInfo = ({ post }) => (
+  <p className="PostInfo__body">
+    {post.body}
+  </p>
 );
