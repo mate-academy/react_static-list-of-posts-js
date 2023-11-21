@@ -4,7 +4,7 @@ import { UserInfo } from '../UserInfo';
 import { CommentList } from '../CommentList';
 
 export const PostInfo = ({ post }) => {
-  const { user, comments, title } = post;
+  const { user, comments, title, body } = post;
 
   return (
     <div className="PostInfo">
@@ -14,7 +14,7 @@ export const PostInfo = ({ post }) => {
       </div>
 
       <p className="PostInfo__body">
-        {post.body}
+        {body}
       </p>
 
       <hr />
