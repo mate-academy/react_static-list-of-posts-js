@@ -18,9 +18,6 @@ export const PostInfo = (props) => {
           {`Posted by ${user.username}`}
 
           <UserInfo user={user} />
-          {/* <a className="UserInfo" href={`${user.email}`}>
-            {user.name}
-          </a> */}
         </p>
       </div>
 
