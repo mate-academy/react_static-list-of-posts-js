@@ -3,7 +3,7 @@
 
 import React from 'react';
 import { mount } from '@cypress/react';
-// eslint-disable-next-line
+
 import { PostInfo } from './PostInfo';
 
 describe('PostInfo', () => {
