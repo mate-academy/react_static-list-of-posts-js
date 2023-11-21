@@ -4,9 +4,6 @@ import postsFromServer from './api/posts.json';
 import commentsFromServer from './api/comments.json';
 import usersFromServer from './api/users.json';
 import { PostList } from './components/PostList';
-// console.log(postsFromServer);
-// console.log(commentsFromServer);
-// console.log(usersFromServer);
 
 const posts = postsFromServer.map((post) => {
   const user = usersFromServer.find(person => person.id === post.userId);
