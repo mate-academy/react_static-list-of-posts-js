@@ -1,3 +1,5 @@
+import './UserInfo.scss';
+
 export const UserInfo = (props) => {
   const { user } = props;
 
