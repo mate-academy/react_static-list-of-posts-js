@@ -8,8 +8,7 @@ function getUser(userId) {
 }
 
 function getComments(id) {
-  return commentsFromServer.filter(coment => coment.postId === id)
-      || null;
+  return commentsFromServer.filter(coment => coment.postId === id);
 }
 
 export const allPosts = postsFromServer.map(post => ({
