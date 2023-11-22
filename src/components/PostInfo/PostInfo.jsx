@@ -16,7 +16,7 @@ export const PostInfo = (props) => {
         <h3 className="PostInfo__title">{title}</h3>
 
         <p>
-          {`Posted by ${user.username}`}
+          {`Posted by `}
 
           <UserInfo user={user} />
         </p>

@@ -1,11 +1,11 @@
 import './UserInfo.scss';
 
 export const UserInfo = (props) => {
-  const { user } = props;
+  const { email, name } = props.user;
 
   return (
-    <a className="UserInfo" href={`mailto:${user.email}`}>
-      {user.name}
+    <a className="UserInfo" href={`mailto:${email}`}>
+      {name}
     </a>
   );
 };
