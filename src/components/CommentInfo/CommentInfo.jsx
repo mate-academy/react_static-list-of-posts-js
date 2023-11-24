@@ -1,5 +1,5 @@
-export const CommentInfo = (props) => {
-  const { name, email, body } = props.comment;
+export const CommentInfo = ({ comment }) => {
+  const { name, email, body } = comment;
 
   return (
     <div className="CommentInfo">

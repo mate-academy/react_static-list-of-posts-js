@@ -9,8 +9,8 @@ import { PostList } from './components/PostList';
 const prepearedPosts = postsFromServer.map(
   post => ({
     ...post,
-    user: usersFromServer.find(user => user.id === post.userId),
-    comments: commentsFromServer.filter(comment => comment.postId === post.id),
+    user: usersFromServer.find(({ id }) => id === post.userId),
+    comments: commentsFromServer.filter(({ postId }) => postId === post.id),
   }),
 );
 

@@ -2,13 +2,13 @@ import { CommentList } from '../CommentList';
 import { UserInfo } from '../UserInfo';
 import './PostInfo.scss';
 
-export const PostInfo = (props) => {
+export const PostInfo = ({ post }) => {
   const {
     title,
     body,
     comments,
     user,
-  } = props.post;
+  } = post;
 
   return (
     <div className="PostInfo">
@@ -32,7 +32,6 @@ export const PostInfo = (props) => {
           ? <CommentList comments={comments} />
           : <b data-cy="NoCommentsMessage">No comments yet</b>
       }
-
     </div>
   );
 };
