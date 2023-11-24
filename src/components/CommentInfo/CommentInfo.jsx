@@ -1,17 +1,21 @@
-export const CommentInfo = ({ comment }) => (
-  <li className="CommentInfo" key={comment.id}>
+export const CommentInfo = ({ comment }) => {
+  const { id, email, body, name } = comment;
 
-    <div className="CommentInfo__title">
-      <strong className="CommentInfo__name">{comment.name}</strong>
-      {' by '}
-      <a
-        className="CommentInfo__email"
-        href={`mailto:${comment.email}`}
-      >
-        {comment.email}
-      </a>
+  return (
+    <div className="CommentInfo" key={id}>
+
+      <div className="CommentInfo__title">
+        <strong className="CommentInfo__name">{name}</strong>
+        {' by '}
+        <a
+          className="CommentInfo__email"
+          href={`mailto:${email}`}
+        >
+          {email}
+        </a>
+      </div>
+
+      <p className="CommentInfo__body">{body}</p>
     </div>
-
-    <p className="CommentInfo__body">{comment.body}</p>
-  </li>
-);
+  );
+};
