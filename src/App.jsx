@@ -5,14 +5,21 @@ import postsFromServer from './api/posts.json';
 import commentsFromServer from './api/comments.json';
 import usersFromServer from './api/users.json';
 
+// object of default user in case if the userId is not found
+const defaultUser = {
+  id: 0,
+  name: 'Anonymous',
+  username: 'DefaultUser',
+  email: '',
+};
+
 function getUserById(userId) {
   return usersFromServer.find(user => user.id === userId)
-    || null;
+    || defaultUser;
 }
 
 function getCommentsByPostId(postId) {
   return commentsFromServer.filter(comment => comment.postId === postId);
-  // || null;
 }
 
 export const posts = postsFromServer.map(post => ({

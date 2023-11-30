@@ -28,7 +28,5 @@ export const PostInfo = ({ post }) => (
     ) : (
       <CommentList comments={post.comments} />)
     }
-
-    {/* <CommentList comments={post.comments} /> */}
   </div>
 );
