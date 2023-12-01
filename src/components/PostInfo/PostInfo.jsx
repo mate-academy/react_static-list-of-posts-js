@@ -12,8 +12,11 @@ export const PostInfo = ({ post }) => {
 
         <p>
           {' Posted by  '}
-
-          <UserInfo user={user} />
+          {user ? (
+            <UserInfo user={user} />
+          ) : (
+            <strong>User not found</strong>
+          )}
         </p>
       </div>
 
