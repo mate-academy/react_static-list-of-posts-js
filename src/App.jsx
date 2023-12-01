@@ -6,8 +6,7 @@ import usersFromServer from './api/users.json';
 import { PostList } from './components/PostList';
 
 function getCommentById(id) {
-  return commentsFromServer.filter(comment => comment.postId === id)
-    || null;
+  return commentsFromServer.filter(comment => comment.postId === id);
 }
 
 function getUserbyId(id) {
