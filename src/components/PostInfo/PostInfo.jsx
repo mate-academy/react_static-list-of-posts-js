@@ -11,11 +11,9 @@ export function PostInfo({ post: { title, user, body, comments } }) {
           {title}
         </h3>
 
-        <p>
-          {' Posted by  '}
-          user &&
-          <UserInfo user={user} />
-        </p>
+        <div>
+          {user && <UserInfo user={user} />}
+        </div>
       </div>
 
       <p className="PostInfo__body">

@@ -5,7 +5,7 @@ export const UserInfo = ({ user }) => {
 
   return (
     <p>
-      {' Posted by  '}
+      <span> Posted by </span>
 
       <a className="UserInfo" href={`mailto:${email}`}>
         {name}
