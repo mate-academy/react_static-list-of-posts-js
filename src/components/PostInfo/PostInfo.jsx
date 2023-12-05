@@ -13,6 +13,7 @@ export function PostInfo({ post: { title, user, body, comments } }) {
 
         <p>
           {' Posted by  '}
+          user &&
           <UserInfo user={user} />
         </p>
       </div>
