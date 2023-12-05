@@ -6,8 +6,7 @@ import commentsFromServer from './api/comments.json';
 import usersFromServer from './api/users.json';
 
 function getUserById(userId) {
-  return usersFromServer.find(user => user.id === userId)
-      || null;
+  return usersFromServer.find(user => user.id === userId);
 }
 
 function getCommentsById(postId) {
