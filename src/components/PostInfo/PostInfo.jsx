@@ -7,8 +7,6 @@ export const PostInfo = ({ post }) => {
   const { user } = post;
   const { comments } = post;
 
-  console.log(comments);
-
   return (
     <>
       <div className="PostInfo">
