@@ -1,10 +1,13 @@
 import { CommentList } from '../CommentList';
+import { NoCommentsMessage } from '../NoCommentsMessage';
 import { UserInfo } from '../UserInfo';
 import './PostInfo.scss';
 
 export const PostInfo = ({ post }) => {
   const { user } = post;
   const { comments } = post;
+
+  console.log(comments);
 
   return (
     <>
@@ -20,7 +23,11 @@ export const PostInfo = ({ post }) => {
 
         <p className="PostInfo__body">{post.body}</p>
 
-        <CommentList comments={comments} />
+        {comments.length !== 0
+          ? <CommentList comments={comments} />
+          : <NoCommentsMessage />
+        }
+
       </div>
     </>
   );
