@@ -1,3 +1,3 @@
 export const NoCommentsMessage = () => (
-  <p>no comments</p>
+  <b data-cy="NoCommentsMessage">No comments yet</b>
 );
