@@ -5,11 +5,11 @@ import postsFromServer from './api/posts.json';
 import commentsFromServer from './api/comments.json';
 import usersFromServer from './api/users.json';
 
-const preparePosts = (posts, comments, users) => (
+const preparePosts = (posts, cmnts, users) => (
   posts.map(post => ({
     ...post,
-    postUser: users.find(user => user.id === post.userId) || null,
-    postComments: comments.filter(comment => comment.postId === post.id),
+    user: users.find(user => user.id === post.userId) || null,
+    comments: cmnts.filter(comment => comment.postId === post.id),
   }))
 );
 
