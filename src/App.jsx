@@ -10,14 +10,15 @@ function getUserById(userId) {
     || null;
 }
 
-function getCommentById(postId) {
-  return commentsFromServer.filter(comment => postId.includes(comment.postId));
+function getCommentById(id) {
+  // return commentsFromServer.filter(comment => postId.includes(comment.postId));
+  return commentsFromServer.filter(comment => comment.postId === id);
 }
 
 const posts = postsFromServer.map(post => ({
   ...post,
   user: getUserById(post.userId),
-  comments: getCommentById([post.userId]),
+  comments: getCommentById(post.id),
 }));
 
 export const App = () => (
