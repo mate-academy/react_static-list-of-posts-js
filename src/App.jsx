@@ -7,7 +7,7 @@ import { PostList } from './components/PostList';
 const preparePosts = () => {
   postsFromServer.map(post => ({
     ...post,
-    user: usersFromServer.find(user => user.id === post.userId) || null,
+    user: usersFromServer.find(user => user.id === post.userId),
     comments: commentsFromServer.filter(comment => comment.postId === post.id),
   }));
 };
