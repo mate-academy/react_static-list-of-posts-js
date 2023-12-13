@@ -1,4 +1,5 @@
 import { CommentList } from '../CommentList';
+import { UserInfo } from '../UserInfo';
 
 export const PostInfo = ({ post }) => {
   const { comments, title, user, body } = post;
@@ -12,9 +13,7 @@ export const PostInfo = ({ post }) => {
         <h3 className="PostInfo__title">{title}</h3>
         <p>
           {' Posted by  '}
-          <a className="UserInfo" href={`mailto:${user.email}`}>
-            {user.name}
-          </a>
+          <UserInfo user={user} />
         </p>
       </div>
 
