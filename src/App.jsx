@@ -4,16 +4,12 @@ import commentsFromServer from './api/comments.json';
 import usersFromServer from './api/users.json';
 import { PostList } from './components/PostList';
 
-const preparePosts = () => {
-  postsFromServer.map(post => ({
+export const App = () => {
+  const posts = postsFromServer.map(post => ({
     ...post,
-    user: usersFromServer.find(user => user.id === post.userId),
+    user: usersFromServer.find(user => user.id === post.userId) || null,
     comments: commentsFromServer.filter(comment => comment.postId === post.id),
   }));
-};
-
-export const App = () => {
-  const posts = preparePosts();
 
   return (
     <section className="App">
