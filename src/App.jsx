@@ -11,8 +11,7 @@ function prepareUser(userId) {
 }
 
 function prepareComment(postId) {
-  return commentsFromServer.filter(user => user.postId === postId)
-  || null;
+  return commentsFromServer.filter(user => user.postId === postId);
 }
 
 const posts = postsFromServer.map(post => ({
