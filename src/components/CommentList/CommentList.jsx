@@ -1,11 +1,11 @@
 import { CommentInfo } from '../CommentInfo/CommentInfo';
 
 export const CommentList = ({ comments }) => (
-  <div className="CommentList">
-    {comments.map(coment => (
-      <li key={coment.id}>
-        <CommentInfo coment={coment} />
+  <ul className="CommentList">
+    {comments.map(comment => (
+      <li key={comment.id}>
+        <CommentInfo comment={comment} />
       </li>
     ))}
-  </div>
+  </ul>
 );

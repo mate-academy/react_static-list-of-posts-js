@@ -11,8 +11,7 @@ function getUserById(userId) {
 }
 
 function getCommentById(postId) {
-  return commentsFromServer.filter(coment => coment.postId === postId)
-  || <b data-cy="NoCommentsMessage">No comments yet</b>;
+  return commentsFromServer.filter(coment => coment.postId === postId);
 }
 
 export const posts = postsFromServer.map(post => ({
@@ -24,7 +23,6 @@ export const posts = postsFromServer.map(post => ({
 export const App = () => (
   <section className="App">
     <h1 className="App__title">Static list of posts</h1>
-
     <PostList
       posts={posts}
     />
