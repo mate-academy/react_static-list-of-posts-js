@@ -1,5 +1,5 @@
 import './PostInfo.scss';
-import CommentList from '../CommentList/CommentList';
+import { CommentList } from '../CommentList';
 import { UserInfo } from '../UserInfo';
 
 export const PostInfo = ({ post }) => (
