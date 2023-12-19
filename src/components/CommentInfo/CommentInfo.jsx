@@ -1,4 +1,4 @@
-export const CommentInfo = ({ comment }) => (
+const CommentInfo = ({ comment }) => (
   <div className="CommentInfo">
     <div className="CommentInfo__title">
       <strong className="CommentInfo__name">
@@ -20,3 +20,5 @@ export const CommentInfo = ({ comment }) => (
     </div>
   </div>
 );
+
+export default CommentInfo;
