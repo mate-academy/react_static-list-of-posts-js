@@ -10,7 +10,7 @@ function getComment(postId) {
 }
 
 function getUser(postId) {
-  return usersFromServer.find(user => user.id === postId) || null;
+  return usersFromServer.find(user => user.id === postId);
 }
 
 export const posts = postsFromServer.map(post => ({
