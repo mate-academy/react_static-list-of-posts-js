@@ -2,7 +2,7 @@ import { CommentList } from '../CommentList';
 import { UserInfo } from '../UserInfo';
 import './PostInfo.scss';
 
-export function PostInfo({ post }) {
+export function PostInfo({ post: { title, user, body, comments } }) {
   const renderNoCommentsMessage = () => (
     <>
       <hr />
@@ -10,23 +10,25 @@ export function PostInfo({ post }) {
     </>
   );
 
+  const noCommentsMessage = renderNoCommentsMessage();
+
   return (
     <>
       <div className="PostInfo">
         <div className="PostInfo__header">
-          <h3 className="PostInfo__title">{post.title}</h3>
+          <h3 className="PostInfo__title">{title}</h3>
 
           <p>
             {' Posted by  '}
-            <UserInfo user={post.user} />
+            <UserInfo user={user} />
           </p>
         </div>
 
-        <p className="PostInfo__body">{post.body}</p>
+        <p className="PostInfo__body">{body}</p>
 
-        {post.comments.length
-          ? <CommentList comments={post.comments} />
-          : renderNoCommentsMessage()}
+        {comments.length
+          ? <CommentList comments={comments} />
+          : noCommentsMessage}
       </div>
     </>
   );
