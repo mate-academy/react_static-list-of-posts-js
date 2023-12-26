@@ -1,5 +1,5 @@
 export const CommentInfo = ({ comment }) => {
-  let mailToLink = "mailto:" + comment.email;
+  const mailToLink = `mailto:${comment.email}`;
 
   return (
     <>
@@ -24,5 +24,5 @@ export const CommentInfo = ({ comment }) => {
         </div>
       </div>
     </>
-  )
+  );
 };

@@ -1,17 +1,26 @@
-import { UserInfo } from "../UserInfo";
-import { CommentList } from "../CommentList";
-
+import { UserInfo } from '../UserInfo';
+import { CommentList } from '../CommentList';
 
 export const PostInfo = ({ post }) => {
-  let allOfComments = post.comments.length !== 0
-    ?
-    <CommentList
-      comments={post.comments}
-    /> : <div className="CommentList" data-cy="NoCommentsMessage">
-      <div className="CommentInfo__body">
-        No comments available
+  const allOfComments = post.comments.length !== 0
+    ? (
+      <CommentList
+        comments={post.comments}
+      />
+    ) : (
+      <div className="CommentList" data-cy="NoCommentsMessage">
+        <div className="CommentInfo__body">
+          No comments available
+        </div>
       </div>
-    </div>;
+    );
+
+  const userIdentefity = post.user !== null
+    ? (
+      <UserInfo
+        user={post.user}
+      />
+    ) : 'anonim';
 
   if (post.length === 0) {
     return null;
@@ -28,9 +37,7 @@ export const PostInfo = ({ post }) => {
           <p>
             {' Posted by  '}
 
-            <UserInfo
-              user={post.user}
-            />
+            {userIdentefity}
           </p>
         </div>
 
@@ -39,10 +46,8 @@ export const PostInfo = ({ post }) => {
         </p>
 
         {allOfComments}
-        {/* <CommentList
-          comments={post.comments}
-        /> */}
+
       </div>
     </>
-  )
+  );
 };

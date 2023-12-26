@@ -1,5 +1,5 @@
 export const UserInfo = ({ user }) => {
-  let mailToUser = 'mailto:' + user.email;
+  const mailToUser = `mailto:${user.email}`;
 
   return (
     <>
@@ -7,5 +7,5 @@ export const UserInfo = ({ user }) => {
         {user.name}
       </a>
     </>
-  )
+  );
 };
