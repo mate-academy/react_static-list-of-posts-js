@@ -1,4 +1,5 @@
 import { PostInfo } from '../PostInfo';
+import './PostList.scss';
 
 export const PostList = ({ posts }) => (
   <>
