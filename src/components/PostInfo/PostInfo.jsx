@@ -1,3 +1,5 @@
+import './PostInfo.scss';
+
 import { CommentList } from '../CommentList';
 import { UserInfo } from '../UserInfo';
 
