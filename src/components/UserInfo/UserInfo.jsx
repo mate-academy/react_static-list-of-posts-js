@@ -1,11 +1,11 @@
 import './UserInfo.scss';
 
-export const UserInfo = ({ user }) => (
+export const UserInfo = ({ user: { email, id, name } }) => (
   <a
     className="UserInfo"
-    href={`mailto:${user.email}`}
-    key={user.id}
+    href={`mailto:${email}`}
+    key={id}
   >
-    {user.name}
+    {name}
   </a>
 );
