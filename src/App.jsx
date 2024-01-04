@@ -13,8 +13,7 @@ function getUserById(userId) {
 function getCommentsByPostId(postId) {
   return commentsFromServer.filter(
     comment => comment.postId === postId,
-  )
-      || null;
+  );
 }
 
 export const posts = postsFromServer.map(post => ({
