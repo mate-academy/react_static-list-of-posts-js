@@ -15,7 +15,7 @@ function getComments(postId) {
 
 export const posts = postsFromServer.map(post => ({
   ...post,
-  user: getUser(post.userId),
+  user: getUser(post.userId) || null,
   comments: getComments(post.id),
 }));
 
