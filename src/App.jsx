@@ -15,7 +15,7 @@ function getCommentsByPostId(postId) {
 
 const posts = postsFromServer.map(post => ({
   ...post,
-  user: getUserById(post.userId),
+  user: getUserById(post.userId) || null,
   comments: getCommentsByPostId(post.id),
 }));
 
