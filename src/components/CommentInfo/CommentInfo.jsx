@@ -1,10 +1,10 @@
 import './CommentInfo.scss';
 
 export const CommentInfo = ({ comment }) => {
-  const { id, name, email, body } = comment;
+  const { name, email, body } = comment;
 
   return (
-    <div className="CommentInfo" key={id}>
+    <div className="CommentInfo">
       <div className="CommentInfo__title">
         <strong className="CommentInfo__name">
           {name}

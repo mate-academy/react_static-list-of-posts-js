@@ -3,10 +3,10 @@ import { CommentList } from '../CommentList';
 import { UserInfo } from '../UserInfo';
 
 export const PostInfo = ({ post }) => (
-  <div className="PostInfo" key={post.id}>
+  <div className="PostInfo">
     <div className="PostInfo__header">
       <h3 className="PostInfo__title">
-        {`${post.title}`}
+        {post.title}
       </h3>
 
       <p>
@@ -17,11 +17,11 @@ export const PostInfo = ({ post }) => (
     </div>
 
     <p className="PostInfo__body">
-      {`${post.body}`}
+      {post.body}
     </p>
 
     {
-      post.comments.length > 0 ? (
+      post.comments.length ? (
         <CommentList comments={post.comments} />
       ) : (
         <>
