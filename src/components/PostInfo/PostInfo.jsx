@@ -13,7 +13,7 @@ export const PostInfo = ({ post }) => {
         <p>
           {' Posted by  '}
 
-          <UserInfo user={user} />
+          {user && <UserInfo user={user} />}
         </p>
       </div>
 
@@ -23,7 +23,7 @@ export const PostInfo = ({ post }) => {
 
       <hr />
 
-      {comments.length === 0
+      {!comments.length
         ? (<b data-cy="NoCommentsMessage">No comments yet</b>)
         : (<CommentList comments={comments} />)
       }
