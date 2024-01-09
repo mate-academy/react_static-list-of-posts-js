@@ -6,18 +6,18 @@ import usersFromServer from './api/users.json';
 
 import './App.scss';
 
-const CommentFinder = postId => (
+const getCommentById = postId => (
   commentsFromServer.filter(comment => comment.postId === postId)
 );
 
-const UserFinder = userId => (
+const getUserById = userId => (
   usersFromServer.find(user => user.id === userId)
 );
 
 export const posts = postsFromServer.map(post => ({
   ...post,
-  user: UserFinder(post.userId),
-  comments: CommentFinder(post.id),
+  user: getUserById(post.userId) || null,
+  comments: getCommentById(post.id) || null,
 }));
 
 export const App = () => (
