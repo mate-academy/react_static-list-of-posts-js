@@ -7,9 +7,17 @@ import { PostList } from './components/PostList';
 
 const preparingPosts = postsFromServer.map(post => ({
   ...post,
-  user: usersFromServer.find(user => (user.id === post.userId)),
-  comments: commentsFromServer.filter(comment => (comment.postId === post.id)),
+  user: getUsersById(post.userId),
+  comments: getCommentsById(post.id),
 }));
+
+function getUsersById(userId) {
+  return usersFromServer.find(user => (user.id === userId));
+}
+
+function getCommentsById(idOfPost) {
+  return commentsFromServer.filter(comment => (comment.postId === idOfPost));
+}
 
 export const App = () => (
   <section className="App">
