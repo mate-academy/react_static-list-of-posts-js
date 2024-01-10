@@ -7,5 +7,4 @@ export const CommentList = ({ comments }) => (
       <CommentInfo comment={comment} key={comment.id} />
     ))}
   </div>
-
 );
