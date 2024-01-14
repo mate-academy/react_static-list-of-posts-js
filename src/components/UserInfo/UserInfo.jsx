@@ -1,3 +1,5 @@
 export const UserInfo = () => (
-  <>Put the user here</>
+  <a className="UserInfo" href="mailto:Julianne.OConner@kory.org">
+    Patricia Lebsack
+  </a>
 );
