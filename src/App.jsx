@@ -8,7 +8,6 @@ import usersFromServer from './api/users.json';
 function getCommentsOfPost(postId) {
   return (
     commentsFromServer.filter(comment => comment.postId === postId)
-      || null
   );
 }
 
