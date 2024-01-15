@@ -14,7 +14,7 @@ export const PostInfo = ({ post }) => (
         {post.user && (
           <UserInfo
             user={post.user}
-            key={post.key}
+            key={post.id}
           />
         )}
       </p>
