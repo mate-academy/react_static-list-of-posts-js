@@ -3,6 +3,7 @@ import { CommentList } from '../CommentList';
 
 export const PostInfo = ({ post }) => {
   const { title, body, user, comments } = post;
+  const [userUnique] = user;
 
   return (
     <div className="PostInfo">
@@ -14,7 +15,7 @@ export const PostInfo = ({ post }) => {
         <p>
           {' Posted by  '}
 
-          <UserInfo user={user[0]} />
+          <UserInfo user={userUnique} />
         </p>
       </div>
 
