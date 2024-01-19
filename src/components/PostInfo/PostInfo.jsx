@@ -13,7 +13,7 @@ export const PostInfo = ({ post }) => {
         <p>
           {' Posted by  '}
 
-          {user.length ? (
+          {user ? (
             <UserInfo user={user} />
           ) : (
             <>user not found</>
