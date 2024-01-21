@@ -1,20 +1,20 @@
 import './PostInfo.scss';
 import { UserInfo } from '../UserInfo';
 import { CommentList } from '../CommentList';
-import { findUser } from '../../api';
 
 export const PostInfo = ({ post }) => {
-  const user = post.user
+  const { user } = post;
 
   return (
     <div className="PostInfo">
       <div className="PostInfo__header">
-        <h3 className="PostInfo__title">{post.title}</h3>
+        <h3 className="PostInfo__title">
+          {post.title}
+        </h3>
 
         <p>
           {' Posted by  '}
-          <UserInfo user={user}
-          />
+          <UserInfo user={user} />
         </p>
       </div>
 
