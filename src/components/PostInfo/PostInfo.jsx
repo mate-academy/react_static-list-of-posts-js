@@ -8,7 +8,7 @@ export const PostInfo = ({ post }) => (
       <h3 className="PostInfo__title">{post.title}</h3>
       <p>
         <span>{` Posted by `}</span>
-        <UserInfo user={post.user} />
+        {post.user && <UserInfo user={post.user} />}
       </p>
     </div>
 
