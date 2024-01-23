@@ -8,7 +8,7 @@ export const PostInfo = ({ post }) => {
   const filteredComments = commentsFromServer
     .filter(comment => comment.postId === post.id);
 
-  const filteredUser = usersFromServer.find((user) => user.id === post.userId)
+  const filteredUser = usersFromServer.find(user => user.id === post.userId);
 
   return (
     <div className="PostInfo">
