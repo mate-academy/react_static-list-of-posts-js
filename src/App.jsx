@@ -1,9 +1,6 @@
 import './App.scss';
 import { PostList } from './components/PostList';
-
 import postsFromServer from './api/posts.json';
-import commentsFromServer from './api/comments.json';
-import usersFromServer from './api/users.json';
 
 export const App = () => (
   <section className="App">
@@ -11,8 +8,6 @@ export const App = () => (
 
     <PostList
       postsFromServer={postsFromServer}
-      commentsFromServer={commentsFromServer}
-      usersFromServer={usersFromServer}
     />
   </section>
 );
