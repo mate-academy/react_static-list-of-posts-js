@@ -9,8 +9,7 @@ const getUserById
   = userId => usersFromServer.find(user => user.id === userId) || null;
 
 const getCommentsByPostId
-  = postId => commentsFromServer.filter(comment => comment.postId === postId)
-  || null;
+  = postId => commentsFromServer.filter(comment => comment.postId === postId);
 
 const posts = postsFromServer.map(post => ({
   ...post,
