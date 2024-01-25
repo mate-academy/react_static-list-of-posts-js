@@ -1,26 +1,35 @@
+import './PostInfo.scss';
 import { CommentList } from '../CommentList';
 import { UserInfo } from '../UserInfo';
+import usersFromServer from '../../api/users.json';
+import commentsFromServer from '../../api/comments.json';
 
-export const PostInfo = ({ post, filteredComments, filteredUsers }) => (
-  <div className="PostInfo">
-    <div className="PostInfo__header">
-      <h3 className="PostInfo__title">{post.title}</h3>
+export const PostInfo = ({ post }) => {
+  const filteredComments = commentsFromServer
+    .filter(comment => comment.postId === post.id);
+  const filteredUsers = usersFromServer.find(user => user.id === post.userId);
 
-      <p>
-        {' Posted by  '}
+  return (
+    <div className="PostInfo">
+      <div className="PostInfo__header">
+        <h3 className="PostInfo__title">{post.title}</h3>
 
-        {filteredUsers && <UserInfo user={filteredUsers} />}
+        <p>
+          {' Posted by  '}
+
+          {filteredUsers && <UserInfo user={filteredUsers} />}
+        </p>
+      </div>
+
+      <p className="PostInfo__body">
+        {post.body}
       </p>
+
+      <hr />
+
+      {(!!filteredComments.length
+        && <CommentList comments={filteredComments} />)
+        || <b data-cy="NoCommentsMessage">No comments yet</b>}
     </div>
-
-    <p className="PostInfo__body">
-      {post.body}
-    </p>
-
-    <hr />
-
-    {(filteredComments.length > 0
-      && <CommentList comments={filteredComments} />)
-      || <b data-cy="NoCommentsMessage">No comments yet</b>}
-  </div>
-);
+  );
+};
