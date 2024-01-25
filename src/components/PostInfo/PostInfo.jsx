@@ -1,3 +1,28 @@
-export const PostInfo = () => (
-  <>Put the post here</>
+import { UserInfo } from '../UserInfo';
+import { CommentList } from '../CommentList';
+
+export const PostInfo = ({ post }) => (
+  <div className="PostInfo">
+    <div className="PostInfo__header">
+      <h3 className="PostInfo__title">{post.title}</h3>
+
+      <p>
+        {' Posted by  '}
+
+        {post.users && <UserInfo user={post.users} />}
+      </p>
+    </div>
+
+    <p className="PostInfo__body">
+      {post.body}
+    </p>
+
+    <hr />
+
+    {!post.comments.length ? (
+      <b data-cy="NoCommentsMessage">No comments yet</b>
+    ) : (
+      <CommentList comments={post.comments} />
+    )}
+  </div>
 );
