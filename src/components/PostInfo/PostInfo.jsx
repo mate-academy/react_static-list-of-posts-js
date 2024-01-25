@@ -3,32 +3,32 @@ import { CommentList } from '../CommentList';
 import './PostInfo.scss';
 
 export const PostInfo = ({ post }) => {
-  const comments = post.comments.length < 1
-    ? (
-      <>
-        <hr />
-        <b data-cy="NoCommentsMessage">No comments yet</b>
-      </>
-    )
-    : <CommentList comments={post.comments} />;
+  const { title, user, body, comments } = post;
 
   return (
     <div className="PostInfo">
       <div className="PostInfo__header">
-        <h3 className="PostInfo__title">{post.title}</h3>
+        <h3 className="PostInfo__title">{title}</h3>
 
         <p>
-          {' Posted by  '}
+          <span> Posted by  </span>
 
-          <UserInfo user={post.user} />
+          <UserInfo user={user} />
         </p>
       </div>
 
       <p className="PostInfo__body">
-        {post.body}
+        {body}
       </p>
 
-      {comments}
+      {(post.comments.length < 1)
+        ? (
+          <>
+            <hr />
+            <b data-cy="NoCommentsMessage">No comments yet</b>
+          </>
+        )
+        : <CommentList comments={comments} />}
     </div>
   );
 };
