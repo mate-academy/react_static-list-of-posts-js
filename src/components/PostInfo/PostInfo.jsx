@@ -11,7 +11,7 @@ export const PostInfo = ({ post }) => {
         <h3 className="PostInfo__title">{title}</h3>
 
         <p>
-          {' Posted by  '}
+          <span> Posted by </span>
 
           <UserInfo user={user} />
         </p>
@@ -23,7 +23,7 @@ export const PostInfo = ({ post }) => {
 
       <hr />
 
-      {(post.comments && post.comments.length > 0)
+      {post.comments && post.comments.length > 0
         ? <CommentList comments={post.comments} />
         : (
           <>
