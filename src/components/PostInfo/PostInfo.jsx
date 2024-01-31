@@ -10,19 +10,20 @@ export const PostInfo = ({ post }) => (
       <p>
         {' Posted by '}
 
-        {post.user && <UserInfo user={post.user} />}
+        {/* {post.user && <UserInfo user={post.user} />} */}
+        <UserInfo user={post.user} />
       </p>
     </div>
 
-    <p className="PostInfo__body">{post.body}</p>
+    <p className="PostInfo__body">
+      {post.body}
+    </p>
 
     <hr />
 
-    {post.comments ? (
-      <CommentList comments={post.comments} />
-    ) : (
-      <b data-cy="NoCommentsMessage">No comments yet</b>
-    )}
-
+    {post.comments.length > 0
+      ? (<CommentList comments={post.comments} />)
+      : (<b data-cy="NoCommentsMessage">No comments yet</b>)
+    }
   </div>
 );

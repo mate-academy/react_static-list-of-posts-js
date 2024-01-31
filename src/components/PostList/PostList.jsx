@@ -4,9 +4,7 @@ import './PostList.scss';
 export const PostList = ({ posts }) => (
   <div className="PostList">
     {posts.map(post => (
-      <div key={post.id}>
-        <PostInfo post={post} />
-      </div>
+      <PostInfo post={post} key={post.id} />
     ))}
   </div>
 );
