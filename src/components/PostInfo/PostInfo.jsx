@@ -18,20 +18,10 @@ export const PostInfo = ({ post }) => (
 
     <hr />
 
-    {/* {post.comments ? <CommentList comments={post.comments} /> : <b data-cy="NoCommentsMessage">No comments yet</b>} */}
-
-    {/* {post.comments && <CommentList comments={post.comments} />}
-      <b data-cy="NoCommentsMessage">No comments yet</b> */}
-
-    {/* {post.comments ? (
+    {post.comments ? (
       <CommentList comments={post.comments} />
     ) : (
       <b data-cy="NoCommentsMessage">No comments yet</b>
-    )} */}
-    {post.comments.length === 0 ? (
-      <b data-cy="NoCommentsMessage">No comments yet</b>
-    ) : (
-      <CommentList comments={post.comments} />
     )}
 
   </div>
