@@ -17,7 +17,7 @@ function getUserById(userId) {
 }
 
 function getCommentByPostId(postId) {
-  return commentsFromServer.sort(comment => comment.postId === postId)
+  return commentsFromServer.filter(comment => comment.postId === postId)
     || null;
 }
 
