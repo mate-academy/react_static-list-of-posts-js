@@ -10,7 +10,7 @@ export const PostInfo = ({ post }) => (
         {post.title}
       </h3>
 
-      <UserInfo user={post.user} />
+      {post.user && <UserInfo user={post.user} />}
     </div>
 
     <p className="PostInfo__body">
