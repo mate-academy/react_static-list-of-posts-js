@@ -1,5 +1,5 @@
 /* eslint-disable max-len */
-/* eslint-disable react/jsx-filename-extension */
+/* eslint-disable linebreak-style */
 
 import React from 'react';
 import { mount } from '@cypress/react';
@@ -21,6 +21,7 @@ describe('PostInfo', () => {
           id: 52,
           name: 'esse autem dolorum',
           email: 'Abigail.OConnell@june.org',
+          // eslint-disable-next-line max-len
           body: 'et enim voluptatem totam laudantium\nimpedit nam labore repellendus enim earum aut\nconsectetur mollitia fugit qui repellat expedita sunt\naut fugiat vel illo quos aspernatur ducimus',
         },
         {
@@ -28,6 +29,7 @@ describe('PostInfo', () => {
           id: 53,
           name: 'maiores alias necessitatibus aut non',
           email: 'Laverne_Price@scotty.info',
+          // eslint-disable-next-line max-len
           body: 'a at tempore\nmolestiae odit qui dolores molestias dolorem et\nlaboriosam repudiandae placeat quisquam\nautem aperiam consectetur maiores laboriosam nostrum',
         },
         {
@@ -35,6 +37,7 @@ describe('PostInfo', () => {
           id: 54,
           name: 'culpa eius tempora sit consequatur neque iure deserunt',
           email: 'Kenton_Vandervort@friedrich.com',
+          // eslint-disable-next-line max-len
           body: 'et ipsa rem ullam cum pariatur similique quia\ncum ipsam est sed aut inventore\nprovident sequi commodi enim inventore assumenda aut aut\ntempora possimus soluta quia consequatur modi illo',
         },
       ];
@@ -43,6 +46,7 @@ describe('PostInfo', () => {
         userId: 2,
         id: 11,
         title: 'et ea vero quia laudantium autem',
+        // eslint-disable-next-line max-len
         body: 'delectus reiciendis molestiae occaecati non minima eveniet qui voluptatibus\naccusamus in eum beatae sit\nvel qui neque voluptates ut commodi qui incidunt\nut animi commodi',
         user: user2,
         comments,

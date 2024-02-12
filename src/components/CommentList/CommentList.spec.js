@@ -1,5 +1,4 @@
-/* eslint-disable max-len */
-/* eslint-disable react/jsx-filename-extension */
+/* eslint-disable linebreak-style */
 
 import React from 'react';
 import { mount } from '@cypress/react';
@@ -14,6 +13,7 @@ describe('CommentList component', () => {
           id: 1,
           name: 'id labore ex et quam laborum',
           email: 'Eliseo@gardner.biz',
+          // eslint-disable-next-line max-len
           body: 'laudantium enim quasi est quidem magnam voluptate ipsam eos\ntempora quo necessitatibus\ndolor quam autem quasi\nreiciendis et nam sapiente accusantium',
         },
         {
@@ -21,6 +21,7 @@ describe('CommentList component', () => {
           id: 2,
           name: 'quo vero reiciendis velit similique earum',
           email: 'Jayne_Kuhic@sydney.com',
+          // eslint-disable-next-line max-len
           body: 'est natus enim nihil est dolore omnis voluptatem numquam\net omnis occaecati quod ullam at\nvoluptatem error expedita pariatur\nnihil sint nostrum voluptatem reiciendis et',
         },
         {
@@ -28,6 +29,7 @@ describe('CommentList component', () => {
           id: 3,
           name: 'odio adipisci rerum aut animi',
           email: 'Nikita@garfield.biz',
+          // eslint-disable-next-line max-len
           body: 'quia molestiae reprehenderit quasi aspernatur\naut expedita occaecati aliquam eveniet laudantium\nomnis quibusdam delectus saepe quia accusamus maiores nam est\ncum et ducimus et vero voluptates excepturi deleniti ratione',
         },
         {
@@ -35,6 +37,7 @@ describe('CommentList component', () => {
           id: 4,
           name: 'alias odio sit',
           email: 'Lew@alysha.tv',
+          // eslint-disable-next-line max-len
           body: 'non et atque\noccaecati deserunt quas accusantium unde odit nobis qui voluptatem\nquia voluptas consequuntur itaque dolor\net qui rerum deleniti ut occaecati',
         },
       ];
