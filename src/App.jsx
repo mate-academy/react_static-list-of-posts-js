@@ -14,7 +14,7 @@ const filterComments = (comments, id) => (
 );
 
 const getPosts = (posts, users, comments) => (
-  [...posts].map(post => ({
+  posts.map(post => ({
     ...post,
     user: findUser(users, post.userId),
     comments: filterComments(comments, post.id),
