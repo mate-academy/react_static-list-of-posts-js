@@ -1,3 +1,1 @@
-export const UserInfo = () => (
-  <>Put the user here</>
-);
+export const UserInfo = () => <>Put the user here</>;

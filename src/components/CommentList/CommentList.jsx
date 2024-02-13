@@ -1,3 +1,1 @@
-export const CommentList = () => (
-  <>Put the list here</>
-);
+export const CommentList = () => <>Put the list here</>;
