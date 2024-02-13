@@ -1,3 +1,4 @@
+/* eslint-disable max-len */
 
 import React from 'react';
 import { mount } from '@cypress/react';
@@ -19,7 +20,6 @@ describe('PostInfo', () => {
           id: 52,
           name: 'esse autem dolorum',
           email: 'Abigail.OConnell@june.org',
-          // eslint-disable-next-line max-len
           body: 'et enim voluptatem totam laudantium\nimpedit nam labore repellendus enim earum aut\nconsectetur mollitia fugit qui repellat expedita sunt\naut fugiat vel illo quos aspernatur ducimus',
         },
         {
@@ -27,7 +27,6 @@ describe('PostInfo', () => {
           id: 53,
           name: 'maiores alias necessitatibus aut non',
           email: 'Laverne_Price@scotty.info',
-          // eslint-disable-next-line max-len
           body: 'a at tempore\nmolestiae odit qui dolores molestias dolorem et\nlaboriosam repudiandae placeat quisquam\nautem aperiam consectetur maiores laboriosam nostrum',
         },
         {
@@ -35,7 +34,6 @@ describe('PostInfo', () => {
           id: 54,
           name: 'culpa eius tempora sit consequatur neque iure deserunt',
           email: 'Kenton_Vandervort@friedrich.com',
-          // eslint-disable-next-line max-len
           body: 'et ipsa rem ullam cum pariatur similique quia\ncum ipsam est sed aut inventore\nprovident sequi commodi enim inventore assumenda aut aut\ntempora possimus soluta quia consequatur modi illo',
         },
       ];
