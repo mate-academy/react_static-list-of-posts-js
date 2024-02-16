@@ -1,3 +1,1 @@
-export const CommentInfo = () => (
-  <>Put the comment here</>
-);
+export const CommentInfo = () => <>Put the comment here</>;
