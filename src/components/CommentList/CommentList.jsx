@@ -1,23 +1,23 @@
-export const CommentList = ({ data }) => (
+export const CommentList = ({ comments }) => (
   <div className="CommentList">
     <div className="CommentInfo">
       <div className="CommentInfo__title">
         <strong className="CommentInfo__name">
-          {data.name}
+          {comments.name}
         </strong>
 
         {' by '}
 
         <a
           className="CommentInfo__email"
-          href={`mailto:${data.email}`}
+          href={`mailto:${comments.email}`}
         >
-          {data.email}
+          {comments.email}
         </a>
       </div>
 
       <div className="CommentInfo__body">
-        {data.body}
+        {comments.body}
       </div>
     </div>
   </div>

@@ -1,26 +1,26 @@
 import { CommentList } from '../CommentList';
 import { UserInfo } from '../UserInfo';
 
-export const PostInfo = ({ info }) => (
+export const PostInfo = ({ post }) => (
   <div className="PostInfo">
     <div className="PostInfo__header">
       <h3 className="PostInfo__title">
-        {info.title}
+        {post.title}
       </h3>
 
       <p>
         {' Posted by  '}
       </p>
-      <UserInfo info={info} />
+      {post.user && <UserInfo user={post.user} />}
     </div>
 
     <p className="PostInfo__body">
-      {info.body}
+      {post.body}
     </p>
 
     <hr />
 
-    {info.comments !== null ? <CommentList data={info.comments} />
+    {post.comments.length !== null ? <CommentList comments={post.comments} />
       : <b data-cy="NoCommentsMessage">No comments yet</b>}
 
   </div>
