@@ -18,9 +18,7 @@ export const PostInfo = ({ post }) => (
       <p className="PostInfo__body">{post.body}</p>
 
       {post.comments.length !== 0 ? (
-        post.comments.map(comments => (
-          <CommentList comments={comments} key={comments.id} />
-        ))
+        <CommentList comments={post.comments} />
       ) : (
         <b data-cy="NoCommentsMessage">No comments yet</b>
       )}
