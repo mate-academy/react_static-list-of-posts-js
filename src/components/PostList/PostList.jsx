@@ -8,15 +8,5 @@ function getCommentByPostId(postId) {
 
 export const PostList = ({ posts }) => (
   <div className="PostList">
-    {posts.map(post => {
-      const comments = getCommentByPostId(post.id);
-      const postWithComments = {
-        ...post,
-        comments,
-        user: usersFromServer.find(user => user.id === post.userId),
-      };
-
-      return <PostInfo post={postWithComments} key={postWithComments.id} />;
-    })}
   </div>
 );
