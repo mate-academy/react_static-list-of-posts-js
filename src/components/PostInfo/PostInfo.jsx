@@ -7,7 +7,6 @@ export const PostInfo = ({ post }) => (
     <div className="PostInfo">
       <div className="PostInfo__header">
         <h3 className="PostInfo__title">{post.title}</h3>
-        
 
         <p>
           {' Posted by  '}
@@ -22,7 +21,6 @@ export const PostInfo = ({ post }) => (
         <CommentList comments={post.comments} />
       ) : (
         <b data-cy="NoCommentsMessage">No comments yet</b>
-
       )}
     </div>
   </>
