@@ -11,8 +11,6 @@ export const posts = postsFromServer.map(post => ({
   comments: getCommentsById(post.id),
 }));
 
-// console.log(posts);
-
 function getUserById(userId) {
   return usersFromServer.find(user => user.id === userId) || null;
 }
