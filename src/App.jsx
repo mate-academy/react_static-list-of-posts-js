@@ -11,15 +11,7 @@ function getUserById(userId) {
 }
 
 function getComments(postId) {
-  return (
-    commentsFromServer.reduce((acc, current) => {
-      if (current.postId === postId) {
-        acc.push(current);
-      }
-
-      return acc;
-    }, []) || null
-  );
+  return commentsFromServer.filter(comment => comment.postId === postId);
 }
 
 export const posts = postsFromServer.map(post => ({
@@ -30,6 +22,7 @@ export const posts = postsFromServer.map(post => ({
 
 export const App = () => (
   <section className="App">
-    <PostList posts={ posts } />
+    <h1 className="App__title">Static list of posts</h1>
+    <PostList posts={posts} />
   </section>
 );
