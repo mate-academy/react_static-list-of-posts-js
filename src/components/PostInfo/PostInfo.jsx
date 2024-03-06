@@ -4,7 +4,7 @@ import { CommentList } from '../CommentList/CommentList';
 import { UserInfo } from '../UserInfo/UserInfo';
 
 export const PostInfo = ({ post }) => {
-  const { title, body, user, comments } = post;
+  const { comments, user, title, body } = post;
 
   return (
     <>
