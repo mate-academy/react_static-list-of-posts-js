@@ -1,11 +1,13 @@
 export const CommentInfo = ({ comment }) => {
+  const { name, email, body } = comment;
+
   return (
     <div className="CommentInfo">
-      <p className="CommentInfo__name">{comment.name}</p>
-      <a href={`mailto:${comment.email}`} className="CommentInfo__email">
+      <p className="CommentInfo__name">{name}</p>
+      <a href={`mailto:${email}`} className="CommentInfo__email">
         {comment.email}
       </a>
-      <p className="CommentInfo__body">{comment.body}</p>
+      <p className="CommentInfo__body">{body}</p>
     </div>
   );
 };
