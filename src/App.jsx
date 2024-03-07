@@ -5,17 +5,17 @@ import commentsFromServer from './api/comments.json';
 import usersFromServer from './api/users.json';
 import { PostList } from './components/PostList/PostList';
 
-function findUserId(UserId) {
+function findUserById(UserId) {
   return usersFromServer.find(user => user.id === UserId);
 }
 
-function filterCommentsByUserId(comments, UserId) {
-  return comments.filter(comment => comment.postId === UserId);
+function filterCommentsByPostId(postId) {
+  return commentsFromServer.filter(comment => comment.postId === postId);
 }
 
 const posts = postsFromServer.map(post => {
-  const user = findUserId(post.userId);
-  const comments = filterCommentsByUserId(commentsFromServer, post.id);
+  const user = findUserById(post.userId);
+  const comments = filterCommentsByPostId(commentsFromServer, post.id);
 
   return {
     ...post,
