@@ -1,7 +1,6 @@
-import './PostInfo.scss';
-
-import { UserInfo } from '../UserInfo';
 import { CommentList } from '../CommentList';
+import { UserInfo } from '../UserInfo';
+import './PostInfo.scss';
 
 export const PostInfo = ({ post }) => {
   const { comments, body, user, title } = post;
