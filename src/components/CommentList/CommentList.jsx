@@ -1,13 +1,11 @@
 import { CommentInfo } from '../CommentInfo/CommentInfo';
 import './CommentList.scss';
 
-export const CommentList = ({ IdOfPost, Comments }) => {
-  const comms = Comments.filter(com => com.postId === IdOfPost);
-
-  if (comms.length > 0) {
+export const CommentList = ({ commenstList }) => {
+  if (commenstList.length > 0) {
     return (
       <div className="CommentList">
-        {comms.map(comment => (
+        {commenstList.map(comment => (
           <CommentInfo comment={comment} key={comment.id} />
         ))}
       </div>
