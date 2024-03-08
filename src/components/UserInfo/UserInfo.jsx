@@ -1,1 +1,8 @@
-export const UserInfo = () => <>Put the user here</>;
+export const UserInfo = ({ user }) => (
+  <p>
+    {'Posted by '}
+    <a href={`mailto:${user.email}`} className="UserInfo">
+      {user.name}
+    </a>
+  </p>
+);
