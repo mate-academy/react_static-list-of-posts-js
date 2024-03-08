@@ -1,12 +1,14 @@
 import { PostInfo } from '../PostInfo/PostInfo';
+import commentsFromServer from '../../api/comments.json';
+import usersFromServer from '../../api/users.json';
 
-export const PostList = ({ postList, userList, commentList }) => (
+export const PostList = ({ postList }) => (
   <div className="PostList">
     {postList.map(post => (
       <PostInfo
         post={post}
-        userList={userList}
-        commenstList={commentList}
+        userList={usersFromServer}
+        commenstList={commentsFromServer}
         key={post.id}
       />
     ))}
