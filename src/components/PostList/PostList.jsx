@@ -3,12 +3,8 @@ import { PostInfo } from '../PostInfo/PostInfo';
 
 export const PostList = ({ posts }) => (
   <div className="PostList">
-    {posts.map(post => {
-      return (
-        <React.Fragment key={post.id}>
-          <PostInfo post={post} />
-        </React.Fragment>
-      );
-    })}
+    {posts.map(post => (
+      <PostInfo key={post.id} post={post} />
+    ))}
   </div>
 );

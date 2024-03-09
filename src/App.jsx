@@ -1,4 +1,3 @@
-/* eslint-disable max-len */
 import './App.scss';
 import React from 'react';
 import { PostList } from './components/PostList/PostList';
