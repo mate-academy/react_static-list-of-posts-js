@@ -7,7 +7,6 @@ export const PostList = ({ posts, users, comments }) => (
         const commentsByPost = comments.filter(
           comment => comment.postId === post.id,
         );
-
         const user = users.find(item => item.id === post.userId);
 
         return (

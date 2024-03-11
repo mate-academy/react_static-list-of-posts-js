@@ -3,8 +3,8 @@ import { UserInfo } from '../UserInfo';
 
 import './PostInfo.scss';
 
-export const PostInfo = ({ post }) => {
-  const { title, user, body, comments } = post;
+export const PostInfo = ({ post, comments, user }) => {
+  const { title, body } = post;
 
   return (
     <div className="PostInfo">
