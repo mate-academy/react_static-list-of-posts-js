@@ -1,5 +1,7 @@
+import { UserInfo } from '../UserInfo/UserInfo';
+
 export const PostInfo = ({ post }) => {
-  console.log(post);
+  const { title, body, user, comments } = post;
 
   return (
     <div className="PostInfo">
@@ -8,10 +10,7 @@ export const PostInfo = ({ post }) => {
 
         <p>
           {' Posted by  '}
-
-          <a className="UserInfo" href="mailto:Julianne.OConner@kory.org">
-            Patricia Lebsack
-          </a>
+          <UserInfo user={user} />
         </p>
       </div>
 
