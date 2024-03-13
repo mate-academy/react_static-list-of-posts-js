@@ -7,7 +7,7 @@ export const PostInfo = ({ post }) => (
     <div className="PostInfo__header">
       <h3 className="PostInfo__title">{post.title}</h3>
 
-      {post.user && <UserInfo user={post.user} />}
+      {post.userId && <UserInfo userId={post.userId} />}
     </div>
 
     <p className="PostInfo__body">{post.body}</p>
