@@ -4,7 +4,7 @@ export const CommentInfo = ({ comment }) => {
   return (
     <div className="CommentInfo">
       <div className="CommentInfo__title">
-        <strong className="CommentInfo__name">{`${name}`}</strong>
+        <strong className="CommentInfo__name">{name}</strong>
 
         {' by '}
 
@@ -13,7 +13,7 @@ export const CommentInfo = ({ comment }) => {
         </a>
       </div>
 
-      <div className="CommentInfo__body">{`${body}`}</div>
+      <div className="CommentInfo__body">{body}</div>
     </div>
   );
 };

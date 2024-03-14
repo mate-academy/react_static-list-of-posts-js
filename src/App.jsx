@@ -7,10 +7,8 @@ import { PostList } from './components/PostList/PostList';
 
 const posts = postsFromServer.map(post => ({
   ...post,
-  user: usersFromServer.find(user => user.id === post.userId || null),
-  comments: commentsFromServer.filter(
-    comment => comment.postId === post.id || null,
-  ),
+  user: usersFromServer.find(user => user.id === post.userId) || null,
+  comments: commentsFromServer.filter(comment => comment.postId === post.id),
 }));
 
 export const App = () => (

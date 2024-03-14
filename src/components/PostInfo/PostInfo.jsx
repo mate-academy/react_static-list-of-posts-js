@@ -8,16 +8,16 @@ export const PostInfo = ({ post }) => {
   return (
     <div className="PostInfo">
       <div className="PostInfo__header">
-        <h3 className="PostInfo__title">{`${title}`}</h3>
+        <h3 className="PostInfo__title">{title}</h3>
 
         <p>
           {' Posted by  '}
 
-          <UserInfo user={user} />
+          {user && <UserInfo user={user} />}
         </p>
       </div>
 
-      <p className="PostInfo__body">{`${body}`}</p>
+      <p className="PostInfo__body">{body}</p>
 
       <hr />
 
