@@ -1,8 +1,8 @@
 export const CommentInfo = ({ comment }) => {
-  const { name, email, body } = comment;
+  const { id, name, email, body } = comment;
 
   return (
-    <div className="CommentInfo">
+    <div key={id} className="CommentInfo">
       <div className="CommentInfo__title">
         <strong className="CommentInfo__name">{`${name}`}</strong>
 
