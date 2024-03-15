@@ -7,11 +7,23 @@ export const PostInfo = ({ post }) => (
     <div className="PostInfo__header">
       <h3 className="PostInfo__title">{post.title}</h3>
 
-      {post.userId && <UserInfo userId={post.userId} />}
+      <p>
+        {' Posted by  '}
+
+        {post.userId && <UserInfo user={post.user} />}
+      </p>
     </div>
 
     <p className="PostInfo__body">{post.body}</p>
 
-    <CommentList postId={post.id} />
+    {post.comments && !post.comments.length ? (
+      <>
+        <hr />
+
+        <b data-cy="NoCommentsMessage">No comments yet</b>
+      </>
+    ) : (
+      <CommentList comments={post.comments} />
+    )}
   </div>
 );

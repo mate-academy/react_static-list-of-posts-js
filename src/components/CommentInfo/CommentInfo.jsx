@@ -1,25 +1,17 @@
-import comments from '../../api/comments.json';
 import './CommentInfo.scss';
 
-export function CommentInfo({ commentId }) {
-  const targetComment = comments.find(comment => comment.id === commentId);
+export const CommentInfo = ({ comment }) => (
+  <div className="CommentInfo">
+    <div className="CommentInfo__title">
+      <strong className="CommentInfo__name">{comment.name}</strong>
 
-  return (
-    <div className="CommentInfo">
-      <div className="CommentInfo__title">
-        <strong className="CommentInfo__name">{targetComment.name}</strong>
+      {' by '}
 
-        {' by '}
-
-        <a
-          className="CommentInfo__email"
-          href={`mailto:${targetComment.email}`}
-        >
-          {targetComment.email}
-        </a>
-      </div>
-
-      <div className="CommentInfo__body">{targetComment.body}</div>
+      <a className="CommentInfo__email" href={`mailto:${comment.email}`}>
+        {comment.email}
+      </a>
     </div>
-  );
-}
+
+    <div className="CommentInfo__body">{comment.body}</div>
+  </div>
+);
