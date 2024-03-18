@@ -4,12 +4,6 @@ import { CommentList } from '../CommentList/CommentList';
 
 export const PostInfo = ({ post }) => {
   const { title, body, user, comments } = post;
-  const commentsMessage =
-    comments.length > 0 ? (
-      <CommentList comments={comments} />
-    ) : (
-      <b data-cy="NoCommentsMessage">No comments yet</b>
-    );
 
   return (
     <div className="PostInfo">
@@ -17,7 +11,7 @@ export const PostInfo = ({ post }) => {
         <h3 className="PostInfo__title">{title}</h3>
 
         <p>
-          {' Posted by  '}
+          <span> Posted by </span>
 
           <UserInfo user={user} />
         </p>
@@ -27,7 +21,11 @@ export const PostInfo = ({ post }) => {
 
       <hr />
 
-      {commentsMessage}
+      {comments.length > 0 ? (
+        <CommentList comments={comments} />
+      ) : (
+        <b data-cy="NoCommentsMessage">No comments yet</b>
+      )}
     </div>
   );
 };
