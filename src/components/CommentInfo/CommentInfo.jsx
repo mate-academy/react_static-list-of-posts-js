@@ -1,6 +1,8 @@
 import React from 'react';
 
-export const CommentInfo = ({ name, email, body }) => {
+export const CommentInfo = ({ comment }) => {
+  const { name, email, body } = comment;
+
   return (
     <div className="CommentInfo">
       <div className="CommentInfo__title">
