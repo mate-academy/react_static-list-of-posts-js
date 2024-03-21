@@ -5,10 +5,9 @@ export const CommentList = ({ comments }) => {
   if (comments.length !== 0) {
     return (
       <div className="CommentList">
-        {comments.map(
-          comment =>
-            comment && <CommentInfo comment={comment} key={comment.id} />,
-        )}
+        {comments.map(comment => (
+          <CommentInfo comment={comment} key={comment.id} />
+        ))}
       </div>
     );
   }
