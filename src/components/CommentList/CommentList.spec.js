@@ -1,8 +1,8 @@
 /* eslint-disable max-len */
 /* eslint-disable react/jsx-filename-extension */
 
+import { mount } from '@cypress/react18';
 import React from 'react';
-import { mount } from '@cypress/react';
 import { CommentList } from './CommentList';
 
 describe('CommentList component', () => {
