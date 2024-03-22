@@ -1,5 +1,4 @@
 import './App.scss';
-
 import postsFromServer from './api/posts.json';
 import commentsFromServer from './api/comments.json';
 import usersFromServer from './api/users.json';
@@ -12,16 +11,12 @@ function getUserById(userId) {
 export const posts = postsFromServer.map(post => ({
   ...post,
   user: getUserById(post.userId),
-}));
-
-export const comments = commentsFromServer.map(comment => ({
-  ...comment,
-  user: getUserById(comment.userId),
+  comments: commentsFromServer.filter(comment => comment.postId === post.id),
 }));
 
 export const App = () => (
   <section className="App">
     <h1 className="App__title">Static list of posts</h1>
-    <PostList />
+    <PostList posts={posts} />
   </section>
 );

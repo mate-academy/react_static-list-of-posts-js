@@ -9,7 +9,7 @@ export const PostInfo = ({ post }) => (
     </div>
     <p className="PostInfo__body">{post.body}</p>
     <hr />
-    <UserInfo user={post.user} />
+    {post.user && <UserInfo user={post.user} />}
     {post.comments.length > 0 ? (
       <CommentList comments={post.comments} />
     ) : (
