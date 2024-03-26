@@ -5,7 +5,7 @@ import './PostInfo.scss';
 export const PostInfo = ({ post }) => (
   <div className="PostInfo">
     <div className="PostInfo__header">
-      <h3 className="PostInfo__title">qui est esse</h3>
+      <h3 className="PostInfo__title">{post.title}</h3>
 
       <p>
         {' Posted by  '} <UserInfo user={post.user} />
