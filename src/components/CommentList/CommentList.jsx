@@ -1,4 +1,5 @@
-import { CommentInfo } from "../CommentInfo";
+import { CommentInfo } from '../CommentInfo';
+
 export const CommentList = ({ posts, users, comments }) => {
   const postComments = comments.filter(item => item.postId === posts.id);
 
