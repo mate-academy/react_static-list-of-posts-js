@@ -21,10 +21,6 @@ export const App = () => (
     <h1 className="App__title">Static list of posts</h1>
 
     <PostList posts={posts} />
-    {posts.some(post => post.id === commentsFromServer.postId) ? (
-      <CommentList comments={commentsFromServer} />
-    ) : (
-      <b data-cy="NoCommentsMessage">No comments yet</b>
-    )}
+    <CommentList comments={commentsFromServer} />
   </section>
 );
