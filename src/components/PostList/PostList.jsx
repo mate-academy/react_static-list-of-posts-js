@@ -1,4 +1,4 @@
-import { PostInfo } from '../PostInfo';
+import { PostInfo } from '../PostInfo/PostInfo';
 import './PostList.scss';
 
 export const PostList = ({ posts }) => (
