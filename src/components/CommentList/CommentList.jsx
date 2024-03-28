@@ -3,9 +3,11 @@ import { CommentInfo } from '../CommentInfo/CommentInfo';
 export const CommentList = ({ comment }) => {
   return (
     <>
-      {comment ? (
+      {comment.length > 0 ? (
         <div className="CommentList">
-          <CommentInfo comment={comment} />
+          {comment.map(post => {
+            return <CommentInfo comment={post} />;
+          })}
         </div>
       ) : (
         <b data-cy="NoCommentsMessage">No comments yet</b>
