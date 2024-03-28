@@ -1,7 +1,8 @@
-import './UserInfo'
+import './UserInfo.scss';
 
-export const UserInfo = ({user}) => {
+export const UserInfo = ({ user }) => {
   const { email, name } = user;
+
   return (
     <p>
       {' Posted by  '}
@@ -10,5 +11,5 @@ export const UserInfo = ({user}) => {
         {name}
       </a>
     </p>
-  )
-}
+  );
+};
