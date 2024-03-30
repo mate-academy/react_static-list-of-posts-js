@@ -2,7 +2,6 @@ import { CommentList } from '../CommentList';
 import { UserInfo } from '../UserInfo';
 
 export const PostInfo = ({ post }) => (
-  <>
     <div className="PostInfo">
       <div className="PostInfo__header">
 
@@ -26,5 +25,5 @@ export const PostInfo = ({ post }) => (
         post={post}
       />
     </div>
-  </>
+
 );
