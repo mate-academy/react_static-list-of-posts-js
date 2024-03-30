@@ -1,8 +1,7 @@
 import { CommentInfo } from '../CommentInfo';
-import commentsFromServer from '../../api/comments.json';
 
-export const CommentList = ({ post }) => {
-  const comments = commentsFromServer.filter(item => item.postId === post.id);
+export const CommentList = ({ posts }) => {
+  const { comments } = posts;
 
   return (
     <>
@@ -10,6 +9,7 @@ export const CommentList = ({ post }) => {
         <div>
           {comments.map(comment => (
             <CommentInfo
+              key={comment.id}
               comment={comment}
             />
           ))}
