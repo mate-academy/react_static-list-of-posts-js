@@ -1,20 +1,21 @@
 import { CommentInfo } from '../CommentInfo';
+import commentsFromServer from '../../api/comments.json';
 
-export const CommentList = ({ posts, users, comments }) => {
-  const postComments = comments.filter(item => item.postId === posts.id);
+export const CommentList = ({ post }) => {
+  const comments = commentsFromServer.filter(item => item.postId === post.id);
 
   return (
     <>
-      {postComments.length > 0 && (
+      {comments.length > 0 ? (
         <div>
-          {postComments.map(comment => (
+          {comments.map(comment => (
             <CommentInfo
-              key={comment.id}
-              currComment={comment}
-              id={comment.id}
+              comment={comment}
             />
           ))}
         </div>
+      ) : (
+        <b data-cy="NoCommentsMessage">No comments yet</b>
       )}
     </>
   );
