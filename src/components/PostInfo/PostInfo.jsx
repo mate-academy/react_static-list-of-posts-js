@@ -1,32 +1,28 @@
 import './PostInfo.scss';
 import { CommentList } from '../CommentList';
 import { UserInfo } from '../UserInfo';
-import usersFromServer from '../../api/users.json';
-
-import commentsFromServer from '../../api/comments.json';
 
 export const PostInfo = ({ post }) => {
-  const comments = commentsFromServer.filter(el => el.postId === post.id);
-  const isComments = !comments.length;
-  const user = usersFromServer.find(el => el.id === post.userId);
+  const { title, body, user, comments } = post;
+  const isComments = comments.length !== 0;
 
   return (
     <div className="PostInfo">
       <div className="PostInfo__header">
-        <h3 className="PostInfo__title">{post.title}</h3>
+        <h3 className="PostInfo__title">{title}</h3>
 
         <UserInfo user={user} />
       </div>
 
-      <p className="PostInfo__body">{post.body}</p>
+      <p className="PostInfo__body">{body}</p>
 
       {isComments ? (
+        <CommentList comments={comments} />
+      ) : (
         <>
           <hr />
           <b data-cy="NoCommentsMessage">No comments yet</b>
         </>
-      ) : (
-        <CommentList comments={comments} />
       )}
     </div>
   );
