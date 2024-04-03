@@ -3,7 +3,8 @@ import { CommentList } from '../CommentList/CommentList';
 
 export const PostInfo = ({ post, users, comments }) => {
   const postUser = users.find(user => user.id === post.userId) || null;
-  const postComments = comments.filter(comment => comment.postId === post.id) || null;
+  const postComments =
+    comments.filter(comment => comment.postId === post.id) || null;
 
   return (
     <div className="PostInfo">
