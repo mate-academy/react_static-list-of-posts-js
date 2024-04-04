@@ -6,13 +6,11 @@ import commentsFromServer from './api/comments.json';
 import usersFromServer from './api/users.json';
 
 function getComentById(postId) {
-  return (
-    commentsFromServer.filter(comment => comment.postId === postId) || null
-  );
+  return commentsFromServer.filter(comment => comment.postId === postId);
 }
 
 function getUserById(userId) {
-  return usersFromServer.find(user => user.id === userId) || null;
+  return usersFromServer.find(user => user.id === userId);
 }
 
 export const posts = postsFromServer.map(post => ({

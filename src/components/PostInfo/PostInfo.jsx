@@ -12,9 +12,7 @@ export const PostInfo = ({ post }) => {
         <p>
           {' Posted by  '}
 
-          <a className="UserInfo" href={`mailto:${post.user.email}`}>
-            {post.user && <UserInfo user={post.user} />}
-          </a>
+          {post.user && <UserInfo user={post.user} />}
         </p>
       </div>
 
