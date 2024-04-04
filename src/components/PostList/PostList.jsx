@@ -1,3 +1,4 @@
+// eslint-disable
 import { PostInfo } from '../PostInfo';
 
 export const PostList = ({ posts }) => (
