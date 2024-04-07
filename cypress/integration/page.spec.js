@@ -10,11 +10,14 @@ describe('Page', () => {
   });
 
   it('should rended posts in the correct order', () => {
-    cy.get('.PostInfo__title').eq(0)
-      .should('have.text', 'sunt aut facere repellat provident occaecati excepturi optio reprehenderit');
+    cy.get('.PostInfo__title')
+      .eq(0)
+      .should(
+        'have.text',
+        'sunt aut facere repellat provident occaecati excepturi optio reprehenderit',
+      );
 
-    cy.get('.PostInfo__title').eq(19)
-      .should('have.text', 'aut amet sed');
+    cy.get('.PostInfo__title').eq(19).should('have.text', 'aut amet sed');
   });
 
   it('should add corresponding users', () => {
