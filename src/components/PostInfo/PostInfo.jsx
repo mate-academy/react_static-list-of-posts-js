@@ -10,7 +10,7 @@ export const PostInfo = ({ post: { title, user, body, comments } }) => (
       <p>
         {' Posted by  '}
 
-        <UserInfo user={user} />
+        {user && <UserInfo user={user} />}
       </p>
     </div>
 
