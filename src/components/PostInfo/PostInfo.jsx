@@ -1,16 +1,6 @@
+import './PostInfo.scss';
 import { CommentList } from '../CommentList';
 import { UserInfo } from '../UserInfo';
-import postsFromServer from '../../api/posts.json';
-import commentsFromServer from '../../api/comments.json';
-
-function findPostByComment(postId) {
-  return postsFromServer.find(post => post.id === postId) || null;
-}
-
-export const commentsWithPost = commentsFromServer.map(comment => ({
-  ...comment,
-  post: findPostByComment(comment.postId),
-}));
 
 export const PostInfo = ({ post }) => {
   return (
@@ -29,7 +19,7 @@ export const PostInfo = ({ post }) => {
 
       <hr />
 
-      <CommentList comments={commentsWithPost} post={post} />
+      <CommentList comments={post.comments} post={post} />
     </div>
   );
 };
