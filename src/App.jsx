@@ -1,12 +1,5 @@
 import './App.scss';
 
-// delete after
-import './components/CommentInfo/CommentInfo.scss';
-import './components/CommentList/CommentList.scss';
-import './components/PostInfo/PostInfo.scss';
-import './components/PostList/PostList.scss';
-import './components/UserInfo/UserInfo.scss';
-
 import postsFromServer from './api/posts.json';
 import commentsFromServer from './api/comments.json';
 import { PostList } from './components/PostList/PostList';
