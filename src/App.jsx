@@ -6,7 +6,7 @@ import usersFromServer from './api/users.json';
 import { PostList } from './components/PostList/PostList';
 
 function getUser(userIdOfPost) {
-  return usersFromServer.find(user => user.id === userIdOfPost);
+  return usersFromServer.find(user => user.id === userIdOfPost) || null;
 }
 
 function getComments(idOfPost) {
