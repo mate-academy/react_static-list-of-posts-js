@@ -13,13 +13,9 @@ function getCommentsByPostId(postId) {
   return commentsFromServer.filter(comment => comment.postId === postId);
 }
 
-export const postsWithComments = postsFromServer.map(post => ({
+const posts = postsFromServer.map(post => ({
   ...post,
   comments: getCommentsByPostId(post.id),
-}));
-
-export const posts = postsWithComments.map(post => ({
-  ...post,
   user: getUserById(post.userId),
 }));
 
