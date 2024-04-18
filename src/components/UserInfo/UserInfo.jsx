@@ -1,14 +1,9 @@
 /* eslint-disable prettier/prettier */
 import './UserInfo.scss';
 
-
 export const UserInfo = ({ user }) => (
   <>
-    <a
-      key={user.id}
-      className="UserInfo"
-      href={`mailto:${user.email}`}
-    >
+    <a key={user.id} className="UserInfo" href={`mailto:${user.email}`}>
       {user.name}
     </a>
   </>
