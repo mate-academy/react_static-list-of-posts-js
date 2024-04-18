@@ -1,8 +1,8 @@
 import { CommentInfo } from '../CommentInfo/CommentInfo';
 import './CommentList.scss';
 
-export const CommentList = ({ comment }) => (
+export const CommentList = ({ comments }) => (
   <div className="CommentList">
-    <CommentInfo comment={comment} />
+    <CommentInfo comments={comments} />
   </div>
 );
