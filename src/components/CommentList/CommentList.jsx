@@ -4,12 +4,12 @@ import './CommentList.scss';
 
 export const CommentList = ({ comments }) => (
   <div className="CommentList">
-    <ul>
+    <div>
       {comments.map(comment => (
-        <li key={comment.id}>
+        <div key={comment.id}>
           <CommentInfo comment={comment} />
-        </li>
+        </div>
       ))}
-    </ul>
+    </div>
   </div>
 );
