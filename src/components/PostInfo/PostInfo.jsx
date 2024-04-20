@@ -1,4 +1,5 @@
 import { UserInfo } from '../UserInfo/UserInfo';
+import { CommentList } from '../CommentList/CommentList';
 
 export const PostInfo = ({ post }) => (
   <>
@@ -16,7 +17,9 @@ export const PostInfo = ({ post }) => (
 
       <hr />
 
-      {post.comments.length === 0 && (
+      {post.comments.length ? (
+        <CommentList comments={post.comments} />
+      ) : (
         <b data-cy="NoCommentsMessage">No comments yet</b>
       )}
     </div>

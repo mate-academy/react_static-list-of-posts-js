@@ -1,7 +1,17 @@
 // import { UserInfo } from '../UserInfo/UserInfo';
 
-export const CommentInfo = ({ comments }) => (
-  <div key={comments.id} className="CommentInfo__name">
-    {comments.name}
+export const CommentInfo = ({ comment }) => (
+  <div className="CommentInfo">
+    <div className="CommentInfo__title">
+      <strong className="CommentInfo__name">{comment.name}</strong>
+
+      {' by '}
+
+      <a className="CommentInfo__email" href={`mailto:${comment.email}`}>
+        {comment.email}
+      </a>
+    </div>
+
+    <div className="CommentInfo__body">{comment.body}</div>
   </div>
 );
