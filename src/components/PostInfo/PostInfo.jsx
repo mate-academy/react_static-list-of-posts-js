@@ -1,4 +1,4 @@
-import { CommentList } from "../CommentList";
+import { CommentList } from '../CommentList';
 
 export const PostInfo = ({ posts }) => {
   return (
@@ -15,7 +15,7 @@ export const PostInfo = ({ posts }) => {
             </p>
           </div>
           <p className="PostInfo__body">{post.body}</p>
-          <CommentList comments={post.comments}/>
+          <CommentList comments={post.comments} />
         </div>
       ))}
     </div>

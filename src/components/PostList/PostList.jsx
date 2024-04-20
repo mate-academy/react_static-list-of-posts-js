@@ -1,9 +1,9 @@
-import { PostInfo } from "../PostInfo";
+import { PostInfo } from '../PostInfo';
 
 export const PostList = ({ posts }) => {
   return (
     <div className="PostList">
-      <PostInfo posts={posts}/>
+      <PostInfo posts={posts} />
     </div>
-  )
+  );
 };
