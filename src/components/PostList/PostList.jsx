@@ -1,10 +1,10 @@
 import { PostInfo } from '../PostInfo/PostInfo';
 
-export const PostList = ({ data }) => (
+export const PostList = ({ posts }) => (
   <>
     <div className="PostList">
-      {data.map(item => (
-        <PostInfo key={item.id} item={item} />
+      {posts.map(post => (
+        <PostInfo key={post.id} post={post} />
       ))}
     </div>
   </>
