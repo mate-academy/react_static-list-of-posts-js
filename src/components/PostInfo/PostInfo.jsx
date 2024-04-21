@@ -3,12 +3,6 @@ import { UserInfo } from '../UserInfo/UserInfo';
 import './PostInfo.scss';
 
 export const PostInfo = ({ post }) => {
-  let commentsExists;
-
-  if (post.comments !== undefined && post.comments.length > 0) {
-    commentsExists = true;
-  }
-
   return (
     <>
       <div className="PostInfo">
@@ -26,7 +20,7 @@ export const PostInfo = ({ post }) => {
 
         <hr />
 
-        {commentsExists ? (
+        {Array.isArray(post.comments) && post.comments.length > 0 ? (
           <CommentList comments={post.comments} />
         ) : (
           <b data-cy="NoCommentsMessage">No comments yet</b>
