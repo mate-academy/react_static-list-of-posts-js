@@ -1,9 +1,7 @@
 import { PostInfo } from '../PostInfo';
 
-export const PostList = ({ posts }) => {
+export const PostList = ({ post }) => {
   return (
-    <div className="PostList">
-      <PostInfo posts={posts} />
-    </div>
+      <PostInfo post={post} />
   );
 };
