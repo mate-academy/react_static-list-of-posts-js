@@ -5,7 +5,7 @@ import commentsFromServer from './api/comments.json';
 import usersFromServer from './api/users.json';
 import { PostList } from './components/PostList/PostList';
 
-export const posts = postsFromServer.map(post => ({
+const posts = postsFromServer.map(post => ({
   ...post,
   user: getUserById(post.userId),
   comments: getComments(post.id),
