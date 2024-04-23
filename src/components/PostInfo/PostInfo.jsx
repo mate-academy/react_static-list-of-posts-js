@@ -11,7 +11,7 @@ export const PostInfo = ({ post }) => {
         <h3 className="PostInfo__title">{title}</h3>
         <p>
           {' Posted by  '}
-          user && <UserInfo user={user} />
+          {user && <UserInfo user={user} />}
         </p>
       </div>
 
