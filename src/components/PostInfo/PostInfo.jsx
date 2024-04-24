@@ -11,7 +11,7 @@ export const PostInfo = ({ post }) => {
         <p>
           {` Posted by `}
 
-          <UserInfo author={post.author} />
+          <UserInfo user={post.user} />
         </p>
       </div>
 

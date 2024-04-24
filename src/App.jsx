@@ -7,14 +7,14 @@ import usersFromServer from './api/users.json';
 import { PostList } from './components/PostList';
 
 const posts = postsFromServer.map(post => {
-  const author = usersFromServer.find(user => user.id === post.userId);
+  const user = usersFromServer.find(item => item.id === post.userId);
   const comments = commentsFromServer.filter(
     comment => comment.postId === post.id,
   );
 
   return {
     ...post,
-    author,
+    user,
     comments,
   };
 });
