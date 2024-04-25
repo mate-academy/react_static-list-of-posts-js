@@ -1,5 +1,4 @@
 import { PostInfo } from '../PostInfo/PostInfo';
-// import { CommentInfo } from '../CommentInfo/CommentInfo';
 import { CommentList } from '../CommentList/CommentList';
 
 function getUserById(users, id) {
@@ -26,21 +25,6 @@ export const PostList = ({ posts, comments, users }) => {
         return (
           <div key={post.id} className="PostInfo">
             <PostInfo post={post} email={user.email} name={user.name} />
-            {/* {comentsUserById.length === 0 ? (
-              <>
-                <hr />
-
-                <b data-cy="NoCommentsMessage">No comments yet</b>
-              </>
-            ) : (
-              <>
-                <div className="CommentList">
-                  {comentsUserById.map(comment => {
-                    return <CommentInfo key={comment.id} comment={comment} />;
-                  })}
-                </div>
-              </>
-            )} */}
             <CommentList coments={comentsUserById} />
           </div>
         );
