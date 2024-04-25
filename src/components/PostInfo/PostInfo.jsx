@@ -1,3 +1,5 @@
+import { UserInfo } from './../UserInfo/UserInfo';
+
 export const PostInfo = ({ post, user }) => {
   return (
     <>
@@ -8,6 +10,7 @@ export const PostInfo = ({ post, user }) => {
           {/* <a className="UserInfo" href={`mailto:${user.email}`}>
             {user.name}
           </a> */}
+          <UserInfo user={user} />
         </p>
       </div>
 
