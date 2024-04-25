@@ -1,31 +1,31 @@
 import './App.scss';
 
 // import { comment } from 'postcss';
+// import { comment } from 'postcss';
 import postsFromServer from './api/posts.json';
 import commentsFromServer from './api/comments.json';
 import usersFromServer from './api/users.json';
-import { PostInfo } from './components/PostInfo/PostInfo';
-import { CommentInfo } from './components/CommentInfo/CommentInfo';
-import { comment } from 'postcss';
+// import { PostInfo } from './components/PostInfo/PostInfo';
+// import { CommentInfo } from './components/CommentInfo/CommentInfo';
+import { PostList } from './components/PostList/PostList';
 
-function getUserById(users, id) {
-  return users.filter(user => {
-    // console.log(user.id, '\t', id);
-    return user.id === id;
-  });
-}
+// function getUserById(users, id) {
+//   return users.filter(user => {
+//     return user.id === id;
+//   });
+// }
 
-function getComentsById(comments, id) {
-  return comments.filter(comment => {
-    return comment.postId === id;
-  });
-}
+// function getComentsById(comments, id) {
+//   return comments.filter(comment => {
+//     return comment.postId === id;
+//   });
+// }
 
 export const App = () => (
   <section className="App">
     <h1 className="App__title">Static list of posts</h1>
-    <div className="PostList">
-      {postsFromServer.map(post => {
+    {/* <div className="PostList"> */}
+    {/* {postsFromServer.map(post => {
         const id = post.userId;
         const resp = getUserById(usersFromServer, id);
         const user = resp.length ? resp[0] : null;
@@ -51,7 +51,12 @@ export const App = () => (
             )}
           </div>
         );
-      })}
-    </div>
+      })} */}
+    {/* </div> */}
+    <PostList
+      posts={postsFromServer}
+      comments={commentsFromServer}
+      users={usersFromServer}
+    />
   </section>
 );
