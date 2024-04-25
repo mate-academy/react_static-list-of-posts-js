@@ -1,1 +1,5 @@
-export const PostList = () => <>Put the list here</>;
+import { PostInfo } from '../PostInfo';
+
+export const PostList = ({ post }) => {
+  return <PostInfo post={post} />;
+};
