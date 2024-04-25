@@ -24,7 +24,7 @@ export const PostList = ({ posts, comments, users }) => {
 
         return (
           <div key={post.id} className="PostInfo">
-            <PostInfo post={post} email={user.email} name={user.name} />
+            <PostInfo post={post} user={user} />
             <CommentList coments={comentsUserById} />
           </div>
         );
