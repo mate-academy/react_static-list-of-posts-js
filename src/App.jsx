@@ -28,15 +28,15 @@ export const App = () => (
         const resp = getUserById(usersFromServer, id);
         // console.log(resp);
         const user = resp.length ? resp[0] : null;
-        const name = user ? user.name : null;
-        const email = user ? user.email : null;
+        // const name = user ? user.name : null;
+        // const email = user ? user.email : null;
         // const { body } = post;
-        const userId = user.id;
-        const comentsUserById = getComentsById(commentsFromServer, userId);
+        // const userId = user.id;
+        const comentsUserById = getComentsById(commentsFromServer, user.id);
 
         return (
           <div key={post.id} className="PostInfo">
-            <PostInfo post={post} email={email} name={name} />
+            <PostInfo post={post} email={user.email} name={user.name} />
             {comentsUserById.length === 0 ? (
               <>
                 <hr />
