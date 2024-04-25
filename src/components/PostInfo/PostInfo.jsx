@@ -1,11 +1,6 @@
 import './PostInfo.scss';
 import { CommentList } from '../CommentList/CommentList';
 import { UserInfo } from '../UserInfo/UserInfo';
-import commentsFromServer from '../../api/comments.json';
-
-function getCommentsByPostId(postId) {
-  return commentsFromServer.filter(comment => comment.postId === postId);
-}
 
 export const PostInfo = ({ post }) => (
   <div className="PostInfo">
@@ -18,8 +13,8 @@ export const PostInfo = ({ post }) => (
 
     <hr />
 
-    {getCommentsByPostId(post.id).length > 0 ? (
-      <CommentList comments={getCommentsByPostId(post.id)} />
+    {post.comments.length > 0 ? (
+      <CommentList comments={post.comments} />
     ) : (
       <b data-cy="NoCommentsMessage">No comments yet</b>
     )}
