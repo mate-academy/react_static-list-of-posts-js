@@ -1,7 +1,7 @@
 import { CommentInfo } from '../CommentInfo/CommentInfo';
 
 export const CommentList = ({ coments }) => {
-  const empty = coments.length === 0;
+  const empty = !coments || coments.length === 0;
 
   if (empty) {
     return (
