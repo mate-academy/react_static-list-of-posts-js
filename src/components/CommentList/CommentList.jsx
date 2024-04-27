@@ -1,4 +1,5 @@
 import { CommentInfo } from '../CommentInfo/CommentInfo';
+import './CommentList.scss';
 
 export const CommentList = ({ coments }) => {
   const empty = !coments || coments.length === 0;
