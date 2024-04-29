@@ -17,15 +17,18 @@ export const PostInfo = ({ post }) => {
         </p>
       </div>
       <p className="PostInfo__body">{body}</p>
-      // eslint-disable-next-line no-extra-boolean-cast
-      {!!comments.length ? (
-        <CommentList comments={comments} />
-      ) : (
-        <>
-          <hr />
-          <b data-cy="NoCommentsMessage">No comments yet</b>
-        </>
-      )}
+
+      {
+        /* eslint-disable-next-line no-extra-boolean-cast */
+        !!comments.length ? (
+          <CommentList comments={comments} />
+        ) : (
+          <>
+            <hr />
+            <b data-cy="NoCommentsMessage">No comments yet</b>
+          </>
+        )
+      }
     </div>
   );
 };
