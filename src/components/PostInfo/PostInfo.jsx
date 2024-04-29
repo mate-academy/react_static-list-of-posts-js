@@ -16,10 +16,9 @@ export const PostInfo = ({ post }) => {
           <UserInfo user={user} />
         </p>
       </div>
-
       <p className="PostInfo__body">{body}</p>
-
-      {post.comments.length !== 0 ? (
+      // eslint-disable-next-line no-extra-boolean-cast
+      {!!comments.length ? (
         <CommentList comments={comments} />
       ) : (
         <>
