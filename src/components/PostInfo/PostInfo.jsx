@@ -1,16 +1,20 @@
-export const PostInfo = ({ post }) => {
-  const { body, id, title } = post;
+import { CommentList } from '../CommentList';
+
+export const PostInfo = ({ postWithUser }) => {
+  const { body, title, user, comments, id } = postWithUser;
+  const { name, email } = user;
+  const { postId } = comments;
 
   return (
-    <div key={id} className="PostInfo">
+    <div className="PostInfo">
       <div className="PostInfo__header">
         <h3 className="PostInfo__title">{title}</h3>
 
         <p>
           {' Posted by  '}
 
-          <a className="UserInfo" href="mailto:Sincere@april.biz">
-            Leanne Graham
+          <a className="UserInfo" href={`mailto:${email}`}>
+            {name}
           </a>
         </p>
       </div>
@@ -19,7 +23,11 @@ export const PostInfo = ({ post }) => {
 
       <hr />
 
-      <b data-cy="NoCommentsMessage">No comments yet</b>
+      {postId === id ? (
+        <CommentList comments={comments} />
+      ) : (
+        <b data-cy="NoCommentsMessage">No comments yet</b>
+      )}
     </div>
   );
 };

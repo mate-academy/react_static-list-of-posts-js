@@ -1,23 +1,19 @@
 export const CommentInfo = ({ comment }) => {
-  const { name, email, body, id } = comment;
+  const { name, email, body } = comment;
 
   return (
     <div className="CommentInfo">
       <div className="CommentInfo__title">
-        <strong className="CommentInfo__name">pariatur omnis in</strong>
+        <strong className="CommentInfo__name">{name}</strong>
 
         {' by '}
 
-        <a className="CommentInfo__email" href="mailto:Telly_Lynch@karl.co.uk">
-          Telly_Lynch@karl.co.uk
+        <a className="CommentInfo__email" href={`mailto:${email}`}>
+          {email}
         </a>
       </div>
 
-      <div className="CommentInfo__body">
-        dolorum voluptas laboriosam quisquam ab totam beatae et aut assumenda
-        voluptas velit itaque quidem voluptatem tempore tempore tempore
-        cupiditate in itaque sit molestiae minus dolores magni
-      </div>
+      <div className="CommentInfo__body">{body}</div>
     </div>
   );
 };
