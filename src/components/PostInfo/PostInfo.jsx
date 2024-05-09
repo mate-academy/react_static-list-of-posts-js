@@ -18,7 +18,7 @@ export const PostInfo = ({ post: { title, body, user, comments } }) => (
 
     <hr />
 
-    {comments.length !== 0 ? (
+    {comments.length ? (
       <CommentList comments={comments} />
     ) : (
       <b data-cy="NoCommentsMessage">No comments yet</b>
