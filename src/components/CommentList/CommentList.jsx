@@ -1,13 +1,13 @@
 import { CommentInfo } from '../CommentInfo/CommentInfo';
 
-export const CommentList = ({ comments }, { postId }) => {
-  const findComment = comments.find(comment => comment.postId === postId);
-
+export const CommentList = ({ postId, commentsWithPosts }) => {
   return (
     <div className="CommentList">
-      {findComment.map(comment => (
-        <CommentInfo comment={comment} key={comment.id} />
-      ))}
+      {commentsWithPosts.map(comment =>
+        comment.postId === postId ? (
+          <CommentInfo comment={comment} key={comment.id} />
+        ) : null,
+      )}
     </div>
   );
 };

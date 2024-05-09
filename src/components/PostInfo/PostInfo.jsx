@@ -2,7 +2,7 @@ import { CommentList } from '../CommentList/CommentList';
 import { UserInfo } from '../UserInfo/UserInfo';
 import './PostInfo.scss';
 
-export const PostInfo = ({ post }, { comentsWithPosts }) => {
+export const PostInfo = ({ post, commentsWithPosts }) => {
   return (
     <div className="PostInfo">
       <div className="PostInfo__header">
@@ -17,7 +17,7 @@ export const PostInfo = ({ post }, { comentsWithPosts }) => {
 
       <p className="PostInfo__body">{post.body}</p>
 
-      <CommentList comments={comentsWithPosts} postId={post.id} />
+      <CommentList postId={post.id} commentsWithPosts={commentsWithPosts} />
     </div>
   );
 };

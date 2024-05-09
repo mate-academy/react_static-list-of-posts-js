@@ -18,7 +18,7 @@ export const postsWithUsers = postsFromServer.map(post => ({
   user: getUserById(post.userId),
 }));
 
-export const comentsWithPosts = commentsFromServer.map(comment => ({
+export const commentsWithPosts = commentsFromServer.map(comment => ({
   ...comment,
   post: getPostById(comment.postId),
 }));
@@ -27,6 +27,6 @@ export const App = () => (
   <section className="App">
     <h1 className="App__title">Static list of posts</h1>
 
-    <PostList posts={postsWithUsers} />
+    <PostList posts={postsWithUsers} commentsWithPosts={commentsWithPosts} />
   </section>
 );
