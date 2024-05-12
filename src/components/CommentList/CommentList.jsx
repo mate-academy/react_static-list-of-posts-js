@@ -1,12 +1,14 @@
 import { CommentInfo } from '../CommentInfo/CommentInfo';
 
-export const CommentList = ({ postId, commentsWithPosts }) => {
+export const CommentList = ({ post }) => {
   return (
     <div className="CommentList">
-      {commentsWithPosts.map(comment =>
-        comment.postId === postId ? (
+      {post.comments.length ? (
+        post.comments.map(comment => (
           <CommentInfo comment={comment} key={comment.id} />
-        ) : null,
+        ))
+      ) : (
+        <b data-cy="NoCommentsMessage">No comments yet</b>
       )}
     </div>
   );
