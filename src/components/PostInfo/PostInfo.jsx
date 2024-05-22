@@ -2,22 +2,22 @@ import './PostInfo.scss';
 import { CommentList } from '../CommentList/CommentList';
 import { UserInfo } from '../UserInfo/UserInfo';
 
-export const PostInfo = ({ post }) => (
+export const PostInfo = ({ post: { title, user, body, comments } }) => (
   <div className="PostInfo">
     <div className="PostInfo__header">
-      <h3 className="PostInfo__title">{post.title}</h3>
+      <h3 className="PostInfo__title">{title}</h3>
 
-      <UserInfo user={post.user} />
+      <UserInfo user={user} />
     </div>
 
-    <p className="PostInfo__body">{post.body}</p>
+    <p className="PostInfo__body">{body}</p>
 
-    {post.comments.length === 0 ? (
+    {comments.length === 0 ? (
       <div className="CommentList">
         <b data-cy="NoCommentsMessage">No comments yet</b>
       </div>
     ) : (
-      <CommentList comments={post.comments} />
+      <CommentList comments={comments} />
     )}
   </div>
 );
