@@ -5,16 +5,14 @@ import commentsFromServer from './api/comments.json';
 import usersFromServer from './api/users.json';
 import { PostList } from './components/PostList/PostList';
 
-function groupData(posts, comments, users) {
-  return postsFromServer.map(post => {
-    const postComments = commentsFromServer.filter(
-      comment => post.id === comment.postId,
-    );
-    const user = usersFromServer.find(u => post.userId === u.id);
+function groupData(posts, commen, users) {
+  return posts.map(post => {
+    const comments = commen.filter(comment => post.id === comment.postId);
+    const user = users.find(u => post.userId === u.id);
 
     return {
       ...post,
-      postComments,
+      comments,
       user,
     };
   });
