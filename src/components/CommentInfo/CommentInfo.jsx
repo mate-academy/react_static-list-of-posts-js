@@ -1,5 +1,3 @@
-import './CommentInfo.scss';
-
 export const CommentInfo = ({ comment }) => (
   <div className="CommentInfo">
     <div className="CommentInfo__title">
