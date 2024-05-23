@@ -1,3 +1,4 @@
+
 import './UserInfo.scss';
 
 export const UserInfo = ({ user }) => (
@@ -5,3 +6,5 @@ export const UserInfo = ({ user }) => (
     {user.name}
   </a>
 );
+=======
+export const UserInfo = () => <>Put the user here</>;

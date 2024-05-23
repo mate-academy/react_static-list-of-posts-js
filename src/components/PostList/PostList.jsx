@@ -1,3 +1,4 @@
+
 import { PostInfo } from '../PostInfo';
 
 export const PostList = ({ posts }) => (
@@ -7,3 +8,5 @@ export const PostList = ({ posts }) => (
     ))}
   </div>
 );
+=======
+export const PostList = () => <>Put the list here</>;

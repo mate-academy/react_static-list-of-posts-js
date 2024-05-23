@@ -2,7 +2,7 @@
 /* eslint-disable react/jsx-filename-extension */
 
 import React from 'react';
-import { mount } from '@cypress/react';
+import { mount } from '@cypress/react18';
 import { CommentList } from './CommentList';
 
 describe('CommentList component', () => {
@@ -47,11 +47,11 @@ describe('CommentList component', () => {
     });
 
     it('should render comments in correct order', () => {
-      cy.get('.CommentInfo__name').eq(0)
+      cy.get('.CommentInfo__name')
+        .eq(0)
         .should('have.text', 'id labore ex et quam laborum');
 
-      cy.get('.CommentInfo__name').eq(3)
-        .should('have.text', 'alias odio sit');
+      cy.get('.CommentInfo__name').eq(3).should('have.text', 'alias odio sit');
     });
   });
 
