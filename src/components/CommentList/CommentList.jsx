@@ -9,5 +9,3 @@ export const CommentList = ({ comments }) => (
     ))}
   </div>
 );
-=======
-export const CommentList = () => <>Put the list here</>;
