@@ -6,5 +6,3 @@ export const UserInfo = ({ user }) => (
     {user.name}
   </a>
 );
-=======
-export const UserInfo = () => <>Put the user here</>;
