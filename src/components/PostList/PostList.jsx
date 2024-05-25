@@ -1,11 +1,9 @@
-import { PostInfo } from '../PostInfo';
+import { PostInfo } from '../PostInfo/PostInfo';
 
-export const PostList = ({ posts }) => {
-  return (
-    <div className="PostList">
-      {posts.map(post => (
-        <PostInfo post={post} />
-      ))}
-    </div>
-  );
-};
+export const PostList = ({ posts }) => (
+  <div className="PostList">
+    {posts.map(post => {
+      return <PostInfo post={post} key={post.id} />;
+    })}
+  </div>
+);
