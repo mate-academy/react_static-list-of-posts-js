@@ -10,13 +10,7 @@ function getUserById(userId) {
 }
 
 function getCommentsById(postId) {
-  return commentsFromServer.map(comment => {
-    if (comment.postId === postId) {
-      return comment;
-    }
-
-    return undefined;
-  });
+  return commentsFromServer.filter(comment => comment.postId === postId);
 }
 
 export const posts = postsFromServer.map(post => ({
@@ -24,20 +18,6 @@ export const posts = postsFromServer.map(post => ({
   user: getUserById(post.userId),
   comments: getCommentsById(post.id),
 }));
-
-posts.forEach(post => post.comments.sort((a, b) => a.id - b.id));
-
-for (let j = 0; j < posts.length; j += 1) {
-  let commentsLength = 0;
-
-  for (let i = 0; i < posts[j].comments.length; i += 1) {
-    if (posts[j].comments[i] !== undefined) {
-      commentsLength += 1;
-    } else {
-      posts[j].comments.length = commentsLength;
-    }
-  }
-}
 
 export const App = () => (
   <section className="App">
