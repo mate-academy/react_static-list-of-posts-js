@@ -16,6 +16,5 @@ export const CommentInfo = ({ comment }) => {
 
         <div className="CommentInfo__body">{body}</div>
       </div>
-    </>
   );
 };
