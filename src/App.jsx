@@ -17,9 +17,6 @@ export const posts = postsFromServer.map(post => ({
   user: getUserById(post.userId),
   comments: getCommentsById(post.id),
 }));
-// import postsFromServer from './api/posts.json';
-// import commentsFromServer from './api/comments.json';
-// import usersFromServer from './api/users.json';
 
 export const App = () => (
   <section className="App">
