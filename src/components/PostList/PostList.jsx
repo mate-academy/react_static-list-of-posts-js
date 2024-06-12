@@ -1,9 +1,11 @@
 import { PostInfo } from '../PostInfo/PostInfo';
 
 export const PostList = ({ posts }) => (
-  <div className="PostList">
+  <ul className="PostList">
     {posts.map(post => (
-      <PostInfo post={post} key={post.id} />
+      <li>
+        <PostInfo post={post} key={post.id} />
+      </li>
     ))}
-  </div>
+  </ul>
 );
