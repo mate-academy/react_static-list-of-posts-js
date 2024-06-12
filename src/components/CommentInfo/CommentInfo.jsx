@@ -1,4 +1,3 @@
-import React from 'react';
 import './CommentInfo.scss';
 
 export const CommentInfo = ({ comment }) => {
@@ -10,7 +9,7 @@ export const CommentInfo = ({ comment }) => {
         <strong className="CommentInfo__name">{name}</strong>
         {' by '}
         <a className="CommentInfo__email" href={`mailto:${email}`}>
-          {comment.email}
+          {email}
         </a>
       </div>
       <div className="CommentInfo__body">{body}</div>
