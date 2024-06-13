@@ -5,18 +5,11 @@ import commentsFromServer from './api/comments.json';
 import usersFromServer from './api/users.json';
 import { PostList } from './components/PostList/PostList';
 
-const combinePosts = postsFromServer.map(post => {
-  const user = usersFromServer.find(person => person.id === post.userId);
-  const postComments = commentsFromServer.filter(
-    coments => coments.postId === post.id,
-  );
-
-  return {
-    ...post,
-    user,
-    comments: postComments,
-  };
-});
+const combinePosts = postsFromServer.map(post => ({
+  ...post,
+  user: usersFromServer.find(person => person.id === post.userId),
+  comments: commentsFromServer.filter(coments => coments.postId === post.id),
+}));
 
 export const App = ({ list }) => (
   <section className="App">
