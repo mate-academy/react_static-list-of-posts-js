@@ -5,11 +5,11 @@ import commentsFromServer from './api/comments.json';
 import usersFromServer from './api/users.json';
 
 const comentId = id => {
-  return commentsFromServer.filter(coment => coment.postId === id) || null;
+  return commentsFromServer.filter(coment => coment.postId === id);
 };
 
 const userId = id => {
-  return usersFromServer.find(user => user.id === id) || null;
+  return usersFromServer.find(user => user.id === id);
 };
 
 export const posts = postsFromServer.map(post => ({
