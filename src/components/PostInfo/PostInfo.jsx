@@ -11,13 +11,13 @@ export const PostInfo = ({ post }) => {
         <p>
           {' Posted by  '}
 
-          <UserInfo user={post.user} />
+          {post.user && <UserInfo user={post.user} />}
         </p>
       </div>
 
       <p className="PostInfo__body">{post.body}</p>
 
-      {post.comments?.length ? (
+      {post.comments.length ? (
         <CommentList comments={post.comments} />
       ) : (
         <>
