@@ -1,10 +1,10 @@
 import { PostInfo } from '../PostInfo';
 import './PostList.scss';
 
-export const PostList = ({ postsFromServer }) => {
+export const PostList = ({ posts }) => {
   return (
     <div className="PostList">
-      {postsFromServer.map(post => (
+      {posts.map(post => (
         <PostInfo key={post.id} post={post} />
       ))}
     </div>

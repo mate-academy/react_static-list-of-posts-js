@@ -23,10 +23,8 @@ const postsFromServer = preparePosts(postsData, usersData, commentsData);
 export const App = () => {
   return (
     <section className="App">
-      <div className="App">
-        <h1 className="App__title">Static list of posts</h1>
-        <PostList postsFromServer={postsFromServer} />
-      </div>
+      <h1 className="App__title">Static list of posts</h1>
+      <PostList posts={postsFromServer} />
     </section>
   );
 };
