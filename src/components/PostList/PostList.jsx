@@ -1,14 +1,9 @@
 import { PostInfo } from '../PostInfo';
 
-export const PostList = ({ user, posts, comments }) => (
+export const PostList = ({ posts }) => (
   <div className="PostList">
     {posts.map(post => (
-      <PostInfo
-        key={post.id}
-        user={user.find(person => person.id === post.userId)}
-        post={post}
-        comments={comments.filter(comm => comm.postId === post.id)}
-      />
+      <PostInfo post={post} key={post.id} />
     ))}
   </div>
 );
