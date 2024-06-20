@@ -4,21 +4,19 @@ import './PostInfo.scss';
 
 export const PostInfo = ({ post: { body, title, user, comments } }) => {
   return (
-    <>
-      <div className="PostInfo">
-        <div className="PostInfo__header">
-          <h3 className="PostInfo__title">{title}</h3>
+    <div className="PostInfo">
+      <div className="PostInfo__header">
+        <h3 className="PostInfo__title">{title}</h3>
 
-          <UserInfo user={user} />
-        </div>
-        <p className="PostInfo__body">{body}</p>
-
-        {comments.length ? (
-          <CommentList comments={comments} />
-        ) : (
-          <b data-cy="NoCommentsMessage">No comments yet</b>
-        )}
+        <UserInfo user={user} />
       </div>
-    </>
+      <p className="PostInfo__body">{body}</p>
+
+      {comments.length ? (
+        <CommentList comments={comments} />
+      ) : (
+        <b data-cy="NoCommentsMessage">No comments yet</b>
+      )}
+    </div>
   );
 };
