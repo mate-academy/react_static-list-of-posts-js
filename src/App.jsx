@@ -8,6 +8,7 @@ import { PostList } from './components/PostList/PostList';
 
 const getUserById = userId =>
   usersFromServer.find(user => user.id === userId) || null;
+
 const getCommentsByPostId = postId =>
   commentsFromServer.filter(comment => comment.postId === postId);
 
