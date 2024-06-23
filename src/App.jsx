@@ -1,4 +1,3 @@
-import { useEffect, useState } from 'react';
 import './App.scss';
 import { PostList } from './components/PostList';
 
@@ -6,30 +5,22 @@ import postsFromServer from './api/posts.json';
 import commentsFromServer from './api/comments.json';
 import usersFromServer from './api/users.json';
 
-const getPosts = () => {
-  return postsFromServer.map(post => {
-    const user = usersFromServer.find(({ id }) => post.userId === id) || null;
-    const comments =
-      commentsFromServer.filter(({ postId }) => postId === post.id) || [];
+const findUserById = id => usersFromServer.find(user => id === user.id) || null;
 
-    return { ...post, user, comments };
-  });
-};
+const filterCommentsById = id =>
+  commentsFromServer.filter(comment => id === comment.postId) || [];
 
-export const App = () => {
-  const [data, setData] = useState([]);
+const posts = postsFromServer.map(post => {
+  const user = findUserById(post.userId);
+  const comments = filterCommentsById(post.id);
 
-  useEffect(() => {
-    const posts = getPosts();
+  return { ...post, user, comments };
+});
 
-    setData(posts);
-  }, []);
+export const App = () => (
+  <section className="App">
+    <h1 className="App__title">Static list of posts</h1>
 
-  return (
-    <section className="App">
-      <h1 className="App__title">Static list of posts</h1>
-
-      <PostList posts={data} />
-    </section>
-  );
-};
+    <PostList posts={posts} />
+  </section>
+);
