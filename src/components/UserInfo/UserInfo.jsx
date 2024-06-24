@@ -1,7 +1,6 @@
 import './UserInfo.scss';
 
 export const UserInfo = ({ user: { name, email } }) => (
-  <>
     <p>
       {' Posted by  '}
 
@@ -9,5 +8,4 @@ export const UserInfo = ({ user: { name, email } }) => (
         {name}
       </a>
     </p>
-  </>
 );
