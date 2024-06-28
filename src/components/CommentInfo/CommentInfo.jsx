@@ -12,6 +12,6 @@ export const CommentInfo = ({ comment }) => (
       </a>
     </div>
 
-    <div className="CommentInfo__body"> {comment.body}</div>
+    <div className="CommentInfo__body">{comment.body}</div>
   </div>
 );
