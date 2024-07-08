@@ -3,24 +3,28 @@ import { UserInfo } from '../UserInfo/UserInfo';
 
 const NO_COMMENTS = 'No comments yet';
 
-export const PostInfo = ({ post }) => (
-  <div className="PostInfo">
-    <div className="PostInfo__header">
-      <h3 className="PostInfo__title">{post.title}</h3>
+export const PostInfo = ({ post }) => {
+  const { title, user, body, comments } = post;
 
-      <UserInfo user={post.user} />
-    </div>
+  return (
+    <div className="PostInfo">
+      <div className="PostInfo__header">
+        <h3 className="PostInfo__title">{title}</h3>
 
-    <p className="PostInfo__body">{post.body}</p>
-
-    {!post.comments.length ? (
-      <div>
-        <hr />
-
-        <b data-cy="NoCommentsMessage">{NO_COMMENTS}</b>
+        <UserInfo user={user} />
       </div>
-    ) : (
-      <CommentList comments={post.comments} />
-    )}
-  </div>
-);
+
+      <p className="PostInfo__body">{body}</p>
+
+      {!comments.length ? (
+        <div>
+          <hr />
+
+          <b data-cy="NoCommentsMessage">{NO_COMMENTS}</b>
+        </div>
+      ) : (
+        <CommentList comments={comments} />
+      )}
+    </div>
+  );
+};
