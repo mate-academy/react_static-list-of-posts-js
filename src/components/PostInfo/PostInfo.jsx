@@ -10,7 +10,7 @@ const PostInfo = ({ post }) => (
     <p>
       Posted by <UserInfo user={post.user} />
     </p>
-    {post.comments.length > 0 ? (
+    {!!post.comments.length ? (
       <CommentList comments={post.comments} />
     ) : (
       <p data-cy="NoCommentsMessage">No comments yet</p>

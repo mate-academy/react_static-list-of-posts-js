@@ -37,7 +37,7 @@ export const App = () => (
           </div>
           <div className="PostInfo__body">{post.body}</div>
           <hr />
-          {post.comments.length > 0 ? (
+          {!!post.comments.length ? (
             <div className="CommentList">
               {post.comments.map(comment => (
                 <div key={comment.id} className="CommentInfo">
