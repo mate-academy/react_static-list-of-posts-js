@@ -3,12 +3,6 @@ import { UserInfo } from '../UserInfo';
 
 export const PostInfo = ({ post }) => {
   const { title, user, body, comments } = post;
-  const CommentLength =
-    comments.length === 0 ? (
-      <b data-cy="NoCommentsMessage">No comments yet</b>
-    ) : (
-      <CommentList comments={comments} key={comments.id} />
-    );
 
   return (
     <div className="PostInfo">
@@ -26,7 +20,11 @@ export const PostInfo = ({ post }) => {
 
       <hr />
 
-      {CommentLength}
+      {comments.length === 0 ? (
+        <b data-cy="NoCommentsMessage">No comments yet</b>
+      ) : (
+        <CommentList comments={comments} key={comments.id} />
+      )}
     </div>
   );
 };
