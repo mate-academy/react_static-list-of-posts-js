@@ -19,8 +19,4 @@ const posts = postsFromServer.map(post => ({
   comments: getCommentsByPostId(post.id),
 }));
 
-export const App = () => (
-  <>
-    <PostList posts={posts} />
-  </>
-);
+export const App = () => <PostList posts={posts} />;
