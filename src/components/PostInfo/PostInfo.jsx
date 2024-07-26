@@ -14,7 +14,6 @@ export const PostInfo = ({ post }) => {
           {user && <UserInfo user={user} />}
         </p>
         <p className="PostInfo__body">{body}</p>
-        <UserInfo user={user} />
       </div>
       <CommentList comments={comments} />
     </div>
