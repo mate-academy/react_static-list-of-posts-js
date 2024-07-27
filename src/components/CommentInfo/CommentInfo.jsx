@@ -7,7 +7,7 @@ export const CommentInfo = ({ comment }) => (
       {comment.name}
     </div>
     <div className="CommentInfo__email" style={{ color: 'gray' }}>
-      email:{comment.email}
+      {comment.email}
     </div>
     <div className="CommentInfo__body">{comment.body}</div>
   </div>
