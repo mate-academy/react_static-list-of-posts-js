@@ -1,9 +1,9 @@
 import { CommentInfo } from '../CommentInfo/CommentInfo';
 import './CommentList.scss';
 
-export const CommentList = ({ post }) => (
+export const CommentList = ({ comments }) => (
   <div className="CommentList">
-    {post.comment.map(com => {
+    {comments.map(com => {
       return <CommentInfo comment={com} key={com.id} />;
     })}
   </div>

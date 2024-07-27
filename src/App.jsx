@@ -16,7 +16,7 @@ function getCommentById(id) {
 export const post = postsFromServer.map(p => ({
   ...p,
   user: getUserById(p.userId),
-  comment: getCommentById(p.id),
+  comments: getCommentById(p.id),
 }));
 
 export const App = () => (
