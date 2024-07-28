@@ -3,8 +3,6 @@ import { UserInfo } from '../UserInfo/UserInfo';
 import './PostInfo.scss';
 
 export const PostInfo = ({ post }) => {
-  // console.log(post.comments.length);
-
   return (
     <div className="PostInfo">
       <div className="PostInfo__header">
