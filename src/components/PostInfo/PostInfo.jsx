@@ -16,7 +16,7 @@ export const PostInfo = ({
         <p>
           {' Posted by  '}
 
-          <UserInfo user={user} />
+          {user && <UserInfo user={user} />}
         </p>
       </div>
 
