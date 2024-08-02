@@ -1,11 +1,11 @@
 import './App.scss';
-import { PostList } from './components/PostList/PostList';
+import { PostList } from './components/PostList';
 
 import postsFromServer from './api/posts.json';
 import commentsFromServer from './api/comments.json';
 import usersFromServer from './api/users.json';
 
-function getCommentsById(postId) {
+function getComments(postId) {
   return commentsFromServer.filter(comment => comment.postId === postId);
 }
 
@@ -18,7 +18,7 @@ const posts = postsFromServer.map(post => ({
   title: post.title,
   body: post.body,
   user: getUser(post.userId),
-  comments: getCommentsById(post.id),
+  comments: getComments(post.id),
 }));
 
 export const App = () => (
