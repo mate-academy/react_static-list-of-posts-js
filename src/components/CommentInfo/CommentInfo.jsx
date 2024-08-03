@@ -13,3 +13,4 @@ export const CommentInfo = ({ comment }) => (
     <div className="CommentInfo__body">{comment.body}</div>
   </div>
 );
+// тест тест!
