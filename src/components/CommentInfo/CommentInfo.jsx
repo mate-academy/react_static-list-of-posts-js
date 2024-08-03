@@ -9,8 +9,6 @@ export const CommentInfo = ({ comment }) => (
         {comment.email}
       </a>
     </div>
-
     <div className="CommentInfo__body">{comment.body}</div>
   </div>
 );
-// тест тест!
