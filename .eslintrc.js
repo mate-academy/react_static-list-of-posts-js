@@ -1,4 +1,4 @@
 module.exports = {
-  extends: ['@mate-academy/eslint-config-react', 'plugin:cypress/recommended'],
+  extends: ['plugin:cypress/recommended'],
   rules: {},
 };
