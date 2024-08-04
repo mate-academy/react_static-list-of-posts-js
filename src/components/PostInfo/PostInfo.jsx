@@ -2,9 +2,7 @@ import './PostInfo.scss';
 import { CommentList } from '../CommentList/CommentList';
 import { UserInfo } from '../UserInfo/UserInfo';
 
-export const PostInfo = ({ post }) => {
-  const { title, id, user, body, comments } = post;
-
+export const PostInfo = ({ post: { title, id, user, body, comments } }) => {
   return (
     <div className="PostInfo">
       <div className="PostInfo__header">
