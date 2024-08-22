@@ -4,6 +4,7 @@ import './PostInfo.scss';
 
 export const PostInfo = ({ post }) => {
   const { title, user, body, comments } = post;
+  const randomUser = `User${Math.floor(Math.random() * 1000)}`;
 
   return (
     <div className="PostInfo">
@@ -12,7 +13,7 @@ export const PostInfo = ({ post }) => {
 
         <p>
           {' Posted by  '}
-          <UserInfo user={user} />
+          {user ? <UserInfo user={user} /> : randomUser}
         </p>
       </div>
 
