@@ -13,9 +13,9 @@ const preparePosts = () => {
   }));
 };
 
-export const App = () => {
-  const posts = preparePosts();
+const posts = preparePosts();
 
+export const App = () => {
   return (
     <section className="App">
       <h1 className="App__title">Static list of posts</h1>
