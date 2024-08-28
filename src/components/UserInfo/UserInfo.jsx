@@ -5,7 +5,7 @@ export const UserInfo = ({ currentPostUserId }) => {
   const currentUser = users.find(user => user.id === currentPostUserId);
 
   if (!currentUser) {
-    return <p>User not found</p>;
+    return false;
   }
 
   return (
