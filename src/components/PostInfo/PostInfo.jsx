@@ -3,7 +3,7 @@ import { CommentList } from '../CommentList/CommentList';
 import { UserInfo } from '../UserInfo/UserInfo';
 
 export const PostInfo = ({ post }) => {
-  const { user, comments } = post;
+  const { user, comments, body, title } = post;
   const noComments = (
     <>
       <hr />
@@ -14,12 +14,12 @@ export const PostInfo = ({ post }) => {
   return (
     <div className="PostInfo">
       <div className="PostInfo__header">
-        <h3 className="PostInfo__title">{post.title}</h3>
+        <h3 className="PostInfo__title">{title}</h3>
 
         {user ? <UserInfo user={user} /> : null}
       </div>
 
-      <p className="PostInfo__body">{post.body}</p>
+      <p className="PostInfo__body">{body}</p>
       {comments.length > 0 ? <CommentList comments={comments} /> : noComments}
     </div>
   );
