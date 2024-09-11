@@ -7,7 +7,7 @@ export const PostInfo = ({ post: { title, user, body, comments } }) => (
     <header className="PostInfo__header">
       <h3 className="PostInfo__title">{title}</h3>
       <p>
-        {' Posted by  '}
+        {' Posted by '}
         <UserInfo user={user} />
       </p>
     </header>
