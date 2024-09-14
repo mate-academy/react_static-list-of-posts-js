@@ -1,5 +1,4 @@
 import { PostInfo } from '../PostInfo';
-import './PostList.scss';
 
 export const PostList = ({ enrichedPosts }) => (
   <div className="PostList">
