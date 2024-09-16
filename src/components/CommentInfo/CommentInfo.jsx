@@ -1,7 +1,7 @@
 import './CommentInfo.scss';
 
 export const CommentInfo = ({ comment }) => (
-  <div className="CommentInfo">
+  <li className="CommentInfo">
     <div className="CommentInfo__body">{comment.body}</div>
     <strong className="CommentInfo__name">{comment.name}</strong>
     <p>
@@ -9,5 +9,5 @@ export const CommentInfo = ({ comment }) => (
         {comment.email}
       </a>
     </p>
-  </div>
+  </li>
 );
