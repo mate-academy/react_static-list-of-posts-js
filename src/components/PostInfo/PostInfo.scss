@@ -1,14 +1,13 @@
+@import '../../style/variables';
+
 .PostInfo {
   margin: 10px auto;
-  width: 90%;
-  border: 1px solid #000;
-  border-radius: 8px;
-  background-color: lightgray;
   padding: 1em;
+  width: 90%;
 
-  &__title {
-    margin: 0;
-  }
+  border: 1px solid $black-color;
+  border-radius: 0.5em;
+  background-color: $gray-color;
 
   &__header {
     margin-bottom: 1em;
