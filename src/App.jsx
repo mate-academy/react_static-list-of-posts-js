@@ -6,7 +6,7 @@ import usersFromServer from './api/users.json';
 
 import { PostList } from './components/PostList';
 
-const PostFullInfo = postsFromServer.map(post => {
+const posts = postsFromServer.map(post => {
   return {
     ...post,
     comments: commentsFromServer.filter(comment => comment.postId === post.id),
@@ -18,6 +18,6 @@ export const App = () => (
   <div className="App">
     <h1 className="App__title">Static list of posts</h1>
 
-    <PostList posts={PostFullInfo} />
+    <PostList posts={posts} />
   </div>
 );
