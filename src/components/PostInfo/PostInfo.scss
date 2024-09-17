@@ -1,1 +1,15 @@
-// add styles here
+@import '../../style/variables';
+
+.PostInfo {
+  margin: 10px auto;
+  padding: 1em;
+  width: 90%;
+
+  border: 1px solid $black-color;
+  border-radius: 0.5em;
+  background-color: $gray-color;
+
+  &__header {
+    margin-bottom: 1em;
+  }
+}

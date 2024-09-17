@@ -1,1 +1,11 @@
-// add styles here
+@import '../../style/variables';
+
+.CommentList {
+  display: flex;
+  flex-direction: column;
+  gap: 0.7em;
+
+  padding: 1em;
+
+  background-color: $light-gray-color;
+}
