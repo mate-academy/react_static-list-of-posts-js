@@ -1,9 +1,9 @@
+import { PostList } from './components/PostList';
 import './App.scss';
 
 import postsFromServer from './api/posts.json';
 import commentsFromServer from './api/comments.json';
 import usersFromServer from './api/users.json';
-import { PostList } from './components/PostList/PostList';
 
 const getUserById = userId =>
   usersFromServer.find(user => user.id === userId || null);
