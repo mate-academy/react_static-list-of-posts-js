@@ -7,7 +7,12 @@ export const CommentList = ({ comments }) => {
 
   if (comments.length > 0) {
     commentList = commentObjects.map(comment => (
-      <CommentInfo comment={comment} key={comment.id} />
+      <CommentInfo
+        name={comment.name}
+        email={comment.email}
+        body={comment.body}
+        key={comment.id}
+      />
     ));
   }
 
