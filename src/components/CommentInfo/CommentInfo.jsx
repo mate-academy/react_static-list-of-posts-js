@@ -14,6 +14,7 @@ export const CommentInfo = ({ comment }) => {
           {email}
         </a>
       </div>
+
       <div className="CommentInfo__body">{body}</div>
     </div>
   );
