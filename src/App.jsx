@@ -1,27 +1,26 @@
+import { PostList } from './components/PostList';
 import './App.scss';
-import { PostInfo } from './components/PostInfo/PostInfo';
 
 import postsFromServer from './api/posts.json';
 import commentsFromServer from './api/comments.json';
 import usersFromServer from './api/users.json';
 
-const getCommenrsById = id => {
-  commentsFromServer.filter(comment => id === comment.postId);
-};
-
-const getUserById = userId => {
+const getUserById = userId =>
   usersFromServer.find(user => user.id === userId || null);
-};
+
+const getCommentsById = id =>
+  commentsFromServer.filter(comment => id === comment.postId);
 
 export const posts = postsFromServer.map(post => ({
   ...post,
-  user: getUserById(post.postId),
-  comments: getCommenrsById(post.id),
+  user: getUserById(post.userId),
+  comments: getCommentsById(post.id),
 }));
 
 export const App = () => (
   <section className="App">
     <h1 className="App__title">Static list of posts</h1>
-    <PostInfo posts={posts} />
+
+    <PostList posts={posts} />
   </section>
 );
