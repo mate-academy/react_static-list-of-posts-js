@@ -18,8 +18,11 @@ export function PostInfo({ post = {} }) {
 
       <p className="PostInfo__body">{post.body}</p>
 
-      {Object.keys(post.comments).length === 0 ? (
-        <b data-cy="NoCommentsMessage">No comments yet</b>
+      {post.comments.length === 0 ? (
+        <>
+          <hr />
+          <b data-cy="NoCommentsMessage">No comments yet</b>
+        </>
       ) : (
         <CommentList comments={post.comments} />
       )}
