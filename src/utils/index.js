@@ -8,7 +8,7 @@ const getCommentsByPostId = postId =>
   comments.filter(comment => comment.postId === postId);
 
 export const getPreparedPosts = () => {
-  posts.map(post => {
+  return posts.map(post => {
     return {
       ...post,
       user: getUserById(post.userId),
