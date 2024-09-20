@@ -15,4 +15,4 @@ export const getPreparedPosts = () => {
       comments: getCommentsByPostId(post.id),
     };
   });
-};
+}
