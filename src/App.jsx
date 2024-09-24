@@ -9,7 +9,7 @@ import { PostList } from './components/PostList/PostList';
 const getUserById = userId =>
   usersFromServer.find(user => user.id === userId) || null;
 const getCommentsByPostId = commentId =>
-  commentsFromServer.filter(comment => comment.id === commentId);
+  commentsFromServer.filter(comment => comment.postId === commentId);
 
 const posts = postsFromServer.map(post => ({
   ...post,
