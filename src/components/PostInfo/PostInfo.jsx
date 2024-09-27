@@ -1,13 +1,9 @@
 import './PostInfo.scss';
-
-import { CommentList } from '../CommentList/CommentList';
-import { UserInfo } from '../UserInfo/UserInfo';
+import { CommentList } from '../CommentList';
+import { UserInfo } from '../UserInfo';
 
 export const PostInfo = ({ post }) => {
-  const { title, body, user, id } = post;
-  let { comments } = post;
-
-  comments = comments.filter(comment => comment.postId === id);
+  const { title, body, user, comments } = post;
 
   return (
     <div className="PostInfo">
