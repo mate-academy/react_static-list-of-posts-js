@@ -6,7 +6,7 @@ import userFromServer from './api/users.json';
 import { PostList } from './components/PostList/PostList';
 
 function getUserById(userId) {
-  return userFromServer.find((user => user.id === userId) || null);
+  return userFromServer.find(user => user.id === userId) || null;
 }
 
 function getCommetById(postId) {
