@@ -10,8 +10,11 @@ export const App = () => {
     const comments = commentsFromServer.filter(
       commentEl => commentEl.postId === postEl.id,
     );
+    const user = usersFromServer?.find(
+      userData => userData.id === postEl.userId,
+    );
 
-    return { ...postEl, comments, usersFromServer };
+    return { ...postEl, comments, user };
   });
 
   return (
