@@ -13,7 +13,7 @@ function getCommentById(id) {
   return commentsFromServer.map(comment => comment.postId === id) || null;
 }
 
-const posts = postsFromServer.map(post => ({
+const posts = postsFromServer(post => ({
   ...post,
   user: getUserById(post.id),
   comments: getCommentById(post.id),
