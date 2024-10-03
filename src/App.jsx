@@ -6,21 +6,19 @@ import commentsFromServer from './api/comments.json';
 import usersFromServer from './api/users.json';
 
 export const App = () => {
-  const postsDatabase = postsFromServer.map(postEl => {
+  const posts = postsFromServer.map(post => {
     const comments = commentsFromServer.filter(
-      commentEl => commentEl.postId === postEl.id,
+      commentEl => commentEl.postId === post.id,
     );
-    const user = usersFromServer?.find(
-      userData => userData.id === postEl.userId,
-    );
+    const user = usersFromServer?.find(userData => userData.id === post.userId);
 
-    return { ...postEl, comments, user };
+    return { ...post, comments, user };
   });
 
   return (
     <section className="App">
       <h1 className="App__title">Static list of posts</h1>
-      <PostList postsDatabase={postsDatabase} />
+      <PostList posts={posts} />
     </section>
   );
 };
