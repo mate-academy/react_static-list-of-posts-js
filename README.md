@@ -1,3 +1,5 @@
+SOSKA
+
 # React Static List of Posts (JS)
 
 This task is similar to [Static List of TODOs](https://github.com/mate-academy/react_static-list-of-todos-js#react-static-list-of-todos), but you should do everything yourself:
