@@ -1,7 +1,6 @@
-import { UserInfo } from '../UserInfo/UserInfo';
 import './CommentInfo.scss';
 
-export const CommentInfo = ({ comment, user }) => {
+export const CommentInfo = ({ comment }) => {
   return (
     <div className="CommentInfo">
       <div className="CommentInfo__title">
