@@ -1,1 +1,9 @@
-// add styles here
+.CommentInfo {
+  &__title {
+    font-weight: bold;
+  }
+
+  &__body {
+    margin-top: 0.5em;
+  }
+}
