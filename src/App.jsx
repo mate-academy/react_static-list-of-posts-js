@@ -1,10 +1,34 @@
 import './App.scss';
 
-// import postsFromServer from './api/posts.json';
-// import commentsFromServer from './api/comments.json';
-// import usersFromServer from './api/users.json';
+import postsFromServer from './api/posts.json';
+import commentsFromServer from './api/comments.json';
+import usersFromServer from './api/users.json';
+import { PostList } from './components/PostList/PostList';
 
-export const App = () => (
+const combinedDataFromServer = (posts, comments, users) => {
+  return posts.map(post => ({
+    ...post,
+    user: users.find(user => user.id === post.userId),
+    comments: comments.filter(comment => comment.postId === post.id),
+  }));
+};
+
+export const App = () => {
+  const postsWithUserAndComments = combinedDataFromServer(
+    postsFromServer,
+    commentsFromServer,
+    usersFromServer,
+  );
+
+  return (
+    <section className="App">
+      <h1 className="App__title">Static list of posts</h1>
+      <PostList posts={postsWithUserAndComments} />
+    </section>
+  );
+};
+
+/*
   <section className="App">
     <h1 className="App__title">Static list of posts</h1>
 
@@ -102,3 +126,4 @@ export const App = () => (
     </div>
   </section>
 );
+*/
