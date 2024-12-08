@@ -2,8 +2,8 @@ import './PostInfo.scss';
 import { CommentList } from '../CommentList/CommentList';
 import { UserInfo } from '../UserInfo/UserInfo';
 
-export const PostInfo = ({ post, comments }) => {
-  const commentList = comments.filter(coment => coment.postId === post.id);
+export const PostInfo = ({ post }) => {
+  // const commentList = comments.filter(coment => coment.postId === post.id);
 
   return (
     <>
@@ -20,8 +20,8 @@ export const PostInfo = ({ post, comments }) => {
         </div>
 
         <p className="PostInfo__body">{post.body}</p>
-        {commentList.length > 0 ? (
-          <CommentList comments={commentList} />
+        {post.comments.length > 0 ? (
+          <CommentList comments={post.comments} />
         ) : (
           <>
             <hr />
