@@ -1,14 +1,56 @@
 import './App.scss';
 
-// import postsFromServer from './api/posts.json';
-// import commentsFromServer from './api/comments.json';
-// import usersFromServer from './api/users.json';
+import postsFromServer from './api/posts.json';
+import commentsFromServer from './api/comments.json';
+import usersFromServer from './api/users.json';
+import { PostList } from './components/PostList/index';
+
+function getUserById(userId) {
+  return usersFromServer.find(user => user.id === userId) || null;
+}
+
+function getCommentsById(postId) {
+  return commentsFromServer.filter(user => user.postId === postId) || null;
+}
+
+export const posts = postsFromServer.map(post => ({
+  ...post,
+  user: getUserById(post.userId),
+  comments: getCommentsById(post.id),
+}));
 
 export const App = () => (
   <section className="App">
     <h1 className="App__title">Static list of posts</h1>
+    <PostList propsPosts={posts} />
+  </section>
+);
+/**
+ * <div className="PostList">
+      <div className="PostInfo">
+        <div className="PostInfo__header">
+          <h3 className="PostInfo__title"> {posts[2].title} </h3>
 
-    <div className="PostList">
+          <p>
+            {' Posted by  '}
+
+            <a className="UserInfo" href={`mailto:${posts[2].email}`}>
+              {posts[0].name}
+            </a>
+          </p>
+        </div>
+
+        <p className="PostInfo__body"> {posts[2].body} </p>
+
+        <hr />
+
+        <b data-cy="NoCommentsMessage">{posts[2].comment[0].body}</b>
+      </div>
+    </div>
+ */
+
+/**
+ * <div className="PostList">
       <div className="PostInfo">
         <div className="PostInfo__header">
           <h3 className="PostInfo__title">qui est esse</h3>
@@ -98,7 +140,6 @@ export const App = () => (
             </div>
           </div>
         </div>
-      </div>
+        </div>
     </div>
-  </section>
-);
+ */
