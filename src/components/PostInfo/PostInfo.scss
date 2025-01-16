@@ -1,1 +1,23 @@
-// add styles here
+.PostInfo {
+  background-color: #f9f9f9;
+  padding: 20px;
+  border-radius: 8px;
+}
+
+.user-info {
+  margin-top: 10px;
+  font-weight: bold;
+}
+
+.comments {
+  margin-top: 10px;
+}
+
+.comments ul {
+  list-style-type: none;
+  padding-left: 0;
+}
+
+.comments li {
+  padding: 5px 0;
+}
