@@ -1,1 +1,16 @@
-// add styles here
+.CommentInfo {
+  &__header {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__title {
+    font-size: 1.5rem;
+    color: #333;
+  }
+
+  &__body {
+    margin: 1rem 0;
+    color: #555;
+  }
+}
