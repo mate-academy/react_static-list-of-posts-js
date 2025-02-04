@@ -1,1 +1,24 @@
 // add styles here
+// src/components/PostInfo/PostInfo.scss
+.PostInfo {
+    margin-bottom: 30px;
+  }
+  
+  .PostInfo__header {
+    margin-bottom: 15px;
+  }
+  
+  .PostInfo__title {
+    font-size: 1.5rem;
+    font-weight: bold;
+  }
+  
+  .PostInfo__body {
+    font-size: 1rem;
+    color: #555;
+  }
+  
+  hr {
+    margin: 15px 0;
+  }
+  

@@ -1,1 +1,39 @@
 // add styles here
+// src/components/CommentList/CommentList.scss
+
+.CommentList {
+    padding-left: 20px; /* Indentation for the comment list */
+    margin-top: 20px;
+    background-color: #f9f9f9; /* Light gray background */
+    border-left: 3px solid #007bff; /* Left border to separate comments */
+    padding-top: 10px;
+  }
+  
+  .CommentList .CommentInfo {
+    margin-bottom: 15px; /* Space between each comment */
+    padding: 10px;
+    background-color: #fff; /* White background for each comment */
+    border: 1px solid #ddd; /* Light border to separate comments */
+    border-radius: 5px; /* Rounded corners */
+  }
+  
+  .CommentList .CommentInfo .CommentInfo__title {
+    font-size: 1.1rem;
+    font-weight: bold;
+  }
+  
+  .CommentList .CommentInfo .CommentInfo__email {
+    color: #007bff;
+    text-decoration: none;
+  }
+  
+  .CommentList .CommentInfo .CommentInfo__email:hover {
+    text-decoration: underline;
+  }
+  
+  .CommentList .CommentInfo .CommentInfo__body {
+    font-size: 1rem;
+    color: #333;
+    margin-top: 8px;
+  }
+  

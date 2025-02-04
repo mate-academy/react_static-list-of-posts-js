@@ -1,1 +1,43 @@
 // add styles here
+// src/components/CommentInfo/CommentInfo.scss
+
+.CommentInfo {
+    padding: 15px;
+    background-color: #fff; /* White background for each comment */
+    border: 1px solid #ddd; /* Light gray border around each comment */
+    border-radius: 5px; /* Rounded corners for a soft look */
+    margin-bottom: 20px; /* Space between comments */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Soft shadow for a subtle 3D effect */
+  }
+  
+  .CommentInfo__title {
+    font-size: 1.1rem; /* Larger font size for the title */
+    font-weight: bold;
+    color: #333; /* Dark gray color for the title */
+    margin-bottom: 5px; /* Small space between the title and body */
+  }
+  
+  .CommentInfo__name {
+    color: #007bff; /* Blue color for the name */
+    text-decoration: none;
+  }
+  
+  .CommentInfo__name:hover {
+    text-decoration: underline; /* Underline the name on hover */
+  }
+  
+  .CommentInfo__email {
+    color: #007bff; /* Blue color for the email */
+    text-decoration: none;
+  }
+  
+  .CommentInfo__email:hover {
+    text-decoration: underline; /* Underline the email on hover */
+  }
+  
+  .CommentInfo__body {
+    font-size: 1rem; /* Normal font size for the comment body */
+    color: #555; /* Slightly lighter gray for the comment text */
+    line-height: 1.5; /* Line spacing for better readability */
+  }
+  
