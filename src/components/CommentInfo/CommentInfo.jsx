@@ -10,21 +10,19 @@ export const CommentInfo = ({comment}) =>
           className="CommentInfo__email"
           href="mailto:Telly_Lynch@karl.co.uk"
         >
-          Telly_Lynch@karl.co.uk
+          {comment.email}
         </a>
       </div>
 
       <div className="CommentInfo__body">
-        dolorum voluptas laboriosam quisquam ab totam beatae et aut
-        aliquid optio assumenda voluptas velit itaque quidem voluptatem
-        tempore cupiditate in itaque sit molestiae minus dolores magni
+        {comment.body}
       </div>
     </div>
 
     <div className="CommentInfo">
       <div className="CommentInfo__title">
         <strong className="CommentInfo__name">
-          odio adipisci rerum aut animi
+          {comment.name}
         </strong>
 
         {' by '}
@@ -33,15 +31,12 @@ export const CommentInfo = ({comment}) =>
           className="CommentInfo__email"
           href="mailto:Nikita@garfield.biz"
         >
-          Nikita@garfield.biz
+          {comment.email}
         </a>
       </div>
 
       <div className="CommentInfo__body">
-        quia molestiae reprehenderit quasi aspernatur aut expedita
-        occaecati aliquam eveniet laudantium omnis quibusdam delectus
-        saepe quia accusamus maiores nam est cum et ducimus et vero
-        voluptates excepturi deleniti ratione
+        {comment.body}
       </div>
     </div>
 
