@@ -1,1 +1,28 @@
-// add styles here
+.CommentInfo {
+  padding: 15px;
+  background-color: white;
+  border-radius: 4px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+
+  &__title {
+    margin-bottom: 10px;
+  }
+
+  &__name {
+    color: #333;
+  }
+
+  &__email {
+    color: #2196f3;
+    text-decoration: none;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+
+  &__body {
+    color: #666;
+    line-height: 1.5;
+  }
+}

@@ -1,1 +1,28 @@
-// add styles here
+.CommentList {
+  margin-top: 20px;
+}
+
+.CommentInfo {
+  margin-bottom: 20px;
+
+  &__title {
+    margin-bottom: 5px;
+  }
+
+  &__name {
+    color: #333;
+  }
+
+  &__email {
+    color: #2196f3;
+    text-decoration: none;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+
+  &__body {
+    color: #666;
+  }
+}

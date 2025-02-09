@@ -2,8 +2,12 @@ iframe {
   display: none;
 }
 
-.App__title {
-  text-align: center;
+.App {
+  &__title {
+    text-align: center;
+    color: #333;
+    margin: 20px 0;
+  }
 }
 
 .PostInfo {
