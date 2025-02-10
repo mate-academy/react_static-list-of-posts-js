@@ -4,6 +4,7 @@
 import React from 'react';
 import { mount } from '@cypress/react18';
 import { PostInfo } from './PostInfo';
+import './PostInfo.scss';
 
 describe('PostInfo', () => {
   describe('', () => {
