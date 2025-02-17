@@ -1,1 +1,22 @@
-// add styles here
+.PostInfo {
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  margin-bottom: 20px;
+}
+
+.PostInfo__title {
+  font-size: 18px;
+  font-weight: bold;
+  margin: 0 0 10px;
+}
+
+.PostInfo__body {
+  margin: 10px 0;
+}
+
+.PostInfo__user {
+  margin-bottom: 10px;
+
+  /* Ensures that only the user link is rendered here */
+}
