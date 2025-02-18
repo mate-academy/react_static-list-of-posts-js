@@ -1,8 +1,12 @@
 import './App.scss';
 
-// import postsFromServer from './api/posts.json';
-// import commentsFromServer from './api/comments.json';
-// import usersFromServer from './api/users.json';
+import postsFromServer from './api/posts.json';
+import commentsFromServer from './api/comments.json';
+import usersFromServer from './api/users.json';
+
+export const users = () => (
+  
+);
 
 export const App = () => (
   <section className="App">
