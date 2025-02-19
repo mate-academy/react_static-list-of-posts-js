@@ -2,15 +2,22 @@ import { CommentList } from '../CommentList';
 import { UserInfo } from '../UserInfo/UserInfo';
 import './PostInfo.scss';
 
-export const PostInfo = ({ postsInfo }) =>
-  postsInfo.map(user => (
-    <div key={user.id} className="PostInfo">
-      <UserInfo userInfo={user} />
+export const PostInfo = ({ post }) => (
+  <div className="PostInfo">
+    <div className="PostInfo__header">
+      <h3 className="PostInfo__title">{post.title}</h3>
 
-      <p className="PostInfo__body">{user.body}</p>
+      <p>
+        {' Posted by  '}
 
-      <hr />
-
-      <CommentList commentUser={user} />
+        <UserInfo user={post.user} />
+      </p>
     </div>
-  ));
+
+    <p className="PostInfo__body">{post.body}</p>
+
+    <hr />
+
+    <CommentList comments={post.comments} />
+  </div>
+);
