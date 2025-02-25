@@ -4,6 +4,7 @@
 import React from 'react';
 import { mount } from '@cypress/react18';
 import { CommentList } from './CommentList';
+import './CommentList.scss';
 
 describe('CommentList component', () => {
   describe('', () => {
