@@ -1,1 +1,24 @@
-// add styles here
+.PostInfo {
+  padding: 1rem;
+  border: 1px solid #ccc;
+  margin-bottom: 1rem;
+}
+
+.PostInfo__header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.PostInfo__title {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.PostInfo__body {
+  margin-top: 1rem;
+}
+
+.TodoInfo--completed {
+  background-color: #e0ffe0;
+}
