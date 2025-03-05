@@ -1,1 +1,9 @@
-// add styles here
+.PostInfo {
+  &__title {
+    margin: 0;
+  }
+
+  &__header {
+    margin-bottom: 1em;
+  }
+}
