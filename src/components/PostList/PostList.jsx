@@ -4,6 +4,7 @@ export const PostList = ({ posts, users, comments }) => (
   <div className="PostList">
     {posts.map(thisPost => (
       <PostInfo
+        key={thisPost.id}
         post={{
           ...thisPost,
           user: users.find(person => person.id === thisPost.userId),
