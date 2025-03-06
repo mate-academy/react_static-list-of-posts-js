@@ -1,1 +1,11 @@
-export const CommentList = () => <>Put the list here</>;
+import { CommentInfo } from '../CommentInfo';
+
+export const CommentList = ({ comment }) => {
+  return (
+    <div className="CommentList">
+      {comment.map(com => (
+        <CommentInfo key={com.id} com={com} />
+      ))}
+    </div>
+  );
+};
