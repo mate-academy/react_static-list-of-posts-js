@@ -1,1 +1,18 @@
-// add styles here
+.PostInfo {
+  width: 90%;
+  margin: 10px auto;
+  border: 1px solid #000;
+
+  padding: 1em;
+  border-radius: 8px;
+
+  background-color: lightgray;
+
+  &__title {
+    margin: 0;
+  }
+
+  &__header {
+    margin-bottom: 1em;
+  }
+}
