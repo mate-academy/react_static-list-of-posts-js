@@ -1,1 +1,33 @@
 // add styles here
+.CommentInfo {
+  padding: 1em;
+  border-bottom: 1px solid #ccc; /* Adds a separator for each comment */
+  background-color: #f9f9f9; /* Subtle background color for contrast */
+
+  &__title {
+    font-size: 1.1rem;
+    font-weight: bold; /* Highlights the commenter's name */
+    margin-bottom: 0.5em;
+  }
+
+  &__name {
+    color: #333; /* Dark text for name */
+  }
+
+  &__email {
+    color: #007bff; /* Makes the email link visually distinct */
+    text-decoration: none; /* Removes underline */
+    transition: color 0.2s;
+
+    &:hover {
+      color: #0056b3; /* Changes to a darker blue on hover */
+      text-decoration: underline; /* Reinforces interactivity */
+    }
+  }
+
+  &__body {
+    font-size: 1rem;
+    color: #555; /* Slightly muted text for readability */
+    line-height: 1.5; /* Improves text spacing */
+  }
+}

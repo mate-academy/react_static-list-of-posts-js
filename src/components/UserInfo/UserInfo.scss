@@ -1,1 +1,12 @@
 // add styles here
+.UserInfo {
+  font-weight: bold; /* Keeps the emphasis */
+  color: #007bff; /* Adds a primary blue color */
+  text-decoration: none; /* Removes underline for a cleaner look */
+  transition: color 0.3s, text-decoration 0.3s; /* Smooth transition for hover effects */
+
+  &:hover {
+    color: #0056b3; /* Slightly darker shade for hover */
+    text-decoration: underline; /* Adds underline when hovered */
+  }
+}

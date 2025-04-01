@@ -1,1 +1,10 @@
 // add styles here
+.PostList {
+  display: flex;
+  flex-direction: column; /* Arrange posts vertically */
+  gap: 1.5em; /* Add spacing between posts */
+  padding: 1em; /* Add padding around the container */
+  background-color: #f8f9fa; /* Light background for contrast */
+  border-radius: 8px; /* Rounded corners for a soft look */
+  box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+}
