@@ -1,1 +1,17 @@
-// add styles here
+.CommentInfo {
+  padding: 8px;
+  margin-bottom: 8px;
+  background-color: #f5f5f5;
+  border-radius: 4px;
+
+  &__body {
+    margin: 0 0 4px;
+    color: #333;
+  }
+
+  &__user {
+    margin: 0;
+    font-size: 12px;
+    color: #666;
+  }
+}
