@@ -1,1 +1,12 @@
-export const PostList = () => <>Put the list here</>;
+/* eslint-disable */
+import { PostInfo } from '../PostInfo/PostInfo';
+
+export const PostList = ({ posts }) => {
+  return (
+    <div className="PostList">
+      {posts.map(post => (
+        <PostInfo key={post.id} post={post} />
+      ))}
+    </div>
+  );
+};
