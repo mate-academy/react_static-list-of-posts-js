@@ -1,1 +1,11 @@
 // add styles here
+
+.UserInfo {
+  text-decoration: none;
+  color: blue;
+  font-weight: bold;
+  
+  &:hover {
+    text-decoration: underline;
+  }
+}
