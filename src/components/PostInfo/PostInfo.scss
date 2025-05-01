@@ -1,1 +1,23 @@
 // add styles here
+
+.PostInfo {
+  background: white;
+  border-radius: 8px;
+  padding: 20px;
+  margin-bottom: 20px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+
+  &__header {
+    margin-bottom: 15px;
+  }
+
+  &__title {
+    font-size: 24px;
+    margin-bottom: 10px;
+  }
+
+  &__body {
+    line-height: 1.6;
+    color: #333;
+  }
+}
