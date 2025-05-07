@@ -10,7 +10,7 @@ const getCommentsByPostId = id => {
 };
 
 const getUserById = id => {
-  return usersFromServer.find(user => user.id === id || null);
+  return usersFromServer.find(user => user.id === id) || null;
 };
 
 export const posts = postsFromServer.map(post => ({
