@@ -1,4 +1,4 @@
-import { PostInfo } from "../PostInfo/PostInfo";
+import { PostInfo } from '../PostInfo/PostInfo';
 
 export const PostList = ({ posts }) => {
   return (
