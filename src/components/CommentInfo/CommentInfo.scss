@@ -1,1 +1,18 @@
-// add styles here
+.CommentInfo {
+  &__title {
+    margin-bottom: 0.5em;
+  }
+
+  &__name {
+    font-weight: bold;
+  }
+
+  &__email {
+    color: blue;
+    text-decoration: underline;
+  }
+
+  &__body {
+    line-height: 1.4;
+  }
+}
