@@ -2,6 +2,7 @@
 
 import React from 'react';
 import { mount } from '@cypress/react18';
+// eslint-disable-next-line import/named
 import { CommentInfo } from './CommentInfo';
 
 describe('CommentInfo component', () => {

@@ -1,1 +1,10 @@
-export const PostList = () => <>Put the list here</>;
+// eslint-disable-next-line import/no-unresolved
+import { PostInfo } from '../PostInfo/PostInfo';
+
+export const PostList = ({ posts }) => (
+  <div className="PostList">
+    {posts.map(post => (
+      <PostInfo key={post.id} post={post} />
+    ))}
+  </div>
+);
