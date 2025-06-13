@@ -2,24 +2,28 @@ import { CommentList } from '../CommentList';
 import { UserInfo } from '../UserInfo';
 import './PostInfo.scss';
 
-export const PostInfo = ({ post, comments = [], users = [] }) => (
-  <div className="PostInfo">
-    <div className="PostInfo__header">
-      <h3 className="PostInfo__title">{post.title}</h3>
+export const PostInfo = ({ post }) => {
+  return (
+    <div className="PostInfo">
+      <div className="PostInfo__header">
+        <h3 className="PostInfo__title">{post.title}</h3>
+        {post.user && (
+          <p>
+            {' Posted by '}
+            <UserInfo user={post.user} />
+          </p>
+        )}
+      </div>
 
-      <p>
-        {' Posted by  '}
-        <UserInfo user={users.find(user => user.id === post.userId)} />
-      </p>
+      <p className="PostInfo__body">{post.body}</p>
+
+      <hr />
+
+      {post.comments.length > 0 ? (
+        <CommentList comments={post.comments} postId={post.id} />
+      ) : (
+        <b data-cy="NoCommentsMessage">No comments yet</b>
+      )}
     </div>
-
-    <p className="PostInfo__body">{post.body}</p>
-
-    <hr />
-
-    <CommentList comments={comments} postId={post.id} />
-    {comments.filter(comment => comment.postId === post.id).length === 0 && (
-      <b data-cy="NoCommentsMessage">No comments yet</b>
-    )}
-  </div>
-);
+  );
+};
