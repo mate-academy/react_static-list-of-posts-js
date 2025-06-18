@@ -1,1 +1,13 @@
-// add styles here
+@import '../src/variable';
+
+.UserInfo {
+  color: var(--primary-color);
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.2s;
+
+  &:hover {
+    color: var(--secondary-color);
+    text-decoration: underline;
+  }
+}

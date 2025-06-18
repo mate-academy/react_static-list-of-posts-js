@@ -1,36 +1,19 @@
-iframe {
-  display: none;
-}
+@import '../src/variable';
 
-.App__title {
-  text-align: center;
-}
-
-.PostInfo {
-  margin: 10px auto;
-  width: 90%;
-  border: 1px solid #000;
-  border-radius: 8px;
-  background-color: lightgray;
-  padding: 1em;
+.App {
+  min-height: 100vh;
+  background-color: var(--bg-color);
+  padding: var(--space-lg);
 
   &__title {
-    margin: 0;
-  }
-
-  &__header {
-    margin-bottom: 1em;
+    color: var(--text-color);
+    font-size: 2rem;
+    font-weight: 600;
+    margin-bottom: var(--space-lg);
+    text-align: center;
   }
 }
 
-.UserInfo {
-  font-weight: bold;
-}
-
-.CommentList {
-  display: flex;
-  flex-direction: column;
-  gap: 0.7em;
-  background-color: #eee;
-  padding: 1em;
+iframe {
+  display: none;
 }

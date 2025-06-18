@@ -1,1 +1,38 @@
-// add styles here
+@import '../src/variable';
+
+.CommentInfo {
+  background: var(--white);
+  padding: var(--space-md);
+  border-radius: var(--radius-sm);
+  border-left: 3px solid var(--primary-color);
+
+  &__title {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: var(--space-sm);
+    margin-bottom: var(--space-sm);
+    font-size: 0.9rem;
+  }
+
+  &__name {
+    font-weight: 500;
+    color: var(--text-color);
+  }
+
+  &__email {
+    color: var(--text-light);
+    text-decoration: none;
+    transition: color 0.2s;
+
+    &:hover {
+      color: var(--primary-color);
+    }
+  }
+
+  &__body {
+    color: var(--text-color);
+    line-height: 1.6;
+    font-size: 0.95rem;
+  }
+}
