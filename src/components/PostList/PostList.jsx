@@ -4,7 +4,9 @@ export const PostList = ({ posts, comments, users }) => (
   <div className="PostList">
     {posts.map(post => {
       const user = users.find(u => u.id === post.userId);
-      const postComments = comments.filter(comment => comment.id === post.id);
+      const postComments = comments.filter(
+        comment => comment.postId === post.id,
+      );
 
       return (
         <PostInfo
