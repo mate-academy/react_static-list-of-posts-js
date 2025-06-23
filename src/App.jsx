@@ -32,4 +32,3 @@ export const App = () => (
     <PostList posts={preparedPosts} />
   </section>
 );
-//
