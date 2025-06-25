@@ -1,1 +1,24 @@
-// add styles here
+.CommentInfo {
+  background-color: #fff;
+  border-radius: 4px;
+  padding: 0.8em;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+
+  &__title {
+    margin-bottom: 0.5em;
+  }
+
+  &__name {
+    font-weight: bold;
+  }
+
+  &__email {
+    color: #35a;
+    text-decoration: none;
+  }
+
+  &__body {
+    line-height: 1.4;
+  }
+}
+

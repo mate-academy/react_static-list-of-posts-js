@@ -1,1 +1,10 @@
-// add styles here
+.PostList {
+  display: flex;
+  flex-direction: column;
+  gap: 2em;
+
+  padding: 2em 0;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
