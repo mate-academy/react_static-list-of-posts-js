@@ -1,1 +1,17 @@
-// add styles here
+.CommentInfo {
+  margin-bottom: 10px;
+}
+
+.CommentInfo__title {
+  font-weight: bold;
+}
+
+.CommentInfo__email {
+  font-style: italic;
+}
+
+.CommentInfo__body {
+  font-size: 14px;
+  color: #555;
+}
+
