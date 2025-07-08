@@ -1,6 +1,6 @@
 {
   "name": "react_static-list-of-posts-js",
-  "homepage": "react_static-list-of-posts-js",
+  "homepage": "https://Anatoli37.github.io/react_static-list-of-posts-js",
   "version": "0.1.0",
   "keywords": [],
   "author": "Mate Academy",
@@ -9,15 +9,17 @@
     "@fortawesome/fontawesome-free": "^6.5.2",
     "bulma": "^1.0.1",
     "classnames": "^2.5.1",
+    "prop-types": "^15.8.1",
     "react": "^18.3.1",
-    "react-dom": "^18.3.1"
+    "react-dom": "^18.3.1",
+    "react-scripts": "^5.0.1"
   },
   "devDependencies": {
     "@cypress/react18": "^2.0.1",
-    "@mate-academy/scripts": "^1.8.5",
+    "@mate-academy/scripts": "^2.1.1",
     "@mate-academy/stylelint-config": "*",
     "@vitejs/plugin-react": "^4.3.1",
-    "cypress": "^13.13.0",
+    "cypress": "^14.5.1",
     "eslint": "^8.57.0",
     "eslint-config-airbnb": "^19.0.4",
     "eslint-config-prettier": "^9.1.0",
@@ -34,22 +36,24 @@
     "mochawesome-report-generator": "^6.2.0",
     "prettier": "^3.3.2",
     "sass": "^1.77.8",
+    "start-server-and-test": "^2.0.12",
     "stylelint": "^16.7.0",
-    "vite": "^5.3.1"
+    "vite": "^5.3.1",
+    "wait-on": "^8.0.3"
   },
   "scripts": {
-    "start": "mate-scripts start -l",
+    "start": "vite preview --port 3001",
     "build": "mate-scripts build",
-    "test": "mate-scripts test -l",
-    "style-format": "npx stylelint 'src/**/*.scss' --fix --allow-empty-input",
-    "lint-js": "mate-scripts lint -j",
-    "lint-css": "mate-scripts lint -s",
-    "format": "prettier --write './src/**/*.{js,jsx}'",
-    "lint": "npm run style-format && npm run format && npm run lint-js && npm run lint-css",
-    "update": "mate-scripts update",
-    "postinstall": "npm run update && cypress verify",
-    "predeploy": "npm run build",
-    "deploy": "mate-scripts deploy"
+    "lint": "mate-scripts lint",
+    "lint-js": "mate-scripts lint-js",
+    "lint-css": "mate-scripts lint-css",
+    "style-format": "mate-scripts style-format",
+    "format": "mate-scripts format",
+    "cypress:run": "cypress run",
+    "cypress:run:log": "cypress run --browser chrome",
+    "cypress:open": "cypress open",
+    "test": "start-server-and-test start http://localhost:3001 cypress:run:log",
+    "deploy": "gh-pages -d dist"
   },
   "browserslist": {
     "production": [
