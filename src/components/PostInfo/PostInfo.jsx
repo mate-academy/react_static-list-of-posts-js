@@ -1,9 +1,8 @@
 import { UserInfo } from '../UserInfo/UserInfo';
 import commentsFromServer from '../../api/comments.json';
 import { CommentList } from '../CommentList/CommentList';
-import usersFromServer from '../../api/users.json';
 
-export const PostInfo = ({ post }) => {
+export const PostInfo = ({ post, user }) => {
   return (
     <div className="PostInfo">
       <div className="PostInfo__header">
@@ -12,9 +11,7 @@ export const PostInfo = ({ post }) => {
         <p>
           {' Posted by  '}
 
-          <UserInfo
-            user={usersFromServer.find(user => user.id === post.userId)}
-          />
+          <UserInfo user={user} />
         </p>
       </div>
 
