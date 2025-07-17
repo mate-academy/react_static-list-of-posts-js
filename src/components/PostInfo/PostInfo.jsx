@@ -1,1 +1,25 @@
-export const PostInfo = () => <>Put the post here</>;
+import { UserInfo } from '../UserInfo/UserInfo';
+import commentsFromServer from '../../api/comments.json';
+import { CommentList } from '../CommentList/CommentList';
+
+export const PostInfo = ({ post, user }) => {
+  return (
+    <div className="PostInfo">
+      <div className="PostInfo__header">
+        <h3 className="PostInfo__title">{post.title}</h3>
+
+        <p>
+          {' Posted by  '}
+
+          <UserInfo user={user} />
+        </p>
+      </div>
+
+      <p className="PostInfo__body">{post.body}</p>
+
+      <hr />
+
+      <CommentList comments={commentsFromServer} postId={post.id} />
+    </div>
+  );
+};
