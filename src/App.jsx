@@ -17,7 +17,7 @@ export const posts = postsFromServer.map(post => ({
 
 export const comments = commentsFromServer.map(comment => ({
   ...comment,
-  user: getUserById(comment.postId),
+  user: getUserById(comment.userId),
 }));
 
 export const App = () => (
