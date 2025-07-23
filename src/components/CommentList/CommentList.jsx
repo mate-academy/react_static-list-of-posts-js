@@ -1,4 +1,3 @@
-// import { posts } from '../../App';
 import './CommentList.scss';
 
 import { CommentInfo } from '../CommentInfo';

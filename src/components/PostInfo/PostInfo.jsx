@@ -27,7 +27,7 @@ const Header = ({ post }) => {
       {post.user && (
         <p>
           {' Posted by  '}
-          <UserInfo email={post.user.email} name={post.user.name} />
+          <UserInfo user={post.user} />
         </p>
       )}
     </div>
