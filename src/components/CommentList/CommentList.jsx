@@ -1,1 +1,14 @@
-export const CommentList = () => <>Put the list here</>;
+// import { posts } from '../../App';
+import './CommentList.scss';
+
+import { CommentInfo } from '../CommentInfo';
+
+export const CommentList = ({ comments }) => {
+  return (
+    <div className="CommentList">
+      {comments.map(comment => (
+        <CommentInfo comment={comment} key={comment.id} />
+      ))}
+    </div>
+  );
+};
