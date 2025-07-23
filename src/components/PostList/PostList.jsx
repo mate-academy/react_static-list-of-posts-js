@@ -9,3 +9,7 @@ export const PostList = ({ posts }) => {
     </div>
   );
 };
+
+PostList.defaultProps = {
+  posts: [],
+};
