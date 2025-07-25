@@ -14,13 +14,15 @@ function getCommentsByPostId(postId) {
   return commentsFromServer.filter(comment => comment.postId === postId);
 }
 
-export const preparedPosts = postsFromServer.map(post => {
+const preparedPosts = postsFromServer.map(post => {
   return {
     ...post,
     user: getUserById(post.userId),
     comments: getCommentsByPostId(post.id),
   }
 })
+
+export default preparedPosts;
 
 export const App = () => (
   <section className="App">
