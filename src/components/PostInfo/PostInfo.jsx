@@ -1,10 +1,10 @@
 import { CommentList } from '../CommentList/CommentList';
 import { UserInfo } from '../UserInfo/UserInfo';
 
-export const PostInfo = ({ post, user, comments }) => (
+export const PostInfo = ({ user, comments, post: { title, body } }) => (
   <div className="PostInfo">
     <div className="PostInfo__header">
-      <h3 className="PostInfo__title">{post.title}</h3>
+      <h3 className="PostInfo__title">{title}</h3>
 
       <p>
         Posted by
@@ -12,9 +12,8 @@ export const PostInfo = ({ post, user, comments }) => (
       </p>
     </div>
 
-    <p className="PostInfo__body">{post.body}</p>
+    <p className="PostInfo__body">{body}</p>
     <hr />
-
-    <CommentList comments={comments} />
+    {comments && <CommentList comments={comments} />}
   </div>
 );
