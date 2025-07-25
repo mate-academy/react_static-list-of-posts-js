@@ -1,0 +1,20 @@
+[
+  {
+    "id": 1,
+    "title": "Introdução ao React",
+    "body": "React é uma biblioteca JavaScript para construir interfaces de usuário...",
+    "author": "Ana Silva"
+  },
+  {
+    "id": 2,
+    "title": "Como usar Hooks",
+    "body": "Hooks permitem usar state e outros recursos do React sem classes...",
+    "author": "Carlos Oliveira"
+  },
+  {
+    "id": 3,
+    "title": "CSS moderno com Sass",
+    "body": "Sass é uma linguagem de extensão CSS que adiciona recursos poderosos...",
+    "author": "Ana Silva"
+  }
+]
