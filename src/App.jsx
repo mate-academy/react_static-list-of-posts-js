@@ -23,5 +23,3 @@ export const App = () => (
     </div>
   </section>
 );
-
-// Trigger re-review with a no-op change
