@@ -4,7 +4,6 @@ import posts from './api/posts.json';
 import users from './api/users.json';
 import comments from './api/comments.json';
 
-
 import { PostInfo } from './components/PostInfo/PostInfo';
 
 const preparedPosts = posts.map(post => ({
@@ -24,3 +23,5 @@ export const App = () => (
     </div>
   </section>
 );
+
+// Trigger re-review with a no-op change
