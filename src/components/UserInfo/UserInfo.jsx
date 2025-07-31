@@ -1,1 +1,26 @@
-export const UserInfo = () => <>Put the user here</>;
+import React from 'react';
+import './UserInfo.scss';
+import PropTypes from 'prop-types';
+
+export const UserInfo = ({ user }) => {
+  if (!user) {
+    return null;
+  }
+
+  return (
+    <a className="UserInfo" href={`mailto:${user.email}`}>
+      {user.name}
+    </a>
+  );
+};
+
+UserInfo.propTypes = {
+  user: PropTypes.shape({
+    name: PropTypes.string.isRequired,
+    email: PropTypes.string.isRequired,
+  }),
+};
+
+UserInfo.defaultProps = {
+  user: null,
+};
