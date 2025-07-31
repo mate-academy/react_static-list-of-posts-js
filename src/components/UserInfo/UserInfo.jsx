@@ -1,5 +1,6 @@
 import React from 'react';
 import './UserInfo.scss';
+import PropTypes from 'prop-types';
 
 export const UserInfo = ({ user }) => {
   if (!user) {
@@ -11,4 +12,15 @@ export const UserInfo = ({ user }) => {
       {user.name}
     </a>
   );
+};
+
+UserInfo.propTypes = {
+  user: PropTypes.shape({
+    name: PropTypes.string.isRequired,
+    email: PropTypes.string.isRequired,
+  }),
+};
+
+UserInfo.defaultProps = {
+  user: null,
 };

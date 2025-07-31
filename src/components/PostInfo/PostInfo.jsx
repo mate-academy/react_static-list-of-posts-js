@@ -2,6 +2,7 @@ import React from 'react';
 import { UserInfo } from '../UserInfo';
 import { CommentList } from '../CommentList';
 import './PostInfo.scss';
+import PropTypes from 'prop-types';
 
 export const PostInfo = ({ post }) => {
   const { title, body, user, comments = [] } = post;
@@ -24,4 +25,23 @@ export const PostInfo = ({ post }) => {
       )}
     </div>
   );
+};
+
+PostInfo.propTypes = {
+  post: PropTypes.shape({
+    title: PropTypes.string.isRequired,
+    body: PropTypes.string.isRequired,
+    user: PropTypes.shape({
+      name: PropTypes.string.isRequired,
+      email: PropTypes.string.isRequired,
+    }),
+    comments: PropTypes.arrayOf(
+      PropTypes.shape({
+        id: PropTypes.number.isRequired,
+        name: PropTypes.string.isRequired,
+        email: PropTypes.string.isRequired,
+        body: PropTypes.string.isRequired,
+      }),
+    ),
+  }).isRequired,
 };
