@@ -1,1 +1,16 @@
+.CommentInfo {
+  background-color: #f8f8f8;
+  border: 1px solid #ddd;
+  padding: 0.5em 1em;
+  border-radius: 4px;
+
+  &__title {
+    margin-bottom: 0.5em;
+  }
+
+  &__body {
+    margin: 0;
+    white-space: pre-wrap;
+  }
+}
 // add styles here
