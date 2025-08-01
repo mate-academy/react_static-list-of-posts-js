@@ -14,7 +14,6 @@ describe('PostInfo', () => {
         username: 'Antonette',
         email: 'Shanna@melissa.tv',
       };
-
       const comments = [
         {
           postId: 11,
