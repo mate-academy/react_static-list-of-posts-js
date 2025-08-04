@@ -1,1 +1,4 @@
-export * from './PostInfo';
+import PostInfoDefault, { PostInfo } from './PostInfo';
+
+export default PostInfoDefault;
+export { PostInfo };
