@@ -1,5 +1,3 @@
-import './App.scss';
-
 import postsFromServer from './api/posts.json';
 import commentsFromServer from './api/comments.json';
 import usersFromServer from './api/users.json';
@@ -9,7 +7,7 @@ function getUserById(userId) {
   return usersFromServer.find(user => user.id === userId) || null;
 }
 
-function getCommemtsById(commentId) {
+function getCommentsById(commentId) {
   return (
     commentsFromServer.filter(comment => comment.postId === commentId) || null
   );
@@ -18,7 +16,7 @@ function getCommemtsById(commentId) {
 export const posts = postsFromServer.map(post => ({
   ...post,
   user: getUserById(post.userId),
-  comments: getCommemtsById(post.id),
+  comments: getCommentsById(post.id),
 }));
 
 export const App = () => (
