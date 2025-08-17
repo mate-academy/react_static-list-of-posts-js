@@ -2,8 +2,9 @@ const { defineConfig } = require('cypress');
 
 module.exports = defineConfig({
   e2e: {
-    baseUrl: 'http://localhost:3000',
-    specPattern: 'cypress/integration/**/*.spec.{js,ts,jsx,tsx}',
+    baseUrl: 'http://localhost:5173',
+
+    specPattern: 'cypress/e2e/**/*.spec.{js,ts,jsx,tsx}',
   },
   video: true,
   viewportHeight: 1920,

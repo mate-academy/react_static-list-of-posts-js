@@ -7,30 +7,71 @@ iframe {
 }
 
 .PostInfo {
-  margin: 10px auto;
   width: 90%;
+  margin: 10px auto;
+  padding: 1em;
   border: 1px solid #000;
   border-radius: 8px;
+
   background-color: lightgray;
-  padding: 1em;
 
   &__title {
     margin: 0;
+    font-size: 22px;
   }
 
   &__header {
     margin-bottom: 1em;
   }
+
+  &__body {
+    margin-top: 1em;
+    font-size: 1rem;
+  }
 }
 
 .UserInfo {
   font-weight: bold;
+  color: #07c;
+  text-decoration: none;
 }
 
 .CommentList {
   display: flex;
   flex-direction: column;
   gap: 0.7em;
-  background-color: #eee;
+
+  margin-top: 1em;
   padding: 1em;
+
+  background-color: #eee;
+}
+
+.CommentInfo {
+  padding: 0.5em;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  background-color: white;
+
+  &__title {
+    display: flex;
+    gap: 6px;
+    align-items: center;
+    margin-bottom: 4px;
+  }
+
+  &__name {
+    font-weight: bold;
+    color: #333;
+  }
+
+  &__email {
+    color: #07c;
+    text-decoration: none;
+  }
+
+  &__body {
+    font-size: 0.95em;
+    color: #444;
+  }
 }
