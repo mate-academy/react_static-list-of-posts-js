@@ -1,1 +1,19 @@
-// add styles here
+.CommentInfo {
+  background-color: whitesmoke;
+
+  &__title {
+    margin: 0;
+  }
+
+  &__name {
+    margin: 0;
+  }
+
+  &__email {
+    margin-bottom: 1em;
+  }
+
+  &__body {
+    margin-bottom: 2em;
+  }
+}
