@@ -1,28 +1,28 @@
 import './PostInfo.scss';
-import {UserInfo} from '../UserInfo';
-import {CommentList} from '../CommentList';
+import { UserInfo } from '../UserInfo';
+import { CommentList } from '../CommentList';
 
 export const PostInfo = ({ post }) => {
-    return (
-        <article className='PostInfo'>
-            <div className='PostInfo__header'>
-                <h3 className='PostInfo__title'>{post.title}</h3>
+  return (
+    <article className="PostInfo">
+      <div className="PostInfo__header">
+        <h3 className="PostInfo__title">{post.title}</h3>
 
-                <p>
-                    {'Posted by '}
-                    {post.user && <UserInfo user={post.user}/>}
-                </p>
-            </div>
+        <p>
+          {'Posted by '}
+          {post.user && <UserInfo user={post.user} />}
+        </p>
+      </div>
 
-            <p className='PostInfo__body'>{post.body}</p>
+      <p className="PostInfo__body">{post.body}</p>
 
-            <hr />
+      <hr />
 
-            {post.comments?.length ? (
-                <CommentList comments={post.comments}/>
-            ) : (
-                <b data-cy="NoCommentsMessage">No comments yet</b>
-            )}
-        </article>
-    );
+      {post.comments?.length ? (
+        <CommentList comments={post.comments} />
+      ) : (
+        <b data-cy="NoCommentsMessage">No comments yet</b>
+      )}
+    </article>
+  );
 };

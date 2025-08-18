@@ -1,13 +1,12 @@
 import './PostList.scss';
-import {PostInfo} from '../PostInfo';
+import { PostInfo } from '../PostInfo';
 
 export const PostList = ({ posts }) => {
-
-    return (
-        <section className='PostList'>
-            {posts.map(post => (
-                <PostInfo key={post.id} post={post}/>
-            ))}
-        </section>
-    );
+  return (
+    <section className="PostList">
+      {posts.map(post => (
+        <PostInfo key={post.id} post={post} />
+      ))}
+    </section>
+  );
 };
