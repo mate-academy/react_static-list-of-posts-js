@@ -8,5 +8,3 @@ export const PostList = ({ posts }) => (
     ))}
   </div>
 );
-
-export default PostList;

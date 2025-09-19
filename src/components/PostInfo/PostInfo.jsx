@@ -1,5 +1,5 @@
 import { CommentList } from '../CommentList';
-import UserInfo from '../UserInfo/UserInfo';
+import { UserInfo } from '../UserInfo';
 import './PostInfo.scss';
 
 export const PostInfo = ({ post }) => {
@@ -23,5 +23,3 @@ export const PostInfo = ({ post }) => {
     </div>
   );
 };
-
-export default PostInfo;

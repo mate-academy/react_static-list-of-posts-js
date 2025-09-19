@@ -1,1 +1,1 @@
-export { default as CommentInfo } from './CommentInfo';
+export * from './CommentInfo';
