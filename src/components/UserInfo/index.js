@@ -1,2 +1,1 @@
-// eslint-disable-next-line import/export
-export * from './UserInfo';
+export { default as UserInfo } from './UserInfo';
