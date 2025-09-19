@@ -1,1 +1,1 @@
-export { default as PostInfo } from './UserInfo';
+export { default as UserInfo } from './UserInfo';
