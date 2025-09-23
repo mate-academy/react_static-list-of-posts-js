@@ -1,13 +1,10 @@
-import { PostInfo } from "../PostInfo/PostInfo";
+import { PostInfo } from '../PostInfo/PostInfo';
+import './PostList.scss';
 
-export const PostList = ({ post }) => (
-  <section className="App">
-    <h3 className="App__title">Static list of posts</h3>
-    {post.map((r) => (
-       <PostInfo post={r} key={r.id}/>
+export const PostList = ({ posts }) => (
+  <section className="PostList">
+    {posts.map(post => (
+      <PostInfo post={post} key={post.id} />
     ))}
   </section>
 );
-
-
-  
