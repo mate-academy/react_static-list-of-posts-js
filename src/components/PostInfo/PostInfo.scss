@@ -1,1 +1,17 @@
-// add styles here
+.PostInfo {
+  padding: 12px 0;
+}
+
+.PostInfo__header {
+  display: flex;
+  gap: 12px;
+  align-items: baseline;
+}
+
+.PostInfo__title {
+  margin: 0;
+}
+
+.PostInfo__body {
+  margin: 8px 0 12px;
+}
