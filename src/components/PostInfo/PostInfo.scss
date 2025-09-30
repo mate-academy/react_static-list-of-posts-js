@@ -1,1 +1,24 @@
 // add styles here
+.post {
+  border: 1px solid #ccc;
+  padding: 16px;
+  border-radius: 8px;
+
+  &__title {
+    font-size: 1.5em;
+    margin-bottom: 8px;
+  }
+
+  &__body {
+    font-size: 1em;
+    line-height: 1.5;
+    color: #333;
+  }
+
+  &__user {
+    font-size: 0.9em;
+    color: #666;
+  }
+
+
+}

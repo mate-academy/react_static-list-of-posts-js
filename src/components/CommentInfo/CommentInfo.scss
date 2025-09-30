@@ -1,1 +1,10 @@
-// add styles here
+.comment {
+  border: 1px solid #eee;
+  padding: 12px;
+  border-radius: 4px;
+
+  &__body {
+    font-size: 0.9em;
+    color: #333;
+  }
+}
