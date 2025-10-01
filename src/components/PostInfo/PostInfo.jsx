@@ -1,3 +1,4 @@
+import './PostInfo.scss';
 // eslint-disable-next-line max-len
 import { UserInfo } from '../UserInfo/UserInfo';
 import { CommentList } from '../CommentList/CommentList';
