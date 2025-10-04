@@ -9,8 +9,19 @@ This task is similar to [Static List of TODOs](https://github.com/mate-academy/r
 - `List` components should take an array of corresponding objects and render one `Info` component per object;
 - `Info` components should take one object and render its data.
 
+
+Це завдання схоже на [Статичний список TODO](https://github.com/mate-academy/react_static-list-of-todos-js#react-static-list-of-todos), але вам слід все робити самостійно:
+
+- не змінюйте класи у заданій розмітці (тести їх використовують);
+- підготуйте `posts`, додавши `user` та `comments` до кожного `post` (кожен коментар має `postId`);
+- розділіть `App` на компоненти на основі заданих блоків CSS;
+- стилі з `App.scss` також слід перенести в окремі файли. Наприклад: `PostList.scss`;
+- Компоненти `List` повинні приймати масив відповідних об'єктів та відображати один компонент `Info` на кожен об'єкт;
+- Компоненти `Info` повинні приймати один об'єкт та відображати його дані.
+
+
 ## Instructions
 - Install Prettier Extention and use this [VSCode settings](https://mate-academy.github.io/fe-program/tools/vscode/settings.json) to enable format on save.
 - Implement a solution following the [React task guideline](https://github.com/mate-academy/react_task-guideline#react-tasks-guideline).
 - Open one more terminal and run tests with `npm test` to ensure your solution is correct.
-- Replace `<your_account>` with your Github username in the [DEMO LINK](https://<your_account>.github.io/react_static-list-of-posts-js/) and add it to the PR description.
+- Replace `<your_account>` with your Github username in the [DEMO LINK](https://ElinaMrachkovska.github.io/react_static-list-of-posts-js/) and add it to the PR description.
