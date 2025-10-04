@@ -1,1 +1,23 @@
-// add styles here
+.CommentInfo {
+  margin: 5px 0;
+  padding: 0.8em;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  background-color: #f0f0f0;
+
+  &__author {
+    font-weight: bold;
+    margin-bottom: 0.3em;
+  }
+
+  &__body {
+    margin: 0;
+  }
+
+  &__date {
+    font-size: 0.85em;
+    color: #666;
+    margin-top: 0.5em;
+  }
+}
+
