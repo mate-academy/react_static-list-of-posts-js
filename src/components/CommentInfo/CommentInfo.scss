@@ -1,1 +1,30 @@
-// add styles here
+.CommentInfo {
+  padding: 0.5em;
+  border-bottom: 1px solid #ccc;
+
+  &:last-child {
+    border-bottom: none;
+  }
+
+  &__title {
+    margin-bottom: 0.3em;
+  }
+
+  &__name {
+    font-weight: bold;
+  }
+
+  &__email {
+    color: #555;
+    text-decoration: none;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+
+  &__body {
+    font-size: 0.95em;
+    line-height: 1.4;
+  }
+}

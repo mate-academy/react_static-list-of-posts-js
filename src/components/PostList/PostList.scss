@@ -1,1 +1,13 @@
-// add styles here
+.App__title {
+  text-align: center;
+}
+
+.PostList {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+iframe {
+  display: none;
+}
