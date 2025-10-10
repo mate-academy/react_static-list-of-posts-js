@@ -1,5 +1,6 @@
 import { UserInfo } from '../UserInfo';
 import { CommentList } from '../CommentList';
+import './PostInfo.scss';
 
 export const PostInfo = ({ post }) => {
   return (
@@ -9,7 +10,7 @@ export const PostInfo = ({ post }) => {
 
         <p>{' Posted by  '}</p>
 
-        <UserInfo user={post.user} />
+        {post.user && <UserInfo user={post.user} />}
       </div>
 
       <p className="PostInfo__body">{post.body}</p>
