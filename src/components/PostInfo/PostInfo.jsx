@@ -1,7 +1,7 @@
 import React from 'react';
-import { UserInfo } from '../UserInfo';
-import { CommentList } from '../CommentList';
-import './PostInfo.scss'
+import { UserInfo } from '../UserInfo/UserInfo';
+import { CommentList } from '../CommentList/CommentList';
+import './PostInfo.scss';
 
 export const PostInfo = ({ post }) => (
   <div className="PostInfo">
@@ -10,7 +10,7 @@ export const PostInfo = ({ post }) => (
 
     <UserInfo user={post.user} />
 
-    {post.comments.length > 0 ? (
+    {post.comments?.length > 0 ? (
       <CommentList comments={post.comments} />
     ) : (
       <p data-cy="NoCommentsMessage">No comments yet</p>
