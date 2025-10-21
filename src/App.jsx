@@ -7,7 +7,12 @@ import usersFromServer from './api/users.json';
 import { PostList } from './components/PostList';
 
 const getUserById = userId => {
-  return usersFromServer.find(user => user.id === userId) || null;
+  return (
+    usersFromServer.find(user => user.id === userId) || {
+      name: 'Unknown author',
+      email: '',
+    }
+  );
 };
 
 const getCommentsByPostId = postId => {

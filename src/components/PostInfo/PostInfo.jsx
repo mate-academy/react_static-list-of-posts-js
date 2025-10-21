@@ -10,7 +10,7 @@ export const PostInfo = ({ post }) => (
 
       <p>
         {' Posted by  '}
-        {post.user ? (
+        {post.user.email.length > 0 ? (
           <UserInfo user={post.user} />
         ) : (
           <span>Unknown author</span>
