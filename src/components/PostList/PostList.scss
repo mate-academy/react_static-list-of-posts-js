@@ -1,1 +1,6 @@
 // add styles here
+.PostList {
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+}

@@ -1,1 +1,21 @@
 // add styles here
+.CommentInfo {
+  &__title {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.3em;
+  }
+
+  &__name {
+    font-weight: bold;
+  }
+
+  &__email {
+    color: #333;
+    text-decoration: underline;
+  }
+
+  &__body {
+    margin-top: 0.5em;
+  }
+}
