@@ -4,13 +4,6 @@
   padding: 0.8rem 1rem;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
 
-  &__header {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    margin-bottom: 0.5rem;
-  }
-
   &__name {
     font-weight: 600;
     color: #0d47a1;
