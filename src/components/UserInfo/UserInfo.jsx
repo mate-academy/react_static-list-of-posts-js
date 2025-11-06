@@ -1,1 +1,17 @@
-export const UserInfo = () => <>Put the user here</>;
+import './UserInfo.scss';
+
+export const UserInfo = ({ user }) => {
+  if (!user) return null;
+  const { name, email } = user;
+
+  return (
+    <div>
+      <p>
+        {' Posted by  '}
+        <a className="UserInfo" href={`mailto:${email}`}>
+          {name}
+        </a>
+      </p>
+    </div>
+  );
+};
