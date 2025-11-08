@@ -110,6 +110,7 @@ module.exports = {
       {
         ignoreTemplateLiterals: true,
         ignoreComments: true,
+        code: 120,
       },
     ],
     'no-console': 'error',
