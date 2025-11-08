@@ -1,1 +1,13 @@
-// add styles here
+.PostInfo {
+  border-bottom: 1px solid #ddd;
+  padding: 10px 0;
+
+  &__title {
+    font-weight: 700;
+    margin-bottom: 10px;
+  }
+
+  &__body {
+    margin-bottom: 10px;
+  }
+}
