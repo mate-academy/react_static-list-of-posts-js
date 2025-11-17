@@ -1,5 +1,6 @@
 import { UserInfo } from '../UserInfo';
 import { CommentList } from '../CommentList';
+import './PostInfo.scss';
 
 export const PostInfo = ({ user, post, comments }) => (
   <div className="PostInfo">
