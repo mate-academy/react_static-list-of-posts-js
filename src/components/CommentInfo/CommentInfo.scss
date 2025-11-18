@@ -1,1 +1,13 @@
-// add styles here
+.CommentInfo {
+  padding: 0.5em;
+  border-radius: 6px;
+  background: #fff;
+
+  &__title {
+    margin-bottom: 0.3em;
+  }
+
+  &__name {
+    font-weight: bold;
+  }
+}
