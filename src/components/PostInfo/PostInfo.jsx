@@ -10,15 +10,11 @@ export const PostInfo = ({ post }) => (
       <p>
         {' Posted by  '}
 
-        <UserInfo user={post.user} key={post.id} />
+        <UserInfo user={post.user} />
       </p>
     </div>
 
-    <p className="PostInfo__body">
-      deserunt eos nobis asperiores et hic est debitis repellat molestiae optio
-      nihil ratione ut eos beatae quibusdam distinctio maiores earum voluptates
-      et aut adipisci ea maiores voluptas maxime
-    </p>
+    <p className="PostInfo__body">{post.body}</p>
 
     {post.comments ? (
       <CommentList comments={post.comments} />
