@@ -1,6 +1,7 @@
 import './UserInfo.scss';
 
 export const UserInfo = ({ user }) => {
+  if (!user) return null;
   const { name, email } = user;
 
   return (
