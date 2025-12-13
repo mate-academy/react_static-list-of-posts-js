@@ -1,4 +1,5 @@
-import './UserInfo.scss'
+import './UserInfo.scss';
+
 export const UserInfo = ({ user }) => (
   <p>
     <a className="UserInfo" href={`mailto:${user.email}`}>
