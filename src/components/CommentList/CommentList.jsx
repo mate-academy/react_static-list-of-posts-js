@@ -1,1 +1,9 @@
-export const CommentList = () => <>Put the list here</>;
+import './CommentList.scss'
+
+export const CommentList = () => {
+  return (
+    <div className="CommentList">
+
+        </div>
+  );
+}
