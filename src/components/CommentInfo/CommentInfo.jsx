@@ -1,1 +1,21 @@
-export const CommentInfo = () => <>Put the comment here</>;
+import { UserInfo } from "../UserInfo/UserInfo"
+
+export const CommentInfo = ({comment}) => {
+  return (
+    <div className="CommentInfo">
+            <div className="CommentInfo__title">
+              <strong className="CommentInfo__name">{comment.name}</strong>
+
+              {' by '}
+
+              <UserInfo user={comment.user}/>
+            </div>
+
+            <div className="CommentInfo__body">
+              {comment.body}
+            </div>
+          </div>
+
+          
+  )
+}
