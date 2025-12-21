@@ -21,7 +21,7 @@ function preparePosts(postId) {
 
 export const posts = postsFromServer.map(post =>({
   ...post,
-  comment: preparePosts(post.id),
+  comments: preparePosts(post.id),
   user: prepareUsers(post.userId),
 
 }))

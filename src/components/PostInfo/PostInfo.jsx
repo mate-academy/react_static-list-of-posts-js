@@ -1,6 +1,6 @@
-import { UserInfo } from '../../../../react_static-list-of-todos-js/src/components/UserInfo/UserInfo'
+import { UserInfo } from '../UserInfo/UserInfo'
 import './PostInfo.scss'
-import { CommentInfo } from '../CommentInfo/CommentInfo'
+import { CommentList } from '../CommentListt/CommentList'
 export const PostInfo = ({post}) => {
   return (
     <div className="PostInfo">
@@ -21,15 +21,8 @@ export const PostInfo = ({post}) => {
         <p className="PostInfo__body">
          {post.body}
         </p>
-        {post.comment?.map(coment =>(
-          <CommentInfo
-          key={coment.id}
-          comment={coment}
-        />
-        ))}
+        { post.comment.length === 0 ? (<b data-cy="NoCommentsMessage">No comments yet</b>) : (<CommentList comments={comments}/>)}
         <hr />
-
-        <b data-cy="NoCommentsMessage">No comments yet</b>
       </div>
   )
 }
