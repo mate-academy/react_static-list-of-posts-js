@@ -13,7 +13,8 @@ function prepareUsers (userId) {
 
 function preparePosts(postId) {
   return commentsFromServer.filter(comment => comment.postId === postId).map(
-    comment => {...comment, user:prepareUsers(comment.userId)}
+   comment => ({ ...comment, user: prepareUsers(comment.userId) })
+
   )
    || null;
 }

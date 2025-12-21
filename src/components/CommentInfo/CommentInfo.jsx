@@ -16,16 +16,6 @@ export const CommentInfo = ({comment}) => {
             </div>
           </div>
 
-          <div className="CommentInfo">
-            <div className="CommentInfo__title">
-              <strong className="CommentInfo__name">
-               {comment.name}
-              </strong>
-
-              {' by '}
-            </div>
-
-
-          </div>
+          
   )
 }
