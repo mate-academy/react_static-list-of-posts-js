@@ -1,17 +1,14 @@
 import React from 'react';
-import comments from '../../api/comments.json';
 import './CommentInfo.scss';
 
-export const CommentInfo = ({ postId }) => {
-  const commentsForPost = postId
-    ? comments.filter(c => c.postId === postId)
-    : comments;
-
+export const CommentInfo = ({ comment }) => {
   return (
-    <div>
-      {commentsForPost.map(comment => (
-        <div key={comment.id}>{comment.body}</div>
-      ))}
+    <div className="CommentInfo">
+      <div className="CommentInfo__name">{comment.name}</div>
+      <a href={`mailto:${comment.email}`} className="CommentInfo__email">
+        {comment.email}
+      </a>
+      <div className="CommentInfo__body">{comment.body}</div>
     </div>
   );
 };
