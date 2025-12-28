@@ -5,10 +5,10 @@ export const UserInfo = () => {
   return (
     <>
       {users.map(user => (
-        <p>
+        <p key={user.id}>
           {' Posted by  '}
 
-          <a className="UserInfo" key={user.id} href={user.email}>
+          <a className="UserInfo" href={user.email}>
             {user.name}
           </a>
         </p>

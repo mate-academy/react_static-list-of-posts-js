@@ -1,5 +1,7 @@
 import { UserInfo } from '../UserInfo';
 import posts from '../../api/posts.json';
+import { CommentList } from '../CommentList/CommentList';
+import './PostInfo.scss';
 
 export const PostInfo = () => (
   <>
@@ -15,7 +17,7 @@ export const PostInfo = () => (
 
         <hr />
 
-        <b data-cy="NoCommentsMessage">No comments yet</b>
+        <CommentList />
       </div>
     ))}
   </>
