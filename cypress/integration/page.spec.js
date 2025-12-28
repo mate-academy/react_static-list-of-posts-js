@@ -1,4 +1,5 @@
 /* eslint-disable max-len */
+/* eslint-disable prettier/prettier */
 
 describe('Page', () => {
   beforeEach(() => {
