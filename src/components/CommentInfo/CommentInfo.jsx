@@ -1,6 +1,4 @@
-import comments from '../../api/comments.json';
-
-export const CommentInfo = () => (
+export const CommentInfo = ({ comments }) => (
   <>
     {comments.map(comment => (
       <div className="CommentInfo" key={comment.id}>

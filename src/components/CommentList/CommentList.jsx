@@ -1,12 +1,11 @@
-import comments from '../../api/comments.json';
 import { CommentInfo } from '../CommentInfo/CommentInfo';
 import './CommentList.scss';
 
-export const CommentList = () => (
+export const CommentList = ({ comments }) => (
   <>
     {comments.map(comment => (
-      <div className="CommentList" key={comment.postId}>
-        <CommentInfo />
+      <div className="CommentList" key={comment.id}>
+        <CommentInfo comment={comment} />
       </div>
     ))}
   </>

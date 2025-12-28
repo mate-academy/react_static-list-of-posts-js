@@ -1,18 +1,12 @@
-import users from '../../api/users.json';
 import './UserInfo.scss';
 
-export const UserInfo = () => {
+export const UserInfo = ({ user }) => {
   return (
-    <>
-      {users.map(user => (
-        <p key={user.id}>
-          {' Posted by  '}
-
-          <a className="UserInfo" href={user.email}>
-            {user.name}
-          </a>
-        </p>
-      ))}
-    </>
+    <p>
+      {' Posted by  '}
+      <a className="UserInfo" href={`mailto:${user.email}`}>
+        {user.name}
+      </a>
+    </p>
   );
 };
