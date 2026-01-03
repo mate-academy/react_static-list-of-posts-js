@@ -1,23 +1,28 @@
-// import { CommentInfo } from '../CommentInfo/CommentInfo';
 import { CommentList } from '../CommentList/CommentList';
 import { UserInfo } from '../UserInfo/UserInfo';
 
 import './PostInfo.scss';
 
-export const PostInfo = ({ comments, post, users }) => {
-  const postComments = comments.filter(comment => comment.postId === post.id);
-  const currentUser = users.find(user => user.id === post.userId);
+export const PostInfo = ({ post }) => {
+  const { title, body, user, comments = [] } = post;
 
   return (
     <div className="PostInfo">
       <div className="PostInfo__header">
-        <h3 className="PostInfo__title">{post.title}</h3>
-        <UserInfo user={currentUser} />
+        <h3 className="PostInfo__title">{title}</h3>
+
+        {user && <UserInfo user={user} />}
       </div>
-      <p className="PostInfo__body">{post.body}</p>
+
+      <p className="PostInfo__body">{body}</p>
+
       <hr />
 
-      <CommentList comments={postComments} />
+      {comments.length === 0 ? (
+        <p data-cy="NoCommentsMessage">No comments yet</p>
+      ) : (
+        <CommentList comments={comments} />
+      )}
     </div>
   );
 };
