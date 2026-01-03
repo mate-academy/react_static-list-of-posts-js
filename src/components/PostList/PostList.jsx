@@ -9,14 +9,13 @@ export const PostList = ({ posts, comments, users }) => (
 
       const user = users.find(u => u.id === post.userId);
 
-      return (
-        <PostInfo
-          key={post.id}
-          post={post}
-          user={user}
-          comments={postComments}
-        />
-      );
+      const preparedPost = {
+        ...post,
+        user,
+        comments: postComments,
+      };
+
+      return <PostInfo key={post.id} post={preparedPost} />;
     })}
   </div>
 );
