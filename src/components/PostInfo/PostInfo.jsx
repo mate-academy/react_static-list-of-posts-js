@@ -9,8 +9,8 @@ export const PostInfo = ({ post }) => (
       <h3 className="PostInfo__title">{post.title}</h3>
 
       <p>
-        {' Posted by  '}
-        <UserInfo user={post.user} />
+        {' Posted by '}
+        {post.user && <UserInfo user={post.user} />}
       </p>
     </div>
 
@@ -18,6 +18,10 @@ export const PostInfo = ({ post }) => (
 
     <hr />
 
-    <CommentList comments={post.comments} />
+    {post.comments.length === 0 ? (
+      <p data-cy="NoCommentsMessage">No comments yet</p>
+    ) : (
+      <CommentList comments={post.comments} />
+    )}
   </div>
 );
