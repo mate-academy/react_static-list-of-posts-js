@@ -1,15 +1,10 @@
 import { PostInfo } from '../PostInfo/PostInfo';
 
-export const PostList = ({ posts, comments, users }) => (
-  <ul className="PostList">
+export const PostList = ({ posts }) => (
+  <div className="PostList">
     {posts.map(post => (
-      <li key={post.id}>
-        <PostInfo
-          post={post}
-          comments={comments.filter(comment => comment.postId === post.id)}
-          user={users.find(u => u.id === post.userId)}
-        />
-      </li>
+      // Теперь объект post уже содержит внутри себя post.user и post.comments
+      <PostInfo key={post.id} post={post} />
     ))}
-  </ul>
+  </div>
 );
