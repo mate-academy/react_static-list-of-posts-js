@@ -1,7 +1,9 @@
-export const PostList = ({ posts }) => (
-  <div className="PostList">
-    {posts.map(post => (
-      <PostInfo key={post.id} post={post} />
+import { CommentInfo } from '../CommentInfo';
+
+export const CommentList = ({ comments }) => (
+  <div className="CommentList">
+    {comments.map(comment => (
+      <CommentInfo key={comment.id} comment={comment} />
     ))}
   </div>
 );
