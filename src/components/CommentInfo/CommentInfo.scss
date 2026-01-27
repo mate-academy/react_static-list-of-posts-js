@@ -1,1 +1,10 @@
-// add styles here
+.CommentInfo {
+  &__name {
+    font-weight: 500;
+  }
+
+  &__email {
+    display: block;
+    margin-bottom: 8px;
+  }
+}
