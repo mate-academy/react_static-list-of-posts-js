@@ -13,7 +13,7 @@ function getUserByPostId(postId) {
   return commentsFromServer.filter(comment => comment.postId === postId);
 }
 
-//оновлюємо масив
+// оновлюємо масив
 export const personalPost = postsFromServer.map(post => ({
   ...post,
   user: getUserById(post.userId),
