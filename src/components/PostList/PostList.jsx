@@ -1,1 +1,16 @@
-export const PostList = () => <>Put the list here</>;
+import PropTypes from 'prop-types';
+import './PostList.scss';
+
+import { PostInfo } from '../PostInfo';
+
+export const PostList = ({ posts }) => (
+  <div className="PostList">
+    {posts.map(post => (
+      <PostInfo key={post.id} post={post} />
+    ))}
+  </div>
+);
+
+PostList.propTypes = {
+  posts: PropTypes.arrayOf(PropTypes.object).isRequired,
+};
