@@ -1,5 +1,6 @@
 import React from 'react';
 import { PostInfo } from '../PostInfo/PostInfo';
+import './PostList.scss';
 
 export const PostList = ({ posts }) => (
   <div className="PostList">

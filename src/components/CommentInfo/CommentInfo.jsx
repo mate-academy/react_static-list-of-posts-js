@@ -1,4 +1,5 @@
 import React from 'react';
+import './CommentInfo.scss';
 
 export const CommentInfo = ({ comment }) => (
   <div className="CommentInfo">
@@ -9,8 +10,6 @@ export const CommentInfo = ({ comment }) => (
         {comment.email}
       </a>
     </div>
-    <div className="CommentInfo__body">
-      {comment.body}
-    </div>
+    <div className="CommentInfo__body">{comment.body}</div>
   </div>
 );

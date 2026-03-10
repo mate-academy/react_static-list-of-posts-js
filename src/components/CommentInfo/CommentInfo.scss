@@ -1,1 +1,19 @@
-// add styles here
+.CommentInfo {
+  &__title {
+    margin-bottom: 0.5em;
+  }
+
+  &__name {
+    color: #333;
+  }
+
+  &__email {
+    font-style: italic;
+    color: #555;
+  }
+
+  &__body {
+    font-size: 0.9em;
+    line-height: 1.4;
+  }
+}
