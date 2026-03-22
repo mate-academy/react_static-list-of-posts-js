@@ -1,1 +1,25 @@
-// add styles here
+.CommentInfo {
+  padding: 0.5em 0;
+  border-bottom: 1px dashed #ccc;
+
+  &:last-child {
+    border-bottom: none;
+  }
+
+  &__name {
+    display: inline-block;
+    margin-right: 0.3em;
+  }
+
+  &__email {
+    font-size: 0.9em;
+    font-style: italic;
+    color: #555;
+  }
+
+  &__body {
+    margin-top: 0.5em;
+    font-size: 0.95em;
+    line-height: 1.4;
+  }
+}
