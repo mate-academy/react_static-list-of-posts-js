@@ -1,16 +1,8 @@
 import './App.scss';
 
 import postsFromServer from './api/posts.json';
-import commentsFromServer from './api/comments.json';
-import usersFromServer from './api/users.json';
-
+import { getUserById, getCommentsByPostId } from './utils';
 import { PostList } from './components/PostList';
-
-const getUserById = id => usersFromServer.find(user => user.id === id);
-
-const getCommentsByPostId = postId => {
-  return commentsFromServer.filter(comment => comment.postId === postId);
-};
 
 const posts = postsFromServer.map(post => {
   return {
