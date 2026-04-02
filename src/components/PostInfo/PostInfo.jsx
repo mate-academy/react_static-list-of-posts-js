@@ -1,5 +1,6 @@
 import { UserInfo } from '../UserInfo';
 import { CommentList } from '../CommentList';
+import { NoCommentsMessage } from '../NoCommentsMessage';
 
 export const PostInfo = ({ post }) => (
   <div className="PostInfo">
@@ -15,6 +16,10 @@ export const PostInfo = ({ post }) => (
 
     <p className="PostInfo__body">{post.body}</p>
 
-    <CommentList comments={post.comments} />
+    {post.comments.length > 0 ? (
+      <CommentList comments={post.comments} />
+    ) : (
+      <NoCommentsMessage />
+    )}
   </div>
 );
