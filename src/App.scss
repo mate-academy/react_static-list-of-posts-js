@@ -7,12 +7,13 @@ iframe {
 }
 
 .PostInfo {
-  margin: 10px auto;
   width: 90%;
+  margin: 10px auto;
+  padding: 1em;
   border: 1px solid #000;
   border-radius: 8px;
+
   background-color: lightgray;
-  padding: 1em;
 
   &__title {
     margin: 0;
@@ -31,6 +32,8 @@ iframe {
   display: flex;
   flex-direction: column;
   gap: 0.7em;
-  background-color: #eee;
+
   padding: 1em;
+
+  background-color: #eee;
 }
