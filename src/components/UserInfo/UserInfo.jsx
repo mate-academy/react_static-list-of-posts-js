@@ -1,3 +1,4 @@
+import './UserInfo.scss';
 import React from 'react';
 
 export const UserInfo = ({ user }) => (
