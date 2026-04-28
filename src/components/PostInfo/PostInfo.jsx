@@ -21,7 +21,6 @@ export const PostInfo = ({ post }) => (
     ) : (
       <b data-cy="NoCommentsMessage">No comments yet</b>
     )}
-
     <hr />
   </div>
 );
