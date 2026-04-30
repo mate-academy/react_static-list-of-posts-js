@@ -4,12 +4,16 @@ import postsFromServer from './api/posts.json';
 import commentsFromServer from './api/comments.json';
 import usersFromServer from './api/users.json';
 
-const posts = postsFromServer.map((post) => {
-  post.user = usersFromServer.find((u) => u.id === post.userId);
-  post.comments = commentsFromServer.filter((c) => c.postId === post.id);
-  return { ...post, };
-});
+const posts = postsFromServer.map(post => {
+  const user = usersFromServer.find(u => u.id === post.userId);
+  const comments = commentsFromServer.filter(c => c.postId === post.id);
 
+  return {
+    ...post,
+    user: user || null,
+    comments,
+  };
+});
 
 export const App = () => (
   <section className="App">
