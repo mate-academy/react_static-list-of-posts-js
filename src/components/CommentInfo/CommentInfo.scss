@@ -1,1 +1,23 @@
-// add styles here
+.CommentInfo {
+  border: 1px solid #ccc;
+  padding: 1rem;
+  border-radius: 8px;
+  background-color: #fff;
+}
+
+.CommentInfo__title {
+  margin-bottom: 0.5rem;
+}
+
+.CommentInfo__name {
+  font-weight: bold;
+}
+
+.CommentInfo__email {
+  color: inherit;
+  text-decoration: none;
+}
+
+.CommentInfo__body {
+  margin: 0;
+}
