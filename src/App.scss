@@ -1,36 +1,24 @@
-iframe {
-  display: none;
+body {
+  margin: 0;
+  font-family: Inter, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  color: #333;
+  background-color: #f4f6f8;
 }
 
-.App__title {
-  text-align: center;
-}
-
-.PostInfo {
-  margin: 10px auto;
-  width: 90%;
-  border: 1px solid #000;
-  border-radius: 8px;
-  background-color: lightgray;
-  padding: 1em;
+.App {
+  max-width: 800px;
+  margin: 40px auto;
+  padding: 0 20px;
 
   &__title {
-    margin: 0;
+    font-size: 2.5rem;
+    font-weight: 800;
+
+    margin-bottom: 40px;
+
+    color: #1a1a1a;
+
+    text-align: center;
+    letter-spacing: -0.5px;
   }
-
-  &__header {
-    margin-bottom: 1em;
-  }
-}
-
-.UserInfo {
-  font-weight: bold;
-}
-
-.CommentList {
-  display: flex;
-  flex-direction: column;
-  gap: 0.7em;
-  background-color: #eee;
-  padding: 1em;
 }

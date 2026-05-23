@@ -1,1 +1,33 @@
-// add styles here
+.CommentInfo {
+  border-left: 4px solid #3b82f6;
+  padding: 12px 16px;
+  background-color: #f9fafb;
+  border-radius: 0 12px 12px 0;
+
+  &__title {
+    margin-bottom: 6px;
+    font-size: 0.85rem;
+    color: #6b7280;
+  }
+
+  &__name {
+    font-weight: 600;
+    color: #1f2937;
+    text-transform: capitalize;
+  }
+
+  &__email {
+    color: #3b82f6;
+    text-decoration: none;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+
+  &__body {
+    font-size: 0.95rem;
+    line-height: 1.5;
+    color: #374151;
+  }
+}

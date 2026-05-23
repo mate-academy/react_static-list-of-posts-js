@@ -1,1 +1,11 @@
-// add styles here
+.CommentList {
+  margin-top: 20px;
+
+  display: flex;
+  padding-top: 20px;
+
+  flex-direction: column;
+
+  border-top: 2px dashed #f3f4f6;
+  gap: 12px;
+}
