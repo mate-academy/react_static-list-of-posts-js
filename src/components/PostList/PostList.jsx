@@ -1,1 +1,11 @@
-export const PostList = () => <>Put the list here</>;
+// import { comments } from '../../App';
+// import { CommentList } from '../CommentList/CommentList';
+import { PostInfo } from '../PostInfo/PostInfo';
+
+export const PostList = ({ posts }) => (
+  <div className="PostList">
+    {posts.map(post => (
+      <PostInfo post={post} key={post.id} />
+    ))}
+  </div>
+);
