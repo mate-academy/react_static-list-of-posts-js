@@ -3,7 +3,7 @@
 
 import React from 'react';
 import { mount } from '@cypress/react18';
-import { PostInfo } from './PostInfo';
+import PostInfo from './PostInfo';
 
 describe('PostInfo', () => {
   describe('', () => {

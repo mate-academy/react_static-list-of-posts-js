@@ -3,7 +3,7 @@
 
 import React from 'react';
 import { mount } from '@cypress/react18';
-import { CommentList } from './CommentList';
+import CommentList from './CommentList';
 
 describe('CommentList component', () => {
   describe('', () => {
