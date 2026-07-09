@@ -1,7 +1,7 @@
 import React from 'react';
 import './PostInfo.scss';
-import { CommentList } from "../CommentList/CommentList";
-import { UserInfo } from "../UserInfo/UserInfo";
+import { CommentList } from '../CommentList/CommentList';
+import { UserInfo } from '../UserInfo/UserInfo';
 
 export const PostInfo = ({ post }) => (
   <div className="PostInfo">
@@ -14,9 +14,7 @@ export const PostInfo = ({ post }) => (
       </p>
     </div>
 
-    <p className="PostInfo__body">
-      {post.body}
-    </p>
+    <p className="PostInfo__body">{post.body}</p>
 
     <hr />
     {post.comments && post.comments.length > 0 ? (
