@@ -5,10 +5,9 @@ import commentsFromServer from './api/comments.json';
 import usersFromServer from './api/users.json';
 import { PostList } from './components/PostList/PostList';
 
-// Добавляем каждому посту готового автора и его комментарии
 const posts = postsFromServer.map(post => ({
   ...post,
-  author: usersFromServer.find(user => user.id === post.userId),
+  user: usersFromServer.find(user => user.id === post.userId),
   comments: commentsFromServer.filter(comment => comment.postId === post.id),
 }));
 
