@@ -20,3 +20,5 @@ export const PostInfo = ({ post }) => (
     <CommentList comments={post.comments} />
   </div>
 );
+
+export default PostInfo;

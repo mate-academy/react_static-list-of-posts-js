@@ -10,3 +10,5 @@ export const CommentList = ({ comments }) =>
       ))}
     </div>
   );
+
+export default CommentList;

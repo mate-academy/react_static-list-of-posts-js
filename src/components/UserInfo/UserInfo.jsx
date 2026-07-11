@@ -7,3 +7,5 @@ export const UserInfo = () => (
     </a>
   </p>
 );
+
+export default UserInfo;
