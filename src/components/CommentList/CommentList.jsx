@@ -9,7 +9,7 @@ export const CommentList = ({ comments = [] }) => {
   return (
     <div className="CommentList">
       {comments.map(comment => {
-        return <CommentInfo comment={comment} />;
+        return <CommentInfo key={comment.id} comment={comment} />;
       })}
     </div>
   );
