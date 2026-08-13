@@ -1,1 +1,17 @@
-// add styles here
+.CommentInfo {
+  &__title {
+    margin-bottom: 0.5em;
+  }
+
+  &__name {
+    font-weight: bold;
+  }
+
+  &__email {
+    font-weight: bold;
+  }
+
+  &__body {
+    margin-bottom: 0.5em;
+  }
+}
