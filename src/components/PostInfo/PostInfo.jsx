@@ -1,4 +1,4 @@
-// import { CommentInfo } from '../CommentInfo/CommentInfo';
+import './PostInfo.scss';
 import { CommentList } from '../CommentList/CommentList';
 import { UserInfo } from '../UserInfo/UserInfo';
 
@@ -21,11 +21,5 @@ export const PostInfo = ({ post }) => (
     ) : (
       <b data-cy="NoCommentsMessage">No comments yet</b>
     )}
-    {/*
-    {post.comment !== null ? (
-      <CommentList commentId={post.commentId} />
-    ) : (
-      <b data-cy="NoCommentsMessage">No comments yet</b>
-    )} */}
   </div>
 );
