@@ -1,24 +1,22 @@
-import { UserInfo } from "../UserInfo/UserInfo";
-import { CommentList } from "../CommentList/CommentList";
+import { UserInfo } from '../UserInfo/UserInfo';
+import { CommentList } from '../CommentList/CommentList';
 
-export const PostInfo = ({post}) => {
-    return (
-        <div className="PostInfo">
-            <div className="PostInfo__header">
-                <h3 className="PostInfo__title">{post.title}</h3>
+export const PostInfo = ({ post }) => {
+  return (
+    <div className="PostInfo">
+      <div className="PostInfo__header">
+        <h3 className="PostInfo__title">{post.title}</h3>
 
-                <p>
-                {' Posted by  '}
+        <p>
+          {' Posted by  '}
 
-                 <UserInfo user={post.user} />
-                </p>
-            </div>
+          <UserInfo user={post.user} />
+        </p>
+      </div>
 
-            <p className="PostInfo__body">
-                { post.body }
-            </p>
+      <p className="PostInfo__body">{post.body}</p>
 
-            <CommentList comments={post.comments} />
-        </div>
-    )
+      <CommentList comments={post.comments} />
+    </div>
+  );
 };
