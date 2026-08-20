@@ -14,7 +14,7 @@ function getCommentsById(postId) {
     comment => comment.postId === postId,
   );
 
-  return comments.length === 0 ? null : comments;
+  return comments;
 }
 
 const posts = postsFromServer.map(post => ({

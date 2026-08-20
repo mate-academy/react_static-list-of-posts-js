@@ -1,5 +1,5 @@
-import { CommentList } from '../CommentList/CommentList';
-import { UserInfo } from '../UserInfo/UserInfo';
+import { CommentList } from '../CommentList';
+import { UserInfo } from '../UserInfo';
 import './PostInfo.scss';
 
 export const PostInfo = ({ post }) => (
@@ -20,7 +20,7 @@ export const PostInfo = ({ post }) => (
 
     <hr />
 
-    {post.comments === null ? (
+    {post.comments.length === 0 ? (
       <b data-cy="NoCommentsMessage">No comments yet</b>
     ) : (
       <CommentList comments={post.comments} />
