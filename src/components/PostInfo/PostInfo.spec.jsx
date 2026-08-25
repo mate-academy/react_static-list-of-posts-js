@@ -1,7 +1,3 @@
-/* eslint-disable max-len */
-/* eslint-disable react/jsx-filename-extension */
-
-import React from 'react';
 import { mount } from '@cypress/react18';
 import { PostInfo } from './PostInfo';
 
@@ -21,21 +17,36 @@ describe('PostInfo', () => {
           id: 52,
           name: 'esse autem dolorum',
           email: 'Abigail.OConnell@june.org',
-          body: 'et enim voluptatem totam laudantium\nimpedit nam labore repellendus enim earum aut\nconsectetur mollitia fugit qui repellat expedita sunt\naut fugiat vel illo quos aspernatur ducimus',
+          body: [
+            'et enim voluptatem totam laudantium',
+            'impedit nam labore repellendus enim earum aut',
+            'consectetur mollitia fugit qui repellat expedita sunt',
+            'aut fugiat vel illo quos aspernatur ducimus',
+          ].join('\n'),
         },
         {
           postId: 11,
           id: 53,
           name: 'maiores alias necessitatibus aut non',
           email: 'Laverne_Price@scotty.info',
-          body: 'a at tempore\nmolestiae odit qui dolores molestias dolorem et\nlaboriosam repudiandae placeat quisquam\nautem aperiam consectetur maiores laboriosam nostrum',
+          body: [
+            'a at tempore',
+            'molestiae odit qui dolores molestias dolorem et',
+            'laboriosam repudiandae placeat quisquam',
+            'autem aperiam consectetur maiores laboriosam nostrum',
+          ].join('\n'),
         },
         {
           postId: 11,
           id: 54,
           name: 'culpa eius tempora sit consequatur neque iure deserunt',
           email: 'Kenton_Vandervort@friedrich.com',
-          body: 'et ipsa rem ullam cum pariatur similique quia\ncum ipsam est sed aut inventore\nprovident sequi commodi enim inventore assumenda aut aut\ntempora possimus soluta quia consequatur modi illo',
+          body: [
+            'et ipsa rem ullam cum pariatur similique quia',
+            'cum ipsam est sed aut inventore',
+            'provident sequi commodi enim inventore assumenda aut aut',
+            'tempora possimus soluta quia consequatur modi illo',
+          ].join('\n'),
         },
       ];
 
@@ -43,7 +54,13 @@ describe('PostInfo', () => {
         userId: 2,
         id: 11,
         title: 'et ea vero quia laudantium autem',
-        body: 'delectus reiciendis molestiae occaecati non minima eveniet qui voluptatibus\naccusamus in eum beatae sit\nvel qui neque voluptates ut commodi qui incidunt\nut animi commodi',
+        body: [
+          'delectus reiciendis molestiae occaecati non minima eveniet qui',
+          'voluptatibus',
+          'accusamus in eum beatae sit',
+          'vel qui neque voluptates ut commodi qui incidunt',
+          'ut animi commodi',
+        ].join('\n'),
         user: user2,
         comments,
       };
@@ -93,7 +110,13 @@ describe('PostInfo', () => {
         userId: 2,
         id: 11,
         title: 'et ea vero quia laudantium autem',
-        body: 'delectus reiciendis molestiae occaecati non minima eveniet qui voluptatibus\naccusamus in eum beatae sit\nvel qui neque voluptates ut commodi qui incidunt\nut animi commodi',
+        body: [
+          'delectus reiciendis molestiae occaecati non minima eveniet qui',
+          'voluptatibus',
+          'accusamus in eum beatae sit',
+          'vel qui neque voluptates ut commodi qui incidunt',
+          'ut animi commodi',
+        ].join('\n'),
         user: user2,
         comments: [],
       };
@@ -118,14 +141,24 @@ describe('PostInfo', () => {
           id: 1,
           name: 'id labore ex et quam laborum',
           email: 'Eliseo@gardner.biz',
-          body: 'laudantium enim quasi est quidem magnam voluptate ipsam eos\ntempora quo necessitatibus\ndolor quam autem quasi\nreiciendis et nam sapiente accusantium',
+          body: [
+            'laudantium enim quasi est quidem magnam voluptate ipsam eos',
+            'tempora quo necessitatibus',
+            'dolor quam autem quasi',
+            'reiciendis et nam sapiente accusantium',
+          ].join('\n'),
         },
         {
           postId: 1,
           id: 2,
           name: 'quo vero reiciendis velit similique earum',
           email: 'Jayne_Kuhic@sydney.com',
-          body: 'est natus enim nihil est dolore omnis voluptatem numquam\net omnis occaecati quod ullam at\nvoluptatem error expedita pariatur\nnihil sint nostrum voluptatem reiciendis et',
+          body: [
+            'est natus enim nihil est dolore omnis voluptatem numquam',
+            'et omnis occaecati quod ullam at',
+            'voluptatem error expedita pariatur',
+            'nihil sint nostrum voluptatem reiciendis et',
+          ].join('\n'),
         },
       ];
 
@@ -133,7 +166,12 @@ describe('PostInfo', () => {
         userId: 1,
         id: 3,
         title: 'ea molestias quasi exercitationem repellat qui ipsa sit aut',
-        body: 'et iusto sed quo iure\nvoluptatem occaecati omnis eligendi aut ad\nvoluptatem doloribus vel accusantium quis pariatur\nmolestiae porro eius odio et labore et velit aut',
+        body: [
+          'et iusto sed quo iure',
+          'voluptatem occaecati omnis eligendi aut ad',
+          'voluptatem doloribus vel accusantium quis pariatur',
+          'molestiae porro eius odio et labore et velit aut',
+        ].join('\n'),
         user: user1,
         comments: post1Comments,
       };
