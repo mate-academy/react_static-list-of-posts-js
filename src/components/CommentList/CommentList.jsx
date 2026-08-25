@@ -7,15 +7,12 @@ export const CommentList = ({ comments }) => {
   }
 
   return (
-    <>
-      <h1 className="App__title">Static list of posts</h1>
-      <div className="CommentList">
-        {comments.map(comment => (
-          <div className="CommentInfo" key={comment.id}>
-            <CommentInfo comment={comment} />
-          </div>
-        ))}
-      </div>
-    </>
+    <div className="CommentList">
+      {comments.map(comment => (
+        <div className="CommentInfo" key={comment.id}>
+          <CommentInfo comment={comment} />
+        </div>
+      ))}
+    </div>
   );
 };
