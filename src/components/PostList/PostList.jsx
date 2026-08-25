@@ -1,3 +1,5 @@
+import './PostList.scss';
+
 import usersList from '../../api/users.json';
 import postsList from '../../api/posts.json';
 import commentsList from '../../api/comments.json';
