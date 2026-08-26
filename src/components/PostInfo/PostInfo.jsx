@@ -16,12 +16,13 @@ export const PostInfo = ({ post }) => (
 
     <p className="PostInfo__body">{post.body}</p>
 
-    {post.comments.length === 0 ? <hr /> : null}
-
     {post.comments.length > 0 ? (
       <CommentList comments={post.comments} />
     ) : (
-      <b data-cy="NoCommentsMessage">No comments yet</b>
+      <>
+        <hr />
+        <b data-cy="NoCommentsMessage">No comments yet</b>
+      </>
     )}
   </div>
 );
