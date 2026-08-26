@@ -1,6 +1,6 @@
 export const CommentInfo = ({ comment }) => {
   return (
-    <div className="CommentInfo">
+    <div className="CommentInfo" key={comment.id}>
       <div className="CommentInfo__title">
         <strong className="CommentInfo__name">{comment.name}</strong>
 
