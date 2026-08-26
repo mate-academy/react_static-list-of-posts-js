@@ -9,7 +9,7 @@ function CollectPostsData(posts, comments, users) {
   return posts.map(post => {
     const postComments = comments.filter(comment => comment.postId === post.id);
 
-    const postUser = users.find(user => user.id === post.userId);
+    const postUser = users.find(user => user.id === post.userId) || null;
 
     return { ...post, comments: postComments, user: postUser };
   });
