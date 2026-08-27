@@ -1,7 +1,7 @@
 import './CommentInfo.scss';
 
 export const CommentInfo = ({ comment }) => {
-  const { name, email, body } = comment || null;
+  const { name, email, body } = comment || {};
 
   return (
     <div className="CommentInfo">
