@@ -1,1 +1,7 @@
-// add styles here
+.CommentInfo {
+  margin-left: 10px;
+
+  &__title {
+    margin: 0;
+  }
+}
