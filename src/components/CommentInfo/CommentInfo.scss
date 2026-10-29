@@ -1,1 +1,6 @@
-// add styles here
+.CommentInfo {
+  &__email {
+    color: inherit;
+    text-decoration: none;
+  }
+}
