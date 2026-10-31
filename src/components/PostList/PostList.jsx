@@ -1,5 +1,6 @@
 import { PostInfo } from '../PostInfo/PostInfo';
 import commentsFromServer from '../../api/comments.json';
+import usersFromServer from '../../api/users.json';
 
 export const PostList = ({ posts }) => (
   <div className="PostList">
@@ -8,9 +9,15 @@ export const PostList = ({ posts }) => (
         key={post.id}
         post={{
           ...post,
-          comments: commentsFromServer.filter(
-            comment => comment.postId === post.id,
-          ),
+          user: usersFromServer.find(user => user.id === post.userId) || null,
+          comments: commentsFromServer
+            .filter(comment => comment.postId === post.id)
+            .map(comment => ({
+              ...comment,
+              user:
+                usersFromServer.find(user => user.email === comment.email) ||
+                null,
+            })),
         }}
       />
     ))}
