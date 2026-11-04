@@ -7,7 +7,7 @@ export const CommentList = ({ comments }) => {
   return isComment ? (
     <div className="CommentList">
       {comments.map(comment => {
-        return <CommentInfo comment={comment} />;
+        return <CommentInfo comment={comment} key={comment.id} />;
       })}
     </div>
   ) : (
