@@ -1,3 +1,7 @@
+import { UserInfo } from '../UserInfo';
+import { CommentList } from '../CommentList';
+import './PostInfo.scss';
+
 export const PostInfo = ({ post }) => (
   <div className="PostInfo">
     <div className="PostInfo__header">
@@ -5,17 +9,19 @@ export const PostInfo = ({ post }) => (
 
       <p>
         {' Posted by  '}
-
-        <a className="UserInfo" href="mailto:Sincere@april.biz">
-          Leanne Graham
-        </a>
+        <UserInfo user={post.user} />
       </p>
     </div>
 
     <p className="PostInfo__body">{post.body}</p>
 
-    <hr />
-
-    <b data-cy="NoCommentsMessage">No comments yet</b>
+    {post.comments.length === 0 ? (
+      <>
+        <hr />
+        <b data-cy="NoCommentsMessage">No comments yet</b>
+      </>
+    ) : (
+      <CommentList comments={post.comments} />
+    )}
   </div>
 );
