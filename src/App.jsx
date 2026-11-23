@@ -1,7 +1,11 @@
+import './global.scss';
+
 import postsFromServer from './api/posts.json';
 import commentsFromServer from './api/comments.json';
 import usersFromServer from './api/users.json';
+
 import { PostList } from './components/PostList';
+import { AppTitle } from './components/AppTitle/AppTitle';
 
 export const posts = postsFromServer.map(post => ({
   ...post,
@@ -11,7 +15,7 @@ export const posts = postsFromServer.map(post => ({
 
 export const App = () => (
   <section className="App">
-    <h1 className="App__title">Static list of posts</h1>
+    <AppTitle />
 
     <PostList posts={posts} />
   </section>
